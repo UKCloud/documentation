@@ -4,7 +4,7 @@ description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 16/12/2021
+lastreviewed: 01/09/2022
 toc_rootlink: About
 toc_sub1:
 toc_sub2:
@@ -34,7 +34,7 @@ toc_mdlink: azs-home.md
     <!-- brief introduction -->
     <p>UKCloud for Microsoft Azure can deliver a fully managed Azure hybrid cloud solution that enables you to unlock the potential of the cloud &ndash; for all workloads regardless of location. Use Azure Stack Hub to run applications in our UK-sovereign data centres or take advantage of our CSP status to get the most out of Azure public &dash; all with the support and guidance of our Microsoft experts.</p>
     <!-- link to propositions -->
-    <p>Accelerate your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> journey by using Azure services that enable organisations and governments to unlock the value of their data and drive business <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovation</strong></a>. Adopt modern architectures and next-gen tooling, all within our <a href="https://ukcloud.com/hub/news/what-is-secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>, then take the next steps to a <a href="https://ukcloud.com/multi-cloud/"><strong>hybrid cloud</strong></a> where you can leverage the best of all clouds.</p>
+    <p>Accelerate your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> journey by using Azure services that enable organisations and governments to unlock the value of their data and drive business <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovation</strong></a>. Adopt modern architectures and next-gen tooling, all within our <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>, then take the next steps to a <a href="https://ukcloud.com/multi-cloud/"><strong>hybrid cloud</strong></a> where you can leverage the best of all clouds.</p>
   </div>
   <div class="col-md-4">
     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -55,7 +55,7 @@ toc_mdlink: azs-home.md
 
 <div class="row">
   <div class="col-md-12">
-    <p>For a general product overview, see the <a href="azs-sd.md"><strong>Service Definition</strong></a>. If you need more in-depth product details, see the <a href="azs-sco.md"><strong>Service Scope</strong></a>.</p>
+    <p>For a general product overview, including benefits, product options and packaging information, see the <a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf"><strong>Service Definition</strong></a>. If you need more in-depth product details, see the <a href="azs-sco.md"><strong>Service Scope</strong></a>.</p>
     <p>For an overview of the functionality available with UKCloud for Microsoft Azure, see <a href="https://docs.ukcloud.com/articles/azure/azs-ref-overview.html"><strong>Understanding UKCloud for Microsoft Azure</strong></a>. The <a href="azs-gs.md"><strong>Getting Started Guide</strong></a> introduces some of the key concepts and tasks, including setting up and accessing your environment.</p>
     <p>If you already use UKCloud for Microsoft Azure or another UKCloud core cloud service, we can act as your public Azure Cloud Solution Provider (CSP). To find out how to set this up, see <a href="azs-how-use-ukc-csp.md"><strong>How to use UKCloud as your public Azure CSP</strong></a>.</p>
   </div>
@@ -212,18 +212,17 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
 <div class="row">
   <div class="col-md-12">
     <p>The <a href="https://ukcloud.com/pricing-guide"><strong>UKCloud Pricing Guide</strong></a> lists all our product pricing. For examples of how pricing works for UKCloud for Microsoft Azure, take a look at our <a href="azs-ref-pricing.md"><strong>Pricing information</strong></a> article.</p>
-    <p>If you'd like a quote for UKCloud for Microsoft Azure, contact your Service Delivery Manger or email <a href="mailto:servicedelivery@ukcloud.com"><strong>servicedelivery@ukcloud.com</strong></a>. Or you can <a href="https://ukcloud.com/contact/"><strong>Contact us</strong></a> via our website or call 01252 303 300.</p>
-    <p><strong>To buy UKCloud for Microsoft Azure:</strong></p>
+    <p>If you're interested in buying UKCloud for Microsoft Azure, or would like a quote:</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <p><em>If you're already a UKCloud customer</em></p>
+    <p><strong>If you're already a UKCloud customer</strong></p>
     <p style="margin-left:15px">Raise a Service Request, contact your Service Delivery Manager or email <a href="mailto:servicedelivery@ukcloud.com"><strong>servicedelivery@ukcloud.com</strong></a></p>
   </div>
   <div class="col-md-6">
-    <p><em>If you're new to UKCloud</em></p>
+    <p><strong>If you're new to UKCloud</strong></p>
     <p style="margin-left:15px"><a href="https://ukcloud.com/contact/"><strong>Contact us</strong></a> via our website or call us on 01252 303 300</p>
   </div>
 </div>
@@ -255,14 +254,14 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
 
 <div class="row">
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="azs-sd.md"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
+      <p style="margin-left:15px"><a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf"><strong>Security domains.</strong></a> Isolate workloads depending on the data sensitivity level.</p>
   </div>
   <div class="col-md-6">
-      <p style="margin-left:15px"><a href="../managed-operations/man-sd-managed-it-ops.md"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
-      <p style="margin-left:15px"><a href="../soc/soc-sd.md"><strong>Security Operations Service.</strong></a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
-      <p style="margin-left:15px"><a href="../pro-services/ps-sd.md"><strong>Professional Services.</strong></a> Help with solution design and digitisation projects.</p>
-      <p style="margin-left:15px"><a href="../cdsz/cdsz-sd.md"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
-        <p style="margin-left:15px"><a href="../cloud-storage/cs-sd.md"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
+      <p style="margin-left:15px"><a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf"><strong>Managed IT Operations.</strong></a> Reduce the amount of time spent on managing your IT infrastructure.</p>
+      <p style="margin-left:15px"><a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf"><strong>Security Operations Service.</strong></a> People, processes and tooling to assist with cyber monitoring capabilities.</p>
+      <p style="margin-left:15px"><a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-232-ukcloud-professional-services-service-definition-13.0-1.pdf"><strong>Professional Services.</strong></a> Help with solution design and digitisation projects.</p>
+      <p style="margin-left:15px"><a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-230-cross-domain-security-zone-service-definition-13.0-1.pdf"><strong>Cross Domain Security Zone.</strong></a> Enable data communication between assured and elevated security domains.</p>
+        <p style="margin-left:15px"><a href="https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf"><strong>Cloud Storage.</strong></a> Cost effective unstructured object storage for data archive.</p>
   </div>
 </div>
 
@@ -306,6 +305,12 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12 text-center">
+    <img src="images/ukc-services-g13.png" alt="Overview of UKCloud services">
+  </div>
+</div>
+
 <!-- end Why UKCloud -->
 
 <!-- begin Feedback -->
@@ -318,7 +323,7 @@ If you're an <strong>Azure Stack Hub service operator</strong>, UKCloud can shar
 
 <div class="row">
   <div class="col-md-12">
-    <p>We want to know what you think. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com"><strong>feedback@ukcloud.com</strong></a>.</p>
+    <a class="banner-link" href="mailto:feedback@ukcloud.com"><img src="images/banner.jpg" alt="If you have an idea for how we could improve our services, send an email to feedback@ukcloud.com"></a>
   </div>
 </div>
 

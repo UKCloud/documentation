@@ -107,7 +107,7 @@ For more information, see the [*Cloud Enablement Service Scope*](../enablement/e
 
 A secure and highly adaptable storage platform designed to address a wide variety of use cases. Our Cloud Storage service is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility.
 
-For more information, see the [Cloud Storage service definition](../cloud-storage/cs-sd.md).
+For more information, see the [Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf).
 
 ### Compute service
 
@@ -117,7 +117,7 @@ A UKCloud for VMware top-level container within a customer account that includes
 
 A UKCloud IaaS service that provides the ability to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using NCSC-approved cross-domain security patterns and our Secure Remote Access service.
 
-For more information, see the [Cross Domain Security Zone service definition](../cdsz/cdsz-sd.md).
+For more information, see the [Cross Domain Security Zone Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-230-cross-domain-security-zone-service-definition-13.0-1.pdf).
 
 *See also:* [Walled Garden](#walled-garden), [Secure Remote Access (SRA)](#secure-remote-access-sra)
 
@@ -153,7 +153,7 @@ For more information, see the [Data Transfer between Assured and Elevated Servic
 
 A UKCloud service option that enables you to have a reserved, single-tenanted section of our cloud, provisioned for your sole use, where the physical CPU and RAM allocations are known. This is useful if you need to run abnormal VM sizes, meet specific software licensing requirements or have increased security requirements.
 
-For more information, see the [UKCloud Dedicated Compute v2 service scope](../dedicated-compute/dc-sd.md).
+For more information, see the [UKCloud Dedicated Compute v2 service scope](https://ukcloud.com/app/uploads/2022/08/ukc-svc-227-dedicated-compute-v2-service-definition-13.0.pdf).
 
 Note the difference between Dedicated Compute, which is run within our multi-tenanted environment, and Private Cloud, which is a single-tenant environment run on independent infrastructure, providing a private cloud environment.
 
@@ -173,7 +173,7 @@ A connectivity option available in the Assured and Elevated security domains tha
 
 A UKCloud IaaS service, powered by Zerto, that enables you to easily replicate data and VMs from your primary site to UKCloud to recover your services with minimum downtime and data loss.
 
-For more information, see the [Disaster Recovery as a Service service definition](../draas/draas-sd.md).
+For more information, see the [Disaster Recovery as a Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-231-disaster-recovery-as-a-service-service-definition-13.0.pdf).
 
 ## E
 
@@ -199,7 +199,7 @@ A UKCloud for OpenStack storage option that exists only as long as the associate
 
 A UKCloud for VMware VM type that may have contended resource allocation. Automated rebalancing is enabled to ensure the workload receives the requested performance.
 
-For more information, see the [UKCloud for VMware service definition](../vmware/vmw-sd.md).
+For more information, see the [UKCloud for VMware Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf).
 
 *See also:* [POWER VM](#power-vm), [PRIORITY VM](#priority-vm)
 
@@ -207,7 +207,7 @@ For more information, see the [UKCloud for VMware service definition](../vmware/
 
 A UKCloud Managed Operations service that reduces the burden customer traditionally must consider in supporting their virtual network infrastructure to enable the reliable and stable connectivity for their solution.
 
-For more information, see the [Extended Network Support service definition](../managed-operations/man-sd-network.md).
+For more information, see the [Extended Network Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-248-extended-network-support-from-ukcloud-service-definition-13.0.pdf).
 
 ## F
 
@@ -303,7 +303,7 @@ Let us know your thoughts and ideas by sending an email to <feedback@ukcloud.com
 
 A UKCloud Advanced Support Services product that provides you with monitoring and support for your Active Directory services and supporting Windows servers.
 
-For more information, see the [Managed Active Directory Support Service Definition](../managed-operations/man-sd-ad.md).
+For more information, see the [Managed Active Directory Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-253-managed-active-directory-support-service-definition-13.0.pdf).
 
 *See also:* [Advanced Support Services](#advanced-support-services)
 
@@ -311,7 +311,7 @@ For more information, see the [Managed Active Directory Support Service Definiti
 
 A UKCloud Managed Operations service that helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. The service includes a variety of options including managed monitoring, managing basic IT hygiene tasks, patching as a service and antivirus as a service. This service provides you with the building blocks to utilise essential operational delivery services.
 
-For more information, see the [Managed IT Operations Service Definition](../managed-operations/man-sd-managed-it-ops.md).
+For more information, see the [Managed IT Operations Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf).
 
 *See also:* [Anti-Virus as a Service](#anti-virus-as-a-service), [Managed Monitoring as a Service](#managed-monitoring-as-a-service), [Patching as a Service](#patching-as-a-service)
 
@@ -327,7 +327,7 @@ For more information, see the [Managed Monitoring as a Service Service Scope](..
 
 A UKCloud Advanced Support Services product that provides you with monitoring and support for your Remote Desktop Services and supporting Windows servers.
 
-For more information, see the [Managed Remote Desktop Services Support Service Definition](../managed-operations/man-sd-rds.md).
+For more information, see the [Managed Remote Desktop Services Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-254-managed-rds-support-service-definition-13.0.pdf).
 
 *See also:* [Advanced Support Services](#advanced-support-services)
 
@@ -335,7 +335,7 @@ For more information, see the [Managed Remote Desktop Services Support Service D
 
 A UKCloud Advanced Support Services product that provides monitoring and support for your SQL servers.
 
-For more information, see the [Managed SQL Server Service Definition](../managed-operations/man-sd-sqlserver.md).
+For more information, see the [Managed SQL Server Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-252-managed-sql-server-service-definition-13.0.pdf).
 
 *See also:* [Advanced Support Services](#advanced-support-services)
 
@@ -343,7 +343,7 @@ For more information, see the [Managed SQL Server Service Definition](../managed
 
 A UKCloud Advanced Support Services product that provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
 
-For more information, see the [Managed Web Server Service Definition](../managed-operations/man-sd-webserver.md).
+For more information, see the [Managed Web Server Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-255-managed-web-server-service-definition-13.0.pdf).
 
 *See also:* [Advanced Support Services](#advanced-support-services)
 
@@ -357,7 +357,7 @@ For more information, see the [Mass Transfer Facility service scope](../enableme
 
 A UKCloud IaaS service, powered by Zerto, that provides easy to use tools to help customers migrate workloads from their on-premises data centres to the UKCloud platform - all on a self-service basis.
 
-For more information, see the [Migration to the Cloud Service Definition](../migration/migr-sd.md).
+For more information, see the [Migration to the Cloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-235-migration-to-the-cloud-service-definition-13.0.pdf).
 
 ### Multi-Cloud for Tier 2
 
@@ -403,7 +403,7 @@ OFFICIAL data that requires specific handling to mitigate risk. Security measure
 
 A UKCloud service that provides ongoing Level 1 and Level 2 support for VMware estates when vSphere licences are operating on currently unsupported versions, providing organisations with additional time to plan upgrades to supported levels of VMware or migrations to new platforms or services.
 
-For more information, see the [On-Premises VMware Extended Support Service Definition](..//vmware/vmw-sd-extended-vmw-support.md).
+For more information, see the [On-Premises VMware Extended Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-256-vmware-extended-support-service-definition-13.0-1.pdf).
 
 ### OpenShift
 
@@ -439,7 +439,7 @@ A UKCloud for OpenStack block storage option that is always available, regardles
 
 A UKCloud for VMware VM type with uncontended compute resource allocation (CPU/RAM). Automated balancing is enable to pre-emptively optimise performance and availability.
 
-For more information, see the [UKCloud for VMware service definition](../vmware/vmw-sd.md).
+For more information, see the [UKCloud for VMware Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf).
 
 *See also:* [ESSENTIAL VM](#essential-vm), [PRIORITY VM](#priority-vm)
 
@@ -447,7 +447,7 @@ For more information, see the [UKCloud for VMware service definition](../vmware/
 
 A UKCloud for VMware VM type with uncontended compute resource allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
 
-For more information, see the [UKCloud for VMware service definition](../vmware/vmw-sd.md).
+For more information, see the [UKCloud for VMware Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf).
 
 *See also:* [ESSENTIAL VM](#essential-vm), [POWER VM](#power-vm)
 
@@ -455,7 +455,7 @@ For more information, see the [UKCloud for VMware service definition](../vmware/
 
 A UKCloud IaaS service that provides a totally isolated, single tenant compute and storage infrastructure, either in one of our sites or in a Crown Hosting Data Centre (CHDC).
 
-For more information, see the [Private Cloud service definition](../private-cloud/prc-sd.md).
+For more information, see the [Private Cloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-236-private-cloud-service-definition-13.0.pdf).
 
 Note the difference between Private Cloud, which is a single-tenant environment run on independent infrastructure, providing a private cloud environment, and Dedicated Compute, which is run within our multi-tenanted environment.
 
@@ -465,19 +465,19 @@ Note the difference between Private Cloud, which is a single-tenant environment 
 
 A UKCloud IaaS service that enables you to have private implementations of Oracle's Engineered Systems within UKCloud's assured, sovereign data centres, Crown Hosting Data Centres or even on-premises.
 
-For more information, see the [Private Cloud for Oracle Software service definition](../oracle/orcl-sd-private.md).
+For more information, see the [Private Cloud for Oracle Software Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-237-private-cloud-for-oracle-software-service-definition-13.0-1-1.pdf).
 
 ### Private Cloud for Storage
 
 A UKCloud IaaS service that provides single-tenant storage infrastructure on your own hardware, either in one of our sites or in a Crown Hosting Data Centre (CHDC).
 
-For more information, see the [Private Cloud for Storage service definition](../private-cloud/prc-sd-storage.md).
+For more information, see the [Private Cloud for Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-234-private-cloud-storage-service-definition-13.0-1.pdf).
 
 ### Professional Services
 
 UKCloud Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The four services include our Assessment, Migration, Optimisation and Transformation services and can be tailored to suit your requirements.
 
-For more information, see the [UKCloud Professional Services service definition](../pro-services/ps-sd.md).
+For more information, see the [UKCloud Professional Services Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-232-ukcloud-professional-services-service-definition-13.0-1.pdf).
 
 ### Protective Monitoring
 
@@ -511,7 +511,7 @@ A physically segregated part of the UKCloud platform within a site that provides
 
 A UKCloud IaaS service that provides a secure internet connection to our Elevated OFFICIAL security domain using NCSC-approved VPN technologies and the walled garden architectural pattern using bastion hosts.
 
-For more information, see the [Secure Remote Access service definition](../sra/sra-sd.md).
+For more information, see the [Secure Remote Access Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-238-secure-remote-access-service-definition-13.0.pdf).
 
 *See also:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz)
 
@@ -525,7 +525,7 @@ The UKCloud platform provides three security domains that support separation and
 
 Provides an always-on, cloud-hosted cyber security capability that can see all your IT systems, all the time, ensuring you have an up-to-date view of possible threats.
 
-For more information, see the [Security Operations Service service definition](../soc/soc-sd.md).
+For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 ### Self Service Backup and Restoration (TrilioVault)
 
@@ -599,31 +599,31 @@ General all-purpose block storage, providing a balance of performance and cost.
 
 A UKCloud service that provides a platform to deliver, protect and manage desktops and apps whilst containing costs and ensuring that end users can work anytime, anywhere, across any device.
 
-For more information, see the [UKCloud Desktop as a Service Service Definition](../daas/daas-sd.md).
+For more information, see the [UKCloud Desktop as a Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-257-ukcloud-desktop-as-a-service-service-definition-13.0.pdf).
 
 ### UKCloud for Microsoft Azure
 
 A UKCloud IaaS service that harnesses the innovation of Microsoft's Azure platform delivered from within our award-winning government-grade multi-cloud environment.
 
-For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
+For more information, see the [UKCloud for Microsoft Azure Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf).
 
 ### UKCloud for OpenStack
 
 A UKCloud IaaS service, powered by OpenStack, that provides a cloud platform specifically designed around the needs of digital communities, and engineered to facilitate true cloud-native applications.
 
-For more information, see the [UKCloud for OpenStack service definition](../openstack/ostack-sd.md).
+For more information, see the [UKCloud for OpenStack Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-242-ukcloud-for-openstack-service-definition-13.0.pdf).
 
 ### UKCloud for Red Hat OpenShift
 
 A UKCloud PaaS service that delivers a secure, private deployment of OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks including HCSN and Janet.
 
-For more information, see the [UKCloud for Red Hat OpenShift service definition](../openshift/oshift-sd.md).
+For more information, see the [UKCloud for Red Hat OpenShift Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-241-ukcloud-for-red-hat-openshift-service-definition-13.0.pdf).
 
 ### UKCloud for VMware
 
 A UKCloud IaaS service that provides a compute infrastructure specifically designed to deliver traditional enterprise applications in the cloud.
 
-For more information, see the [UKCloud for VMware service definition](../vmware/vmw-sd.md).
+For more information, see the [UKCloud for VMware Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf).
 
 ### UKCloud Health
 
@@ -655,7 +655,7 @@ Software that emulates the functionality of a physical computer, running an oper
 
 A licensing model provided by UKCloud that enables you to exchange the fixed cost of your ongoing VMware Support and Subscription (SnS) Service for existing perpetual VMware licences with a VMware Cloud Provider Programme (VCPP) consumption-based licence provided by UKCloud.
 
-For more information, see the [VMware Licence Service Service Definition](../vmware/vmw-sd-vls.md).
+For more information, see the [VMware Licence Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-226-vmware-licence-service-service-definition-13.0.pdf).
 
 ### vOrg
 
@@ -667,7 +667,7 @@ For more information, see the [VMware Licence Service Service Definition](../vmw
 
 A Cross Domain Security Zone (CDSZ) service option that provides you with self-service access to the CSDZ so that you can design, implement and manage your own walled garden, using technology and application services of your choice.
 
-For more information, see the [Cross Domain Security Zone service definition](../cdsz/cdsz-sd.md).
+For more information, see the [Cross Domain Security Zone Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-230-cross-domain-security-zone-service-definition-13.0-1.pdf).
 
 *See also:* [Cross Domain Security Zone (CDSZ)](#cross-domain-security-zone-cdsz)
 

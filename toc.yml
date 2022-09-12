@@ -9,43 +9,35 @@
   topicHref: articles/openstack/ostack-home.md
 - name: Oracle
   href: articles/oracle/
-  topicHref: articles/oracle/orcl-sd-private.md
+  topicHref: articles/oracle/orcl-sco-private.md
 - name: VMware
   href: articles/vmware/
   topicHref: articles/vmware/vmw-home.md
 - name: More
   nav_dropdown: true
   items:
+  - name: Cloud Security
+    topicHref: articles/security/sec-home.md
   - name: Cloud Storage
-    topicHref: articles/cloud-storage/cs-gs.md
+    topicHref: articles/cloud-storage/cs-home.md
   - name: Connectivity 
     topicHref: articles/connectivity/conn-faq.md
-  - name: Cross Domain Security Zone
-    topicHref: articles/cdsz/cdsz-gs-walled-garden.md
-  - name: Dedicated Compute
-    topicHref: articles/dedicated-compute/dc-sd.md
   - name: Desktop as a Service
-    topicHref: articles/daas/daas-sd.md
-  - name: Disaster Recovery as a Service
-    topicHref: articles/draas/draas-gs.md
+    topicHref: articles/daas/daas-home.md
   - name: Email and Collaboration 
     topicHref: articles/email/email-gs.md
   - name: Enablement Services
-    topicHref: articles/enablement/enbl-ref-services.md
+    topicHref: articles/enablement/enbl-home.md
   - name: Managed Operations
     topicHref: articles/managed-operations/man-home.md
-  - name: Migration to the Cloud 
-    topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud
-    topicHref: articles/private-cloud/prc-sd.md
+    topicHref: articles/private-cloud/prc-home.md
   - name: Professional Services
-    topicHref: articles/pro-services/ps-sd.md
-  - name: Secure Remote Access
-    topicHref: articles/sra/sra-gs.md
-  - name: Security Operations Service
-    topicHref: articles/soc/soc-sd.md   
+    topicHref: articles/pro-services/ps-home.md
   - name: UKCloud for Kubernetes
     topicHref: articles/kubernetes/k8s-home.md
+  - name: VMware Licensing & Support
+    topicHref: articles/vls/vls-home.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
   - name: Shared Services

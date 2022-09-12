@@ -45,7 +45,7 @@ We do not share a feed from our platform protective monitoring to customers, so 
 
 ## Security Operations Service
 
-If you require protective monitoring services above the hypervisor (for example, for your own virtual machines, appliances and applications), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+If you require protective monitoring services above the hypervisor (for example, for your own virtual machines, appliances and applications), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 ## Cyber Security News page
 

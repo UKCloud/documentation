@@ -19,7 +19,7 @@ toc_mdlink: man-ref-customer-prereqs.md
 
 ## Overview
 
-Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. For more information, see the [*Managed IT Operations Service Definition*](man-sd-managed-it-ops.md).
+Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire multi-cloud estate. For more information, see the [Managed IT Operations Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf).
 
 Before UKCloud can begin onboarding your virtual machines onto this service, your environment **must** meet the the prerequisites outlined in this article.
 

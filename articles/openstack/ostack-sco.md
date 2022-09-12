@@ -142,7 +142,7 @@ Although designed to be a large-scale cloud platform, we strongly advise that wh
 
 ## Published features not currently available
 
-The following features published in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md) are not currently available:
+The following features published in the [UKCloud for OpenStack Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-242-ukcloud-for-openstack-service-definition-13.0.pdf) are not currently available:
 
 - MCN connectivity
 

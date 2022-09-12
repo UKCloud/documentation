@@ -77,10 +77,10 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 UKCloud offers a variety of *T-shirt sizes* to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
 
-Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details on the currently available sizes.
+Check the [UKCloud for VMware Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf) for more details on the currently available sizes.
 
 > [!NOTE]
-> UKCloud for VMware does not currently support custom-sized VMs outside the T-shirt sizes, however if you require more flexibility with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of [*Dedicated Compute v2*](../dedicated-compute/dc-sd.md) to build custom-sized VMs.
+> UKCloud for VMware does not currently support custom-sized VMs outside the T-shirt sizes, however if you require more flexibility with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of [Dedicated Compute v2](https://ukcloud.com/app/uploads/2022/08/ukc-svc-227-dedicated-compute-v2-service-definition-13.0.pdf) to build custom-sized VMs.
 
 ### Can I resize a VM?
 
@@ -138,7 +138,7 @@ Dedicated Compute uses the same storage infrastructure as the shared compute pla
 
 There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (one month rather than one hour).
 
-For more details, see the [*Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md).
+For more details, see the [Dedicated Compute v2 Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-227-dedicated-compute-v2-service-definition-13.0.pdf).
 
 > [!NOTE]
 > Dedicated Compute is available only in UKCloud regions 5 and 6.
@@ -516,7 +516,7 @@ You will only be charged for the protection of the storage consumed, not the VM.
 
 With UKCloud for VMware's [*Journaling Protection*](vmw-sco-journaling-protection.md) option, you can protect your UKCloud for VMware applications by replicating them to another UKCloud for VMware-enabled zone. This ensures that you can meet your DR requirements, including any aggressive recovery point (RPO) or recovery time objectives (RTO).
 
-[*Disaster Recovery as a Service*](../draas/draas-sd.md) enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.
+[Disaster Recovery as a Service](https://ukcloud.com/app/uploads/2022/08/ukc-svc-231-disaster-recovery-as-a-service-service-definition-13.0.pdf) enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.
 
 ### How does UKCloud enable customers to create their own DR solutions?
 
@@ -598,7 +598,7 @@ The service is hosted in the UK and operated by UK government security-cleared s
 
 UKCloud's Cross Domain Security Zone enables customers to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
-For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
+For more information, see the [Cross Domain Security Zone Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-230-cross-domain-security-zone-service-definition-13.0-1.pdf).
 
 ## Feedback
 

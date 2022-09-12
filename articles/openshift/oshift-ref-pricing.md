@@ -186,7 +186,7 @@ For more information about the discount and purchase schemes offered by UKCloud,
 
 ### Registry storage
 
-- UKCloud uses our Cloud Storage service for registry storage, which is charged at the prevailing rate. For more information, see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md).
+- UKCloud uses our Cloud Storage service for registry storage, which is charged at the prevailing rate. For more information, see the [Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf).
 
 ### Enhanced Aggregated Logging
 

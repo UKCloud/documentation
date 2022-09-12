@@ -75,7 +75,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
-Check the [*Service Definition*](ostack-sd.md) for more details on the currently available sizes.
+Check the [Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-242-ukcloud-for-openstack-service-definition-13.0.pdf) for more details on the currently available sizes.
 
 ### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
@@ -193,7 +193,7 @@ To request the implementation of either the options shown above, raise a ticket 
 
 ### How much storage do I get with an instance?
 
-The default amount of storage which comes with each instance starts from 10GiB of ephemeral storage and increases as larger instances are consumed. Full details can be found in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md).
+The default amount of storage which comes with each instance starts from 10GiB of ephemeral storage and increases as larger instances are consumed. Full details can be found in the [UKCloud for OpenStack Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-242-ukcloud-for-openstack-service-definition-13.0.pdf).
 
 All ephemeral storage is fixed and cannot be increased.
 
@@ -243,7 +243,7 @@ UKCloud does not currently support any third-party key management services or HS
 
 ### Is object storage (OpenStack Swift) available?
 
-The OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that you can use in conjunction with OpenStack; see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md) for further details.
+The OpenStack object storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible object storage service that you can use in conjunction with OpenStack; see the [Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf) for further details.
 
 ### What is the fastest way of importing large amounts of data onto the UKCloud platform?
 

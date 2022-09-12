@@ -236,7 +236,7 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 
 For Disaster Recovery as a Service and Journaling Protection, we recommend that you run a test failover to verify that, in the case of an actual disaster, your VMs can be recovered successfully. For information about how to do this, as well as how to perform an actual failover, see [*How to perform a failover*](vmw-how-zerto-perform-failover.md).
 
-For Migration to the Cloud, you can now migrate your selected VMs to the UKCloud platform. For more information, see [*How to migrate your workloads to the UKCloud platform*](../migration/migr-how-zerto-migrate-to-ukcloud.md).
+For Migration to the Cloud, you can now migrate your selected VMs to the UKCloud platform. For more information, see [*How to migrate your workloads to the UKCloud platform*](../enablement/migr-how-zerto-migrate-to-ukcloud.md).
 
 ## Feedback
 

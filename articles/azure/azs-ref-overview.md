@@ -152,7 +152,7 @@ Azure Stack Hub storage is all served from the same pool of disks and does not p
 
 - Use blob storage (object storage) to support the application; not for multiple petabytes of data storage.
 
-- Put large volume data on UKCloud's [*Cloud Storage*](../cloud-storage/cs-sd.md).
+- Put large volume data on UKCloud's [Cloud Storage](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf).
 
 - Clean up backups to conserve storage.
 

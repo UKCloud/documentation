@@ -26,13 +26,13 @@ Whilst UKCloud for Oracle Software has been retired from sale, we do offer other
 
 ### Dedicated Compute
 
-For small Oracle environments we continue to offer [*Dedicated Compute*](../dedicated-compute/dc-sd.md) for both Assured and Elevated OFFICIAL. This is on our UKCloud for VMware service and utilises dedicated VMware hosts within the cloud. You should be sure to understand your licensing restrictions around VMs on small host clusters before installing Oracle software on VMs. Some Oracle software requires you to license all processors in a host cluster as Oracle doesn't recognise VMware as a hard partition for licences.
+For small Oracle environments we continue to offer [Dedicated Compute](https://ukcloud.com/app/uploads/2022/08/ukc-svc-227-dedicated-compute-v2-service-definition-13.0.pdf) for both Assured and Elevated OFFICIAL. This is on our UKCloud for VMware service and utilises dedicated VMware hosts within the cloud. You should be sure to understand your licensing restrictions around VMs on small host clusters before installing Oracle software on VMs. Some Oracle software requires you to license all processors in a host cluster as Oracle doesn't recognise VMware as a hard partition for licences.
 
 ### Private Cloud
 
-For larger Oracle requirements we continue to offer our [*Private Cloud*](../private-cloud/prc-sd.md) service for both Assured OFFICIAL and Elevated OFFICIAL, which you can use in conjunction with Oracle VM hypervisor.
+For larger Oracle requirements we continue to offer our [Private Cloud](https://ukcloud.com/app/uploads/2022/08/ukc-svc-236-private-cloud-service-definition-13.0.pdf) service for both Assured OFFICIAL and Elevated OFFICIAL, which you can use in conjunction with Oracle VM hypervisor.
 
-Alternatively, if you want to use Oracle proprietary hardware, such as Exadata, then we can support the hosting and management of certain Oracle technologies. See [*Private Cloud for Oracle Software*](orcl-sd-private.md) for more information.
+Alternatively, if you want to use Oracle proprietary hardware, such as Exadata, then we can support the hosting and management of certain Oracle technologies. See [*Private Cloud for Oracle Software*](https://ukcloud.com/app/uploads/2022/08/ukc-svc-237-private-cloud-for-oracle-software-service-definition-13.0-1-1.pdf) for more information.
 
 ## General
 
@@ -42,7 +42,7 @@ UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered
 
 ### What is provided in the service?
 
-For further details on the service, and what is provided, please view the [*UKCloud for Oracle Software service definition*](orcl-sd.md).
+For further details on the service, and what is provided, please view the [*UKCloud for Oracle Software service scope*](orcl-sco.md).
 
 ### Do UKCloud offer an SLA for this service?
 
@@ -50,7 +50,7 @@ Yes. There is a service credit-backed SLA of 99.95% for non-HA enabled VMs, and 
 
 The SLA excludes faults within your control or external networking connections such as internet, PSN, Janet or HSCN.
 
-For further details regarding the SLA, see the [*Service level agreement definition*](../other/other-ref-sla-definition.md).
+For further details regarding the SLA, see the [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ### Is the UKCloud for Oracle Software environment a separate physical hosting platform with external connectivity via the UKCloud for VMware platform?
 
@@ -76,7 +76,7 @@ No, this service is not currently available for Oracle data.
 
 ### Can I have a dedicated UKCloud for Oracle Software environment?
 
-Yes. If you prefer a dedicated environment, UKCloud offer the [*Private Cloud service*](../private-cloud/prc-sd.md) for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see [*Private Cloud for Oracle Software*](orcl-sd-private.md) for more information.
+Yes. If you prefer a dedicated environment, UKCloud offer the [Private Cloud service](https://ukcloud.com/app/uploads/2022/08/ukc-svc-236-private-cloud-service-definition-13.0.pdf) for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see [Private Cloud for Oracle Software](https://ukcloud.com/app/uploads/2022/08/ukc-svc-237-private-cloud-for-oracle-software-service-definition-13.0-1-1.pdf) for more information.
 
 ### Is the RAM virtual or physical?
 

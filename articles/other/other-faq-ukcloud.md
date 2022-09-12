@@ -38,16 +38,16 @@ Service option           | FAQ
 Journaling Protection    | [here](../vmware/vmw-faq-journaling-protection.md)
 Snapshot Protection      | [here](../vmware/vmw-faq-snapshot-protection.md)
 Sharing catalogs         | [here](../vmware/vmw-faq-sharing-catalogs.md)
-VMware Licence Service   | [here](../vmware/vmw-faq-vls.md)
+VMware Licence Service   | [here](../vls/vls-faq.md)
 
 ## Multi-cloud enabling services
 
 Service                                | FAQ
 ---------------------------------------|----
 Cloud Storage                          | [here](../cloud-storage/cs-faq.md)
-Cross Domain Security Zone (CDSZ)      | [here](../cdsz/cdsz-faq.md)
-Disaster Recovery as a Service (DRaaS) | [here](../draas/draas-faq.md)
-Secure Remote Access (SRA)             | [here](../sra/sra-faq.md)
+Cross Domain Security Zone (CDSZ)      | [here](../security/cdsz-faq.md)
+Disaster Recovery as a Service (DRaaS) | [here](../security/draas-faq.md)
+Secure Remote Access (SRA)             | [here](../security/sra-faq.md)
 
 ## Connectivity services
 

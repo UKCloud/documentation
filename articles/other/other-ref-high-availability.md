@@ -58,10 +58,10 @@ High-availability consideration | Notes
 --------------------------------|------
 [Neustar UltraDNS from UKCloud](../connectivity/conn-sco-glb.md) | Authoritative DNS that enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.
 [Neustar DDoS Protection from UKCloud](../connectivity/conn-sco-app-ddos.md) | A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.
-[Disaster Recovery as a Service](../draas/draas-sd.md) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
+[Disaster Recovery as a Service](https://ukcloud.com/app/uploads/2022/08/ukc-svc-231-disaster-recovery-as-a-service-service-definition-13.0.pdf) | A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.
 Replicated backup | Enables your services to be backed up and the backup data replicated to another site.
-[Cloud Storage](../cloud-storage/cs-sd.md) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
-[Professional Services](../pro-services/ps-sd.md) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
+[Cloud Storage](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf) | Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).
+[Professional Services](https://ukcloud.com/app/uploads/2022/08/ukc-svc-232-ukcloud-professional-services-service-definition-13.0-1.pdf) | Our multi-cloud experts can assess your cloud environment and help you ensure its availability.
 
 For information about product-specific availability features, see the appropriate section below.
 

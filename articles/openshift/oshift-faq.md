@@ -23,7 +23,7 @@ UKCloud for Red Hat OpenShift is UKCloud's OpenShift powered Kubernetes Platform
 
 UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure or platform services.
 
-For an overview what the service offers, see the [*UKCloud for Red Hat OpenShift Service Definition*](oshift-sd.md). For specific details about the implementation and boundaries of the service, see the [*UKCloud for Red Hat OpenShift Service Scope*](oshift-sco.md).
+For an overview what the service offers, see the [UKCloud for Red Hat OpenShift Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-241-ukcloud-for-red-hat-openshift-service-definition-13.0.pdf). For specific details about the implementation and boundaries of the service, see the [*UKCloud for Red Hat OpenShift Service Scope*](oshift-sco.md).
 
 ### Why deliver UKCloud for Red Hat OpenShift as a cloud service?
 

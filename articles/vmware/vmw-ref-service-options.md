@@ -21,7 +21,7 @@ toc_mdlink: vmw-ref-service-options.md
 
 Each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is completely configurable, and gives you the flexibility to use different service levels, virtual machine (VM) sizes, security domains, connectivity and data protection options.
 
-![UKCloud for VMware options](images/vmw-product-options-g12.png)
+![UKCloud for VMware options](images/vmw-product-options-g13.png)
 
 ## Security domain
 

@@ -279,7 +279,7 @@ Any customer data that UKCloud collects as part of this service will never leave
 
 Protective monitoring is included with all our IaaS platforms at the hypervisor level and below and follows GPG 13. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
-If you require protective monitoring services above the hypervisor we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+If you require protective monitoring services above the hypervisor we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 ## Feedback
 
