@@ -89,7 +89,7 @@ After you have logged in to the ZSSP, you can:
 
 - Perform a live failover to recover after a disaster or migrate workloads (see [*How to perform a failover*](vmw-how-zerto-perform-failover.md))
 
-- Move a VPG to migrate workloads (see [*How to migrate your workloads to the UKCloud platform*](../migration/migr-how-zerto-migrate-to-ukcloud.md))
+- Move a VPG to migrate workloads (see [*How to migrate your workloads to the UKCloud platform*](../enablement/migr-how-zerto-migrate-to-ukcloud.md))
 
 ## Feedback
 

@@ -43,31 +43,31 @@ Multi-Cloud for Tier 2 provides the most trusted, connected and flexible multi-c
 
 ### Cloud Storage
 
-A secure and highly adaptable object storage platform, which is natively optimised for cloud storage in terms of scale, resilience and accessibility. For more information, see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md).
+A secure and highly adaptable object storage platform, which is natively optimised for cloud storage in terms of scale, resilience and accessibility. For more information, see the [Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf).
 
 ### Cross Domain Security Zone (CDSZ)
 
-CDSZ enables UKCloud's Assured OFFICIAL and Elevated OFFICIAL security domains to communicate with each other as part of a requirement of a service, using cross-domain security patterns. For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
+CDSZ enables UKCloud's Assured OFFICIAL and Elevated OFFICIAL security domains to communicate with each other as part of a requirement of a service, using cross-domain security patterns. For more information, see the [Cross Domain Security Zone Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-230-cross-domain-security-zone-service-definition-13.0-1.pdf).
 
 ### Dedicated Compute v2
 
-Dedicated Compute v2 is a flexible solution designed for where guaranteed performance is required. Delivering exceptional performance through dedicated compute hosts, meeting your security obligations by addressing compliance and regulatory requirements through physical separation of workloads. For more information, see the [*UKCloud Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md).
+Dedicated Compute v2 is a flexible solution designed for where guaranteed performance is required. Delivering exceptional performance through dedicated compute hosts, meeting your security obligations by addressing compliance and regulatory requirements through physical separation of workloads. For more information, see the [UKCloud Dedicated Compute v2 Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-227-dedicated-compute-v2-service-definition-13.0.pdf).
 
 ### Disaster Recovery as a Service (DRaaS)
 
-This service (powered by Zerto) makes it easy to replicate and recover VMs to the cloud, by failing over from your own data centre to UKCloud. For more information, see the [*Disaster Recovery as a Service Service Definition*](../draas/draas-sd.md).
+This service (powered by Zerto) makes it easy to replicate and recover VMs to the cloud, by failing over from your own data centre to UKCloud. For more information, see the [Disaster Recovery as a Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-231-disaster-recovery-as-a-service-service-definition-13.0.pdf).
 
 ### Migration to the Cloud
 
-This service (powered by Zerto) makes it easy to replicate and migrate applications to the cloud, by moving VMs over from your own data centre to UKCloud's trusted, cost-effective and well-connected cloud. For more information, see the [*Migration to the Cloud Service Definition*](../migration/migr-sd.md).
+This service (powered by Zerto) makes it easy to replicate and migrate applications to the cloud, by moving VMs over from your own data centre to UKCloud's trusted, cost-effective and well-connected cloud. For more information, see the [Migration to the Cloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-235-migration-to-the-cloud-service-definition-13.0.pdf).
 
 ### Secure Remote Access (SRA)
 
-This service enables you to securely connect to the UKCloud Elevated OFFICIAL security domain using internet virtual private network (VPN) technologies and the walled garden architectural pattern (using bastion hosts), where direct connection to the network is not available. For more information, see the [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
+This service enables you to securely connect to the UKCloud Elevated OFFICIAL security domain using internet virtual private network (VPN) technologies and the walled garden architectural pattern (using bastion hosts), where direct connection to the network is not available. For more information, see the [Secure Remote Access Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-238-secure-remote-access-service-definition-13.0.pdf).
 
 ### UKCloud Desktop as a Service
 
-UKCloud Desktop as a Service provides a platform to deliver, protect and manage desktops and applications whilst containing costs and ensuring that end users can work anytime, anywhere, across any device. This service enables the Bring Your Own Device (BYOD) policy and supports remote working, without compromising application availability, security, and compliance. For more information, see the [*UKCloud Desktop as a Service Service Definition*](../daas/daas-sd.md).
+UKCloud Desktop as a Service provides a platform to deliver, protect and manage desktops and applications whilst containing costs and ensuring that end users can work anytime, anywhere, across any device. This service enables the Bring Your Own Device (BYOD) policy and supports remote working, without compromising application availability, security, and compliance. For more information, see the [UKCloud Desktop as a Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-257-ukcloud-desktop-as-a-service-service-definition-13.0.pdf).
 
 ### VMware Cloud Disaster Recovery (VCDR)
 
@@ -75,11 +75,11 @@ You can use VMware Cloud Disaster Recovery&trade; to protect your VMware vSphere
 
 ### VMware Extended Support (VES)
 
-VES provides ongoing Level 1 and Level 2 support for VMware estates where vSphere licences are operating on currently unsupported versions such as v5.5 and v6.0. VES provides additional time to plan upgrades to supported levels of VMware or migrations onto new platforms or services, such as UKCloud. Effectively, this is a cut down version of the VLS service, offering only support and no licences. For more information, see the [*On-Premises VMware Extended Support Service Definition*](../vmware/vmw-sd-extended-vmw-support.md).
+VES provides ongoing Level 1 and Level 2 support for VMware estates where vSphere licences are operating on currently unsupported versions such as v5.5 and v6.0. VES provides additional time to plan upgrades to supported levels of VMware or migrations onto new platforms or services, such as UKCloud. Effectively, this is a cut down version of the VLS service, offering only support and no licences. For more information, see the [VMware Extended Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-256-vmware-extended-support-service-definition-13.0-1.pdf).
 
 ### VMware Licence Service (VLS)
 
-VLS has been designed to reduce cost and deliver licence flexibility for on-premises VMware compute estates, without any long-term commitment, making it is easier to modernise existing VMware environments. Both new licence purchases and support of existing VMware estates can benefit from this consumption based UKCloud service. This service is ideal if you need licensing and support, but do not want to commit to long-term expensive VMware licence agreements. For more information, see the [*VMware Licence Service Service Definition*](../vmware/vmw-sd-vls.md).
+VLS has been designed to reduce cost and deliver licence flexibility for on-premises VMware compute estates, without any long-term commitment, making it is easier to modernise existing VMware environments. Both new licence purchases and support of existing VMware estates can benefit from this consumption based UKCloud service. This service is ideal if you need licensing and support, but do not want to commit to long-term expensive VMware licence agreements. For more information, see the [VMware Licence Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-226-vmware-licence-service-service-definition-13.0.pdf).
 
 #### VMware Horizon Licences (VLS)
 
@@ -93,15 +93,15 @@ VMware Workspace ONE is an intelligence-driven digital workspace platform that s
 
 ### Private Cloud
 
-This service provides single-tenant compute and storage, hosted either in one of our data centres, to gain the benefits of our Assured and Elevated security domains, or in your Crown Hosting Data Centre (CHDC). For more information, see the [*Private Cloud Service Definition*](../private-cloud/prc-sd.md).
+This service provides single-tenant compute and storage, hosted either in one of our data centres, to gain the benefits of our Assured and Elevated security domains, or in your Crown Hosting Data Centre (CHDC). For more information, see the [Private Cloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-236-private-cloud-service-definition-13.0.pdf).
 
 ### Private Cloud for Oracle Software
 
-This service provides single-tenant compute, where your compute needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated security domains, or in your Crown Hosting Data Centre (CHDC). This is specifically set up for the use of Oracle, and there are a variety of hardware and infrastructure options to choose from. For more information, see the [*Private Cloud for Oracle Software Service Definition*](../oracle/orcl-sd-private.md).
+This service provides single-tenant compute, where your compute needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated security domains, or in your Crown Hosting Data Centre (CHDC). This is specifically set up for the use of Oracle, and there are a variety of hardware and infrastructure options to choose from. For more information, see the [Private Cloud for Oracle Software Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-237-private-cloud-for-oracle-software-service-definition-13.0-1-1.pdf).
 
 ### Private Cloud for Storage
 
-This service provides single-tenant storage, where your data is hosted either in one of our data centres, to gain the benefits of our Assured OFFICIAL and Elevated OFFICIAL security domains, or in your Crown Hosting Data Centre (CHDC). For more information, see the [*Private Cloud for Storage Service Definition*](../private-cloud/prc-sd-storage.md).
+This service provides single-tenant storage, where your data is hosted either in one of our data centres, to gain the benefits of our Assured OFFICIAL and Elevated OFFICIAL security domains, or in your Crown Hosting Data Centre (CHDC). For more information, see the [Private Cloud for Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-234-private-cloud-storage-service-definition-13.0-1.pdf).
 
 ## Cloud software
 
@@ -161,7 +161,7 @@ VMware Workspace ONE UEM is the secure enterprise platform that delivers and man
 
 ## Professional Services
 
-UKCloud's Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The services can be tailored to suit your requirements. For more information, see the [*UKCloud Professional Services Service Definition*](../pro-services/ps-sd.md).
+UKCloud's Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. The services can be tailored to suit your requirements. For more information, see the [UKCloud Professional Services Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-232-ukcloud-professional-services-service-definition-13.0-1.pdf).
 
 ### Cloud Assessment Service
 
@@ -199,41 +199,41 @@ Mapping, discovery and classification of an entity's data, with the outcome of o
 
 ### Managed IT Operations from UKCloud
 
-Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire IT estate via managed monitoring, backups, OS patching and anti-virus/malware, all delivered as a managed service. For more information, see the [*Managed IT Operations Service Definition*](../managed-operations/man-sd-managed-it-ops.md).
+Managed IT Operations helps to reduce the non-value add challenges of managing your compute assets, whilst increasing your overall level of trust and confidence in the true health of your entire IT estate via managed monitoring, backups, OS patching and anti-virus/malware, all delivered as a managed service. For more information, see the [Managed IT Operations Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf).
 
 ### Managed Active Directory Support
 
-UKCloud provides full 24/7 monitoring and support for your Active Directory (AD) services and supporting Windows servers across your multi-cloud compute estate. This monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [*Managed Active Directory Support Service Definition*](../managed-operations/man-sd-ad.md).
+UKCloud provides full 24/7 monitoring and support for your Active Directory (AD) services and supporting Windows servers across your multi-cloud compute estate. This monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [Managed Active Directory Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-253-managed-active-directory-support-service-definition-13.0.pdf).
 
 ### Managed Remote Desktop Services Support
 
-UKCloud provides full 24/7 monitoring and support for your Remote Desktop Services (RDS) and supporting Windows servers across your multi-cloud compute estate. This monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your RDS services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [*Managed Remote Desktop Services Support Service Definition*](../managed-operations/man-sd-rds.md).
+UKCloud provides full 24/7 monitoring and support for your Remote Desktop Services (RDS) and supporting Windows servers across your multi-cloud compute estate. This monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your RDS services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [Managed Remote Desktop Services Support Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-254-managed-rds-support-service-definition-13.0.pdf).
 
 ### Managed SQL Server
 
-UKCloud provides full monitoring and support for your SQL servers across your multi-cloud compute estate. This monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [*Managed SQL Server Service Definition*](../managed-operations/man-sd-sqlserver.md).
+UKCloud provides full monitoring and support for your SQL servers across your multi-cloud compute estate. This monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [Managed SQL Server Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-252-managed-sql-server-service-definition-13.0.pdf).
 
 ### Managed Web Server
 
-UKCloud provides full monitoring and support for your IIS, Apache, Windows or Linux servers across your multi-cloud compute estate. This monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your web services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [*Managed Web Server Service Definition*](../managed-operations/man-sd-webserver.md).
+UKCloud provides full monitoring and support for your IIS, Apache, Windows or Linux servers across your multi-cloud compute estate. This monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your web services are operating effectively, enabling you to focus on targeted organisational outcomes. For more information, see the [Managed Web Server Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-255-managed-web-server-service-definition-13.0.pdf).
 
 ### Extended Network Support from UKCloud
 
-Extended Network Support from UKCloud enables you to choose from an extensive list of officially supported network appliances for which UKCloud undertakes the initial deployment (or assumes ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support, further enabling you to focus on your applications and business outcomes rather than worrying about your connectivity uptime. For more information, see the [*Extended Network Support from UKCloud Service Definition*](../managed-operations/man-sd-network.md).
+Extended Network Support from UKCloud enables you to choose from an extensive list of officially supported network appliances for which UKCloud undertakes the initial deployment (or assumes ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support, further enabling you to focus on your applications and business outcomes rather than worrying about your connectivity uptime. For more information, see the [Extended Network Support from UKCloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-248-extended-network-support-from-ukcloud-service-definition-13.0.pdf).
 
 ## Third-party support services
 
 ### Neustar DDoS Protection from UKCloud
 
-Neustar DDoS Protection has two options: UltraDDos Protect and UltraWAF. Both are tailored to your traffic patterns, providing you with powerful analytics, top-tier personalised DDoS mitigation and layer 7 protection that enables you to suppress threats before they become attacks. Ideal for both UKCloud and non-UKCloud based compute workloads. For more information, see the [*Neustar DDoS Protection from UKCloud Service Definition*](../connectivity/conn-sd-ddosprotect.md).
+Neustar DDoS Protection has two options: UltraDDos Protect and UltraWAF. Both are tailored to your traffic patterns, providing you with powerful analytics, top-tier personalised DDoS mitigation and layer 7 protection that enables you to suppress threats before they become attacks. Ideal for both UKCloud and non-UKCloud based compute workloads. For more information, see the [Neustar DDoS Protection from UKCloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-250-neustar-ddos-protection-from-ukcloud-service-definition-13.0.pdf).
 
 ### Neustar UltraDNS from UKCloud
 
-Neustar UltraDNS is an enterprise grade, cloud-based authoritative DNS service that securely delivers fast and accurate query responses to websites and other vital online assets. Options around primary, secondary and recursive DNS to fit your specific DNS needs. Ideal for both UKCloud and non-UKCloud based compute workloads. For more information, see the [*Neustar UltraDNS from UKCloud Service Definition*](../connectivity/conn-sd-ultradns.md).
+Neustar UltraDNS is an enterprise grade, cloud-based authoritative DNS service that securely delivers fast and accurate query responses to websites and other vital online assets. Options around primary, secondary and recursive DNS to fit your specific DNS needs. Ideal for both UKCloud and non-UKCloud based compute workloads. For more information, see the [Neustar UltraDNS from UKCloud Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-250-neustar-ddos-protection-from-ukcloud-service-definition-13.0.pdf).
 
 ### Security Operations Service
 
-An always-on, cloud-hosted cyber security capability that can see all your IT compute systems, all the time. Performing services such as traffic analysis; deep packet inspections; IDS, MDR, vulnerability scanning and blacklist monitoring of the assets that matter to you. This ensures that you have an up-to-date view of all possible threats. For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+An always-on, cloud-hosted cyber security capability that can see all your IT compute systems, all the time. Performing services such as traffic analysis; deep packet inspections; IDS, MDR, vulnerability scanning and blacklist monitoring of the assets that matter to you. This ensures that you have an up-to-date view of all possible threats. For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 ## Feedback
 

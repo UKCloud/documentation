@@ -26,7 +26,7 @@ The following provides a brief overview of our managed operations products; clic
 > [!NOTE]
 > These services are not intended to replace a customer's Systems Administrator or Operations Team. This service should be used to reduce the burden of routine IT hygiene and provide Level 3+ support assistance.
 
-- [**Managed IT Operations**](man-sd-managed-it-ops.md) - A portfolio of managed operations products focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
+- [**Managed IT Operations**](https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf) - A portfolio of managed operations products focused on enhancing the general health of your compute assets. This portfolio is comprised of the following elements:
   
   - [**_Managed Monitoring as a Service_**](man-sco-monitoring.md) - The foundation of the Managed IT Operations portfolio of services. We become your first line of support, 24 hours a day, 365 days a year, receiving and reacting to any abnormal events or alerts across your IT estate. This means you can reduce the amount of noise you have to filter through, enabling you to focus on the critical events that really matter.
 
@@ -36,13 +36,15 @@ The following provides a brief overview of our managed operations products; clic
 
 - **Advanced Support Services** - A suite of specialised support products focused on the middleware and back-end services supporting your solutions. This suite is comprised of the following products:
 
-  - [**_Managed SQL Server_**](man-sd-sqlserver.md) - Provides monitoring and support for your SQL servers. This level of monitoring and support, when coupled with SQL tuning and proactive SQL patching, provides you with the confidence that your SQL services are operating effectively.
+  - [**_Managed Active Directory (AD) Support_**](https://ukcloud.com/app/uploads/2022/08/ukc-svc-253-managed-active-directory-support-service-definition-13.0.pdf) - Provides you with monitoring and support for your AD services and supporting Windows servers.
 
-  - [**_Managed Web Server_**](man-sd-webserver.md) - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers. This level of monitoring and support, when coupled with proactive operating system patching, provides you with the confidence that your web services are operating effectively.
+  - [**_Managed Remote Desktop Services (RDS) Support_**](https://ukcloud.com/app/uploads/2022/08/ukc-svc-254-managed-rds-support-service-definition-13.0.pdf) - Provides you with monitoring and support for your RDS services and supporting Windows servers.
 
-  - [**_Managed Active Directory (AD) Support_**](man-sd-ad.md) - Provides you with monitoring and support for your AD services and supporting Windows servers. This level of monitoring and support, when coupled with proactive Windows patching, provides you with the confidence that your AD services are operating effectively.
+  - [**_Managed SQL Server_**](https://ukcloud.com/app/uploads/2022/08/ukc-svc-252-managed-sql-server-service-definition-13.0.pdf) - Provides monitoring and support for your SQL servers.
 
-- [**Extended Network Support from UKCloud**](man-sd-network.md) - Enables customers to choose from an extensive list of officially supported network appliances with UKCloud undertaking the initial deployment (or assuming ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support.
+  - [**_Managed Web Server_**](https://ukcloud.com/app/uploads/2022/08/ukc-svc-255-managed-web-server-service-definition-13.0.pdf) - Provides you with monitoring and support for IIS or Apache and supporting Windows or Linux servers.
+
+- [**Extended Network Support from UKCloud**](https://ukcloud.com/app/uploads/2022/08/ukc-svc-248-extended-network-support-from-ukcloud-service-definition-13.0.pdf) - Enables customers to choose from an extensive list of officially supported network appliances with UKCloud undertaking the initial deployment (or assuming ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support.
 
 ## Feedback
 

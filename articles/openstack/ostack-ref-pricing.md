@@ -37,7 +37,7 @@ Each service has a per-unit price. Billing is per unit.
 
 Persistent block storage cost is based on the average storage provisioned by the customer at the end of the month, which is based on daily average measurements.
 
-In addition, our Cloud Storage service is available to provide an API-accessible and S3-compatible object storage solution that complements your OpenStack environment. For full details, see the [*Cloud Storage Service Definition*](../cloud-storage/cs-sd.md).
+In addition, our Cloud Storage service is available to provide an API-accessible and S3-compatible object storage solution that complements your OpenStack environment. For full details, see the [Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf).
 
 ## Self-service backup and restoration
 

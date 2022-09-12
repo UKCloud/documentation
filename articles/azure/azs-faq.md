@@ -78,7 +78,7 @@ While UKCloud for Microsoft Azure is developed by Microsoft, some services will 
 
 ### Does UKCloud offer an SLA for this service?
 
-The SLA for this service is 99.95%. For further details, review the [*UKCloud for Microsoft Azure Service Definition*](azs-sd.md).
+The SLA for this service is 99.95%. For further details, review the [UKCloud for Microsoft Azure Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf).
 
 ### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
 
@@ -191,7 +191,7 @@ This can be requested via the UKCloud [Free Trial page](https://ukcloud.com/free
 
 ### What do I do when my trial comes to an end?
 
-During your 30 day trial period, you will be contacted regularly by your Service Delivery Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you want to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you want to commit to using the service, your trial will convert to a full paid service, and you'll then be billed according to the [*Service Definition*](azs-sd.md).
+During your 30 day trial period, you will be contacted regularly by your Service Delivery Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you want to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you want to commit to using the service, your trial will convert to a full paid service, and you'll then be billed according to the [Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf).
 
 ## Billing and legal
 

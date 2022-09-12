@@ -39,7 +39,7 @@ The figure below shows an example of a possible setup, but it should be used as 
 
 ## Service architecture
 
-UKCloud will provide access to a CDSZ environment for the transfer of data between the security domains. A CDSZ Walled Garden is a VMware only environment, utilizing VMware Cloud Director as the management orchestrator for the service. For additional information regarding the CDSZ, see the [*Service Scope*](../cdsz/cdsz-sco.md).
+UKCloud will provide access to a CDSZ environment for the transfer of data between the security domains. A CDSZ Walled Garden is a VMware only environment, utilizing VMware Cloud Director as the management orchestrator for the service. For additional information regarding the CDSZ, see the [*Service Scope*](../security/cdsz-sco.md).
 
 The actual CDSZ service will be provided without charge for the transfer of data, with the following restrictions:
 
@@ -55,7 +55,7 @@ The actual CDSZ service will be provided without charge for the transfer of data
 
 - Customers are responsible for the setting up of the applications within their service to facilitate the transfer. If required, UKCloud can provide assistance via our Professional Services team, which can be arranged via your Service Delivery Manager.
 
-A CDSZ Walled Garden provides a virtual data centre (VDC) in which you can build VMs and virtual networks to inspect and protect data moving between Assured and Elevated security domains. You can find more information about architecting a CDSZ environment in the [*Getting Started Guide for the Cross Domain Security Zone*](../cdsz/cdsz-gs-walled-garden.md) and the [*Cross Domain Security Zone Blueprint*](../cdsz/cdsz-ref-bp-overview.md).
+A CDSZ Walled Garden provides a virtual data centre (VDC) in which you can build VMs and virtual networks to inspect and protect data moving between Assured and Elevated security domains. You can find more information about architecting a CDSZ environment in the [*Getting Started Guide for the Cross Domain Security Zone*](../security/cdsz-gs-walled-garden.md) and the [*Cross Domain Security Zone Blueprint*](../security/cdsz-ref-bp-overview.md).
 
 ## Service availability
 
@@ -65,15 +65,15 @@ As a free service for data transfer between security domains, customers are not 
 
 The following documents contain more information about the CDSZ and the service options:
 
-- [*Getting Started Guide for the Cross Domain Security Zone Walled Garden*](../cdsz/cdsz-gs-walled-garden.md)
+- [*Getting Started Guide for the Cross Domain Security Zone Walled Garden*](../security/cdsz-gs-walled-garden.md)
 
-- [*Cross Domain Service Scope*](../cdsz/cdsz-sco.md)
+- [*Cross Domain Service Scope*](../security/cdsz-sco.md)
 
-- [*Cross Domain Security Zone FAQs*](../cdsz/cdsz-faq.md)
+- [*Cross Domain Security Zone FAQs*](../security/cdsz-faq.md)
 
-- [*UKCloud Cross Domain Security Zone application process*](../cdsz/cdsz-ref-application-process.md)
+- [*UKCloud Cross Domain Security Zone application process*](../security/cdsz-ref-application-process.md)
 
-- [*Cross Domain Security Zone Blueprint*](../cdsz/cdsz-ref-bp-overview.md)
+- [*Cross Domain Security Zone Blueprint*](../security/cdsz-ref-bp-overview.md)
 
 ## Feedback
 

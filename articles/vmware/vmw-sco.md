@@ -53,7 +53,7 @@ PRIORITY      | Uncontended (CPU/GiB) | Configured to reduce workload movement a
 
 **VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through VMware Cloud Director.
 
-Full details of the available service options are outlined in the [*Service Definition*](vmw-sd.md).
+Full details of the available service options are outlined in the [Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf).
 
 ## Storage options
 
@@ -201,7 +201,7 @@ Full customer and UKCloud responsibilities can be found in the [*Bring Your Own 
 
 We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
-If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
 
@@ -271,7 +271,7 @@ For information about Planned and Emergency Maintenance, see [*Understanding UKC
 
 The following documents contain more information about UKCloud for VMware and the service options:
 
-- [*UKCloud for VMware Service Definition*](vmw-sd.md)
+- [UKCloud for VMware Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-244-ukcloud-for-vmware-service-definition-13.0.pdf)
 
 - [*UKCloud for VMware FAQ*](vmw-faq.md)
 

@@ -142,7 +142,7 @@ We can provide:
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, check the [*Service Definition*](azs-sd.md).
+For the latest available licences, check the [Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If customers provide their own licensing, they must inform UKCloud (by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal) for a retrospective discount.
 
@@ -204,7 +204,7 @@ Customers are responsible for:
 
 We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
-If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+If you require protective monitoring services above the hypervisor (for example, for your VM), we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
 
@@ -289,7 +289,7 @@ For UKCloud for Microsoft Azure pricing, see the [UKCloud Pricing Guide](https:/
 
 The following documents contain more information about UKCloud for Microsoft Azure and the service options:
 
-- [*UKCloud for Microsoft Azure Service Definition*](azs-sd.md)
+- [UKCloud for Microsoft Azure Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-240-ukcloud-for-microsoft-azure-service-definition-13.0.pdf)
 
 - [*Pricing information for UKCloud for Microsoft Azure*](azs-ref-pricing.md)
 

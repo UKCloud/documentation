@@ -71,7 +71,7 @@ Action upon detection - Suspicious objects                    | A/R      | R/C  
 
 UKCloud harnesses the market-leading cyber security services of [SentinelOne](https://https://www.sentinelone.com/) as the engine that powers our Anti-Virus as a Service product.
 
-To ensure the utmost accuracy, reliability and protection of our [*Anti-Virus as a Service*](man-sd-managed-it-ops.md) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
+To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf) product, SentinelOne Agents must be installed on any customer end-point (VM) opted in to this service. The SentinelOne Agent exchanges key endpoint metadata securely between any customer endpoint that has the SentinelOne agent installed and SentinelOne's central cloud platform, which sits outside of UKCloud's data centres.
 
 For a full list of the data that may be exchanged between the SentinelOne Agent and SentinelOne's central cloud platform, see [*Data collected by UKCloud's Anti-Virus as a Service*](man-ref-sentinelone-datacollection.md).
 

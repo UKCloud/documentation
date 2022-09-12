@@ -134,7 +134,7 @@ Storage is billed on a per-GiB per-month basis, and is based on utilisation of t
 
 ### How is my storage bill calculated?
 
-Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the [*Cloud Storage Service Definition*](cs-sd.md). When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
+Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the [Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf). When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
 
 As an example, if you use 520TiB of storage in a month, your charges are calculated as:
 
@@ -194,7 +194,7 @@ Ultimately, it is down to you to select which encryption methodology should be u
 
 UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
-For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
+For more information, see the [Cross Domain Security Zone Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-230-cross-domain-security-zone-service-definition-13.0-1.pdf).
 
 ## Feedback
 

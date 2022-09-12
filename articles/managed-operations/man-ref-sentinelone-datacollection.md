@@ -21,7 +21,7 @@ toc_mdlink: man-ref-sentinelone-datacollection.md
 
 UKCloud harnesses the market-leading cyber security services of [SentinelOne](https://https://www.sentinelone.com/) as the engine that powers our Anti-Virus as a Service product.
 
-To ensure the utmost accuracy, reliability and protection of our [*Anti-Virus as a Service*](https://docs.ukcloud.com/articles/managed-services/man-sd-managed-it-ops.html) product, key endpoint metadata must be securely exchanged between SentinelOne's central cloud platform, which sits outside of UKCloud's data centres, and any customer endpoint that has the SentinelOne Agent installed.
+To ensure the utmost accuracy, reliability and protection of our [Anti-Virus as a Service](https://ukcloud.com/app/uploads/2022/08/ukc-svc-251-managed-it-operations-service-definition-13.0.pdf) product, key endpoint metadata must be securely exchanged between SentinelOne's central cloud platform, which sits outside of UKCloud's data centres, and any customer endpoint that has the SentinelOne Agent installed.
 
 This article defines any such metadata that may be exchanged between a customer's endpoint that has the SentinelOne Agent installed and the SentinelOne central cloud platform.
 

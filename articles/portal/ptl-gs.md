@@ -164,7 +164,7 @@ The Portal navigation panel provides access to all the functionality available i
 
   - **Cyber Security News**, where you can view general threat briefs and security news (see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md))
 
-  - **Security Operations Service**, which shows the number of logs processed against the UKCloud platform by our Security Operations Service (see [*Security Operations Service Service Definition*](../soc/soc-sd.md))
+  - **Security Operations Service**, which shows the number of logs processed against the UKCloud platform by our Security Operations Service (see [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf))
 
 - **Support** - Provides access to:
 

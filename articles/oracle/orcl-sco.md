@@ -52,7 +52,7 @@ Customers can configure OVMs by the number of cores, and amount of memory and st
 
 VM creation and sizing increases are currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM or change the size of a VM. For more information, see [*Oracle cloud self-service functionality*](orcl-ref-bug-self-service.md).
 
-Full details of the available service options are outlined in the [*Service Definition*](orcl-sd.md).
+Full details of the available service options are outlined in the [*Service Scope*](orcl-sco.md).
 
 ## Storage options
 
@@ -157,7 +157,7 @@ Bring Your Own Firewall is currently not available for UKCloud for Oracle Softwa
 
 We've implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
-If you require protective monitoring services above the hypervisor, we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+If you require protective monitoring services above the hypervisor, we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
 
@@ -221,7 +221,7 @@ For information about Planned and Emergency Maintenance, see [*Understanding UKC
 
 The following documents contain more information about UKCloud for Oracle Software and the service options:
 
-- [*UKCloud for Oracle Software Service Definition*](orcl-sd.md)
+- [*UKCloud for Oracle Software Service Scope*](orcl-sco.md)
 
 - [*UKCloud Terms & Conditions for G-Cloud 12*](../other/other-ref-terms-and-conditions.md)
 

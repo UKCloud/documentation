@@ -27,7 +27,7 @@ UKCloud for Red Hat OpenShift is UKCloud's OpenShift powered Kubernetes Platform
 
 UKCloud deploys, monitors and updates the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality controlled code, all without having to worry about the underlying infrastructure.
 
-For more information about what the service offers, see the [*UKCloud for Red Hat OpenShift Service Definition*](oshift-sd.md).
+For more information about what the service offers, see the [UKCloud for Red Hat OpenShift Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-241-ukcloud-for-red-hat-openshift-service-definition-13.0.pdf).
 
 ### Key service capabilities
 
@@ -148,7 +148,7 @@ To facilitate the deployment of stateful workloads, UKCloud for Red Hat OpenShif
 
 As standard, localised component failures are tolerated within the infrastructure through elimination of single points of failure (including physical server failure or disk failure).
 
-Although OpenShift is designed to deploy and manage stateless applications (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain an original copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud's [Cloud Storage](../cloud-storage/cs-sd.md) service.
+Although OpenShift is designed to deploy and manage stateless applications (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain an original copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud's [Cloud Storage](https://ukcloud.com/app/uploads/2022/08/ukc-svc-229-cloud-storage-service-definition-13.0-2.pdf) service.
 
 ### Service limitations
 
@@ -162,7 +162,7 @@ In line with current restrictions on the OpenStack service that underpins OpenSh
 
 ### Published features not currently available
 
-The following features published in the [UKCloud for Red Hat OpenShift Service Definition](oshift-sd.md) are not currently available:
+The following features published in the [UKCloud for Red Hat OpenShift Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-241-ukcloud-for-red-hat-openshift-service-definition-13.0.pdf) are not currently available:
 
 - Janet, PSN and MCN connectivity
 
@@ -214,7 +214,7 @@ UKCloud for Red Hat OpenShift includes full UKCloud support as standard at no ad
 
 In addition, you'll be assigned a Service Delivery Manager (SDM) to provide any assistance you may require during your use of the service, including onboarding, service reviews and incident reporting and escalation.
 
-UKCloud's Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. We provide expert, agnostic, multi-cloud advice through a structured, modular approach. Each stage is supported by an outcome-focused workflow that delivers tailored, high value output, enabling organisations to adopt and leverage cloud with confidence. For more information, see the [*Professional Services Service Definition*](../pro-services/ps-sd.md).
+UKCloud's Professional Services are designed to provide a clear path to true cloud value, no matter where your organisation is on the journey to cloud migration and adoption. We provide expert, agnostic, multi-cloud advice through a structured, modular approach. Each stage is supported by an outcome-focused workflow that delivers tailored, high value output, enabling organisations to adopt and leverage cloud with confidence. For more information, see the [Professional Services Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-232-ukcloud-professional-services-service-definition-13.0-1.pdf).
 
 Cloud Architects are available to support you during the design of solutions to help reconcile your requirements with our cloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions.
 
@@ -230,7 +230,7 @@ To assist you in using our services and all associated functionality, the UKClou
 
 Protective Monitoring is available for UKCloud for Red Hat OpenShift. For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
-If you require additional protective monitoring services, we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [*Security Operations Service Service Definition*](../soc/soc-sd.md).
+If you require additional protective monitoring services, we offer our Security Operations Service to monitor your virtual estate (additional charges apply). For more information, see the [Security Operations Service Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-239-security-operations-service-service-definition-13.0.pdf).
 
 In line with UKCloud's System Interconnect and Security Policy (SISP), we provide notifications of customer-impacting security incidents. It's the customer's responsibility to report similar incidents to us.
 
@@ -260,7 +260,7 @@ At the point of termination, all customer data, accounts and access will be perm
 
 For more information about UKCloud for Red Hat OpenShift, see the following:
 
-- [*UKCloud for Red Hat OpenShift Service Definition*](oshift-sd.md)
+- [UKCloud for Red Hat OpenShift Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-241-ukcloud-for-red-hat-openshift-service-definition-13.0.pdf)
 
 - [*Pricing information for UKCloud for Red Hat OpenShift*](oshift-ref-pricing.md)
 
