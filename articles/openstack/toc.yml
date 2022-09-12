@@ -74,8 +74,6 @@
     href: ostack-ref-pricing.md
   - name: Self Service Backup and Restoration (TrilioVault) Service Scope
     href: ostack-sco-triliovault.md
-  - name: Service Definition
-    href: ostack-sd.md
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
 - name: Videos

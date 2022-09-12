@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: Private Cloud
+    href: prc-home.md
 - name: FAQs
   items:
   - name: Private Cloud FAQs
@@ -6,11 +10,9 @@
     href: prc-faq-storage.md
 - name: Service Information
   items:
-  - name: Private Cloud for Storage Service Definition
-    href: prc-sd-storage.md
+  - name: Dedicated Compute v2 Service Scope
+    href: prc-sco-dc.md
   - name: Private Cloud for Storage Service Scope
     href: prc-sco-storage.md
-  - name: Private Cloud Service Definition
-    href: prc-sd.md
   - name: Private Cloud Service Scope
     href: prc-sco.md

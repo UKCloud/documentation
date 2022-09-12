@@ -88,7 +88,5 @@
   items:
   - name: Pricing information
     href: oshift-ref-pricing.md
-  - name: Service Definition
-    href: oshift-sd.md
   - name: Service Scope
     href: oshift-sco.md

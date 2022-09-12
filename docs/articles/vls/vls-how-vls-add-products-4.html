@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to add products to vCloud Usage Meter for the VMware Licence Service </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to add products to vCloud Usage Meter for the VMware Licence Service ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vls/vls-how-vls-add-products-4.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-add-products-to-the-vcloud-usage-meter-for-the-vmware-licence-service">How to add products to the vCloud Usage Meter for the VMware Licence Service</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The VMware Licence Service (VLS) enables you to switch to a flexible, VMware Cloud Provider Programme (VCPP) consumption-based licensing model.</p>
+<p>As the VLS licensing model is consumption-based, you must submit reports to VMware to detail your usage of VMware products. To generate these reports, you need to install the vCloud Usage Meter (Usage Meter).</p>
+<p>This article provides all the information you need to add popular products to the Usage Meter. For more information about the Usage Meter, see the VMware documentation <a href="https://docs.vmware.com/en/vCloud-Usage-Meter/index.html#about-vcloud-usage-meter-0">here</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You must have installed and registered the vCloud Usage Meter. For more information, see <a href="vls-how-vls-install-usage-meter-4.html"><em>How to install the vCloud Usage Meter for the VMware Licence Service</em></a>.</p>
+<h2 id="adding-products-to-the-usage-meter">Adding products to the Usage Meter</h2>
+<p>To collect VMware product usage information for your VLS entitlement, you must add each product that you require to be monitored to the Usage Meter. For each product that you add, the Usage Meter might present a certificate that you can verify, which you'll need to accept before proceeding.</p>
+<p>The instructions below show how to enable monitoring for some of the base VMware products. For instructions for additional products, see the VMware documentation <a href="https://docs.vmware.com/en/vCloud-Usage-Meter/4.5/Using-and-Managing-vCloud-Usage-Meter/GUID-228A9D22-6993-4E2E-B14B-F30921339DF3.html">here</a>.</p>
+<h3 id="adding-a-vcenter-server-to-the-usage-meter">Adding a vCenter Server to the Usage Meter</h3>
+<p>You can add one or more vCenter Server instances to the Usage Meter.</p>
+<h4 id="creating-a-role-for-the-usage-meter">Creating a role for the Usage Meter</h4>
+<p>Before you can add a vCenter Server to the Usage Meter, you need to create a new role with the correct read only permission:</p>
+<ol>
+<li><p>In vCenter, navigate to <strong>Administration &gt; Roles</strong>, then click the <strong>Create role</strong> button.</p>
+</li>
+<li><p>Enter <strong>Role name</strong>, for example, <code>usagemeter_RO</code>.</p>
+</li>
+<li><p>Select the <strong>Profile-driven storage &gt; Profile-driven storage view</strong> permission and click <strong>OK</strong>.</p>
+</li>
+<li><p>Navigate to <strong>Administration &gt; Users and Groups</strong>.</p>
+</li>
+<li><p>Create a new local user, for example, <code>usagemeter</code> and record the password.</p>
+</li>
+<li><p>Navigate to <strong>Hosts and Clusters</strong> and select the root server object.</p>
+</li>
+<li><p>Select <strong>Permissions</strong> and click the <strong>Add</strong> button.</p>
+</li>
+<li><p>Enter the user and role created in these steps and select <strong>Propagate to children</strong>, then click <strong>OK</strong>.</p>
+</li>
+</ol>
+<h4 id="adding-a-vcenter-server">Adding a vCenter Server</h4>
+<p>To monitor vCenter Servers using the Usage Meter, verify that you have the host name and the above credentials for the vCenter Server you're adding.</p>
+<p>To add a vCenter Server to the Usage Meter:</p>
+<ol>
+<li><p>Log in to the Usage Meter web application using the <code>usagemeter</code> account.</p>
+</li>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Products</strong>.</p>
+</li>
+<li><p>In the left navigation pane, click <strong>vCenter / VMware Cloud Foundation</strong>.</p>
+</li>
+<li><p>In the <em>vCenter / VMware Cloud Foundation</em> page, click the <strong>Add</strong> button.</p>
+</li>
+<li><p>In the <strong>Endpoint</strong> field, enter the host name or IP address of the vCenter Server instance. Leave the default port number as 443.</p>
+</li>
+<li><p>In the <strong>Username</strong> and <strong>Password</strong> fields, enter the FQDN credentials of the Usage Meter user created above or created previously, for example, <code>usagemeter@vsphere.local</code>.</p>
+</li>
+<li><p>(Optional) If you use an external Platform Services Controller, select the <strong>Use External Platform Services Controller (PSC)</strong> check box and enter the IP address or host name of the external Platform Services Controller.</p>
+</li>
+<li><p>(Optional) Confirm if vCloud Usage Meter must meter the virtual machines that are protected by all Site Recovery Manager instances, associated with the registered vCenter Server instance. To disable the metering of Site Recovery Manager, deselect the <strong>Meter VMs protected by all SRMs</strong> check box.</p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+</li>
+<li><p>For each vCenter Server instance that you add, vCloud Usage Meter presents a certificate that you must accept before proceeding.</p>
+</li>
+<li><p>To accept the certificate, on the <em>vCenter / VMware Cloud Foundation</em> page, select the vCenter Server instance and, in the <strong>Status</strong> column, click <strong>Please accept certificate</strong>, then select the vCenter in the popup window.</p>
+</li>
+<li><p>In the <em>Certificate Info</em> window, check the certificate is correct and click <strong>ACCEPT</strong>.</p>
+</li>
+</ol>
+<p>Once added correctly, the status column will report an <em>OK</em> status. If an error occurs, you'll see a message against the server instance indicating the issue.</p>
+<h3 id="adding-nsx-v-manager-to-the-usage-meter">Adding NSX-v Manager to the Usage Meter</h3>
+<p>To meter the product consumption data of NSX Data Center for vSphere, you must add the NSX Manager instance to vCloud Usage Meter.</p>
+<p>To Add the NSX Manager to the Usage Meter, you must have already added the vCenter Server instance associated with the NSX-v Manager to the vCloud Usage Meter list of vCenter Server instances.</p>
+<p>You must have the CLI Admin username and password for the NSX-v Manager appliance that you want to add.</p>
+<p>To add NSX Manager to the Usage Meter:</p>
+<ol>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Products</strong>.</p>
+</li>
+<li><p>In the left navigation bar, click <strong>NSX-v</strong>.</p>
+</li>
+<li><p>On the <em>NSX-v</em> page, click the <strong>Add</strong> button.</p>
+</li>
+<li><p>In the <strong>vCenter Host Name</strong> field, select the appropriate vCenter Server host name or IP address.</p>
+</li>
+<li><p>In the <strong>Endpoint</strong> field, enter the host name or IP address of the NSX-v Manager appliance.</p>
+</li>
+<li><p>In the <strong>Username</strong> and <strong>Password</strong> fields, enter the NSX-v Manager CLI Admin credentials.</p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+</li>
+<li><p>For each NSX Manager that you add, vCloud Usage Meter may present a certificate that you must accept before proceeding.</p>
+</li>
+<li><p>To accept the certificate, on the <em>NSX-v</em> page, select the NSX Manager instance and, in the <strong>Status</strong> column, click <strong>Please accept certificate</strong>, then select the NSX-v Manager in the popup window.</p>
+</li>
+<li><p>In the <em>Certificate Info</em> window, check the certificate is correct and click <strong>ACCEPT</strong>.</p>
+</li>
+</ol>
+<p>Once added correctly the status column will report an <em>OK</em> status. If an error occurs, you'll see a message against the server instance indicating the issue.</p>
+<h3 id="adding-nsx-t-to-the-usage-meter">Adding NSX-T to the Usage Meter</h3>
+<p>To meter the product consumption data of NSX-T Data Center, you must add the NSX-T Manager instance to vCloud Usage Meter.</p>
+<p>You must add the vCenter Server instance associated with the NSX-T Manager to the vCloud Usage Meter list of vCenter Server instances.</p>
+<p>You must have the <code>CLI Admin</code> username and password for the NSX-T Manager instance that you want to add.</p>
+<p>To add NSX-T to the Usage Meter:</p>
+<ol>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Products</strong>.</p>
+</li>
+<li><p>In the left navigation bar, click <strong>NSX-T</strong>.</p>
+</li>
+<li><p>On the <em>NSX-T</em> page, click the <strong>Add</strong> button.</p>
+</li>
+<li><p>In the <strong>Endpoint</strong> field, enter the host name or IP address of the NSX-T Manager instance.</p>
+</li>
+<li><p>In the <strong>Username</strong> and <strong>Password</strong> fields, enter the NSX-T Manager CLI Admin credentials.</p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+</li>
+<li><p>For each NSX-T instance that you add, vCloud Usage Meter may present a certificate that you must accept before proceeding.</p>
+</li>
+<li><p>To accept the certificate, on the <em>NSX-T</em> page, select the NSX Manager instance and, in the Status column, click <strong>Please accept certificate</strong>, then select the NSX-T instance in the popup window.</p>
+</li>
+<li><p>In the <em>Certificate Info</em> window, check the certificate is correct and click <strong>ACCEPT</strong>.</p>
+</li>
+</ol>
+<h3 id="adding-vrealize-operations-manager-to-the-usage-meter">Adding vRealize Operations Manager to the Usage Meter</h3>
+<p>The vROPs Manager solutions and adapters must be properly configured. For more information, see <em>Connecting to Data Sources</em> in the vRealize Operations Manager Documentation.</p>
+<p>The vROPs Manager instance must be registered as a vCenter Server extension.</p>
+<p>The account used for vROPs access must have at least read-only privileges.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To prevent metering issues with vROps, ensure vROps, vCenter and the Usage Meter are all using the same time zone.</p>
+</div>
+<p>To add vROPs to the Usage Meter:</p>
+<ol>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Products</strong>.</p>
+</li>
+<li><p>In the left navigation bar, click <strong>vRealize Operations</strong>.</p>
+</li>
+<li><p>On the <em>vRealize Operations</em> page, click <strong>Add</strong>.</p>
+</li>
+<li><p>In the <strong>Endpoint</strong> field, enter the host name or IP address of the vRealize Operations Manager instance. The default port number is 443.</p>
+</li>
+<li><p>In the <strong>Username</strong> and <strong>Password</strong> fields, enter the credentials for the vRealize Operations Manager instance.</p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+</li>
+<li><p>For each vROPs instance that you add, vCloud Usage Meter may present a certificate that you must accept before proceeding.</p>
+</li>
+<li><p>To accept the certificate, on the <em>vRealize Operations</em> page, select the vROPs Manager instance and, in the Status column, click <strong>Please accept certificate</strong>, then select the vROPs instance in the popup window.</p>
+</li>
+<li><p>In the <em>Certificate Info</em> window, check the certificate is correct and click <strong>ACCEPT</strong>.</p>
+</li>
+</ol>
+<h4 id="how-to-limit-the-scope-of-vrops-to-only-meter-a-subset-of-vms">How to limit the scope of vROPs to only meter a subset of VMs.</h4>
+<p>vCloud Usage Meter can meter a subset of virtual machines that vRealize Operations Manager controls. To support such a topology, you must create a specific user for vRealize Operations Manager, who is granted access to the VMs in vROPs, and use this account for metering in vCloud Usage Meter.</p>
+<p>To enable metering of only a subset of VMs registered in vROPs:</p>
+<ol>
+<li><p>Log in to the <em>Administration</em> interface of vRealize Operations Manager.</p>
+</li>
+<li><p>Navigate to <em>Administration &gt; Access Control</em> and on the <strong>User Accounts</strong> tab, click the <strong>Add</strong> button.</p>
+</li>
+<li><p>In the <em>Add User</em> window, enter the basic user information and click <strong>Next</strong>.</p>
+</li>
+<li><p>To assign roles and allocate resources, in the <em>Assign Groups and Permissions</em> window, click <strong>Objects</strong>.</p>
+</li>
+<li><p>From the <em>Select Role</em> drop-down menu, select <strong>Administrator</strong> and select the <strong>Assign this role to the user</strong> check box.</p>
+</li>
+<li><p>In the <em>Select Object Hierarchies</em> pane, select the <strong>vSphere Storage</strong> check box.</p>
+</li>
+<li><p>The vSphere inventory tree appears in the <em>Select Object</em> pane.</p>
+</li>
+<li><p>In the <em>Select Object</em> pane, select the virtual machines to be metered and click <strong>Finish</strong>.</p>
+</li>
+<li><p>Go to the vCloud Usage Meter web interface and add or update the user credentials for vRealize Operations Manager to use the new account.</p>
+</li>
+</ol>
+<h3 id="adding-horizon-to-the-usage-meter">Adding Horizon to the Usage Meter</h3>
+<p>Customers can meter Horizon deployments starting with Horizon 7.10 and up.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Horizon metering does not include NSX for Desktop or VSAN for Desktop metering, these must be added separately to the Usage Meter using the NSX or vSAN metering.</p>
+</div>
+<p>Horizon usage is based on the highest concurrent connections per month. Usage Meter will track the calendar month statistics and will reset its count at the beginning of a new month. This supports both standard Horizon desktops and Horizon Apps usage.</p>
+<p>If a Horizon Connection Server exists behind a load balancer, you must add a Connection Server directly to vCloud Usage Meter, not via a load balanced IP.</p>
+<p>If you've deployed multiple Connection Servers in a load balanced cluster, you must add only one of the Connection Servers to vCloud Usage Meter.</p>
+<p>To add Horizon to the Usage Meter:</p>
+<ol>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Products</strong>.</p>
+</li>
+<li><p>In the left navigation bar, click <strong>Horizon</strong>.</p>
+</li>
+<li><p>On the <em>Horizon</em> page, click <strong>Add</strong>.</p>
+</li>
+<li><p>In the <strong>Endpoint</strong> field, enter the host name or IP address of your VMware Horizon instance.</p>
+</li>
+<li><p>In the <strong>Username</strong> and <strong>Password</strong> fields, enter the credentials for the VMware Horizon instance.</p>
+</li>
+<li><p>Enter the VMware Horizon domain name.</p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+</li>
+</ol>
+<h2 id="checking-the-monitoring-status">Checking the monitoring status</h2>
+<p>Once you've finished adding all of your metered products, you can check monitoring status to ensure the Usage Meter is monitoring products correctly.</p>
+<ol>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Notifications</strong>.</p>
+</li>
+<li><p>Using the Time range fields you can change the dates to display.</p>
+</li>
+<li><p>The top area displays an overall status of each day's collections. Each day is represented by an icon displaying the overall collection status.</p>
+</li>
+<li><p>The bottom area displays the current month's worth of collections, which you can filter using the columns or by clicking on the date in the top section.</p>
+</li>
+<li><p>If collections are failing, hover the mouse over the icon in the top section to display how many errors were recorded. Click the icon to filter the bottom window and display the error messages.</p>
+</li>
+<li><p>If you're unable to diagnose the cause of the errors, you can use the <strong>Support</strong> option from the menu bar to generate a log bundle and then raise a ticket in <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and attach the log for investigation.</p>
+</li>
+</ol>
+<h2 id="setting-licence-packs">Setting licence packs</h2>
+<p>Once you've completed the addition of VMware products to the Usage Meter and it's performed a discovery of the environment, you need to configure the discovered licences to set the correct billing category.</p>
+<ol>
+<li><p>In the main menu bar of the vCloud Usage Meter web interface, click <strong>Licenses</strong>.</p>
+</li>
+<li><p>In the <em>Licenses</em> window, you'll see all the discovered licences.</p>
+</li>
+<li><p>Ensure all UKCloud VLS supplied licences have the <strong>Licenses Category</strong> set to <strong>Rental</strong>.</p>
+</li>
+<li><p>For any old licences that were part of your old perpetual VMware licence, select the licence, click <strong>EDIT</strong> and change the <strong>License Category</strong> to <strong>Perpetual</strong>, then click <strong>SAVE</strong>.</p>
+</li>
+</ol>
+<h2 id="related-articles">Related articles</h2>
+<p>If you're planning to upgrade any of your VLS-licensed VMware products, you must request new licences before upgrading. For more information, see <a href="vls-how-vls-request-licence.html"><em>How to request a new VLS license</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

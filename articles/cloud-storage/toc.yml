@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: Cloud Storage
+    href: cs-home.md
 - name: FAQs
   items:
   - name: Cloud Storage FAQs
@@ -28,8 +32,6 @@
   items:
   - name: Pricing information
     href: cs-ref-pricing.md
-  - name: Service Definition
-    href: cs-sd.md
   - name: Service Scope
     href: cs-sco.md
 - name: Videos

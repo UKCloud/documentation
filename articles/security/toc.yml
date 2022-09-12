@@ -1,0 +1,50 @@
+- name: About
+  items:
+  - name: Cloud Security
+    href: sec-home.md
+- name: Cross Domain Security Zone
+  items:
+  - name: Access UKCloud services from Walled Garden and Secure Remote Access
+    href: cdsz-how-access-services-walled-garden.md
+  - name: Application process
+    href: cdsz-ref-application-process.md
+  - name: Blueprint
+    href: cdsz-ref-bp-overview.md
+  - name: FAQs
+    href: cdsz-faq.md
+  - name: Getting Started Guide
+    href: cdsz-gs-walled-garden.md
+  - name: Pricing information
+    href: cdsz-ref-pricing.md
+  - name: Service Scope
+    href: cdsz-sco.md
+- name: Disaster Recovery as a Service
+  items:
+  - name: (Video) Using Zerto Virtual Manager for DR testing
+    href: draas-vid-zerto-dr.md
+  - name: FAQs
+    href: draas-faq.md
+  - name: Getting Started
+    href: draas-gs.md
+  - name: Install and configure Zerto in your local environment
+    href: draas-how-zerto-install-local.md
+  - name: Service Scope
+    href: draas-sco.md
+  - name: Troubleshooting
+    href: draas-ref-troubleshooting.md
+- name: Secure Remote Access
+  items:
+  - name: Add and remove users
+    href: sra-how-add-remove-users.md
+  - name: FAQs
+    href: sra-faq.md
+  - name: Getting Started
+    href: sra-gs.md
+  - name: Pricing information
+    href: sra-ref-pricing.md
+  - name: Service Scope
+    href: sra-sco.md
+- name: Security Operations Service
+  items:
+  - name: (Video) UKCloud & e2e-assure
+    href: soc-vid-intro.md

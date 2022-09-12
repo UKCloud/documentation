@@ -1,8 +1,8 @@
+- name: About
+  items:
+  - name: UKCloud Professional Services
+    href: ps-home.md
 - name: FAQs
   items:
   - name: Jumpstart FAQs
     href: ps-faq-jumpstart.md
-- name: Service Information
-  items:
-  - name: Service Definition
-    href: ps-sd.md

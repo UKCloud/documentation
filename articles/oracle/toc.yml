@@ -1,7 +1,5 @@
 - name: Private Cloud for Oracle Software
   items:
-  - name: Service Definition
-    href: orcl-sd-private.md
   - name: Service Scope
     href: orcl-sco-private.md
 - name: UKCloud for Oracle Software
@@ -42,8 +40,6 @@
     items:
     - name: Pricing information
       href: orcl-ref-pricing.md
-    - name: Service Definition
-      href: orcl-sd.md
     - name: Service Scope
       href: orcl-sco.md
   - name: Videos

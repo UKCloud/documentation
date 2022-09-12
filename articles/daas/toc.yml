@@ -1,6 +1,8 @@
+- name: About
+  items:
+  - name: UKCloud Desktop as a Service
+    href: daas-home.md
 - name: Service Information
   items:
   - name: Pricing information
     href: daas-ref-pricing.md
-  - name: Service Definition
-    href: daas-sd.md

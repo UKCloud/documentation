@@ -1,15 +1,21 @@
 - name: About
   items:
   - name: Enablement services
-    href: enbl-ref-services.md
+    href: enbl-home.md
 - name: How To
   items:
   - name: Migrate edge configuration data
     href: enbl-how-migrate-edge-config.md
   - name: Migrate your workloads between UKCloud regions
     href: enbl-how-zerto-migrate-between-regions.md
+  - name: Migrate your workloads to the UKCloud platform
+    href: migr-how-zerto-migrate-to-ukcloud.md
   - name: Obtain full IPsec VPN configuration
     href: enbl-how-obtain-vpn-config.md
+- name: Reference
+  items:
+  - name: Troubleshooting Migration to the Cloud
+    href: migr-ref-troubleshooting.md
 - name: Service Information
   items:
   - name: Big Cloud Enablement Service Scope

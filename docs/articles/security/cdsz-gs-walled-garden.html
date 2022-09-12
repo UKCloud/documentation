@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for the Cross Domain Security Zone </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for the Cross Domain Security Zone ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/security/cdsz-gs-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="getting-started-guide-for-the-cross-domain-security-zone">Getting Started Guide for the Cross Domain Security Zone</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The UKCloud Walled Garden provides self-service access to the Cross Domain Security Zone (CDSZ) so that you can design, implement and manage a cross‑domain solution, using technology and application services of your choice. UKCloud provides support and guidance in the design of the CDSZ architecture; it's your responsibility to build, manage and ensure you use appropriate risk management to understand and mitigate identified risks.</p>
+<p>The Walled Garden is ideal if you require control and flexibility over what is passed between security domains, to support a wider range of use cases.</p>
+<p>This article covers the steps you need to follow to get your Walled Garden up and running.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for customers who have completed the <a href="cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before you can start to implement a Walled Garden, you must have completed and passed the appropriate application process. For more information, see the <a href="cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
+<p>After your Walled Garden application has been approved, we'll raise a service request to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If a service request for this implementation already exists, we'll use the existing request rather than rasie a new one.</p>
+</div>
+<p>You can track the progress of the service request in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>During the provisioning of the Walled Garden service, we'll ask you for some additional information via the service request:</p>
+<ul>
+<li><p>The customer account in which you'd like the Walled Garden VDC to be provisioned. If this is different from the customer completing the Walled Garden application we must see written conformation from the customer to validate they're happy for the provisioning to take place.</p>
+</li>
+<li><p>Whether you plan to have a single or dual site solution.</p>
+</li>
+<li><p>How many VDCs you need to be set up in each security domain.</p>
+</li>
+<li><p>If you're connecting new or existing VDCs to the Walled Garden VDC.</p>
+<ul>
+<li>If you're connecting to existing VDCs, we'll need to know information such as network details and customer account.</li>
+</ul>
+</li>
+</ul>
+<p>The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When we've fully provisioned the environment, your Service Delivery Manager (SDM) will send you the information you need to access it.</p>
+<h2 id="building-your-walled-garden-service">Building your Walled Garden service</h2>
+<p>As soon as you have access to your environment, you can start to build your Walled Garden services.</p>
+<p>It's important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN, private connections into Elevated or through UKCloud's Secure Remote Access (SRA) service.</p>
+<h3 id="setting-up-your-networking">Setting up your networking</h3>
+<p>First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules for any firewalls within your environment. For information about creating networks and firewall rules, see the links at the end of the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or network address translation (NAT) rules. You can find links to relevant articles at the end of the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<h4 id="networking-examples">Networking examples</h4>
+<p>There are two options for networking between the VDCs in the Walled Garden service:</p>
+<ul>
+<li><p><strong>Option 1:</strong> Create static routes between the VDCs. This is the simplest option for connecting VDCs.</p>
+</li>
+<li><p><strong>Option 2:</strong> Use NAT rules on top of the static routes. This option may be appropriate if you want to abstract the static routes.</p>
+</li>
+</ul>
+<p>The diagrams below provide examples for both options.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For both options:</p>
+<ul>
+<li><p>You cannot route public IP addresses to the virtual firewalls in the Walled Garden.</p>
+</li>
+<li><p>The Org VDC networks 192.168.XXX.XX in the examples below are illustrative and you should replace these with your own details.</p>
+</li>
+<li><p>You must have at least one virtual machine (VM) in the Walled Garden VDC connecting to both virtual firewalls. These are connected via the routed org networks as seen in the examples below.</p>
+</li>
+<li><p>Each of the examples below assumes that the appropriate firewall rules are in place.</p>
+</li>
+<li><p>You must apply an SNAT rule in the Elevated security domain to enable connectivity to UKCloud services.</p>
+</li>
+</ul>
+</div>
+<p><img src="images/cdsz-static-routes-snat.jpg" alt="Option 1 example: Static routes and SNAT in Elevated"></p>
+<p><img src="images/cdsz-snat-dnat.jpg" alt="Option 2 example: SNAT/DNAT transit address"></p>
+<h3 id="building-your-virtual-machines">Building your virtual machines</h3>
+<p>The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the VMware Cloud Director catalog or from template VMs as Open Virtualization Format (OVF) files. The VMs must be able to access UKCloud shared services, such as OS repositories, the network time server and the Key Management Server (KMS). You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For information about creating VMs, see the links at the end of the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>. For information about accessing UKCloud shared services, see <a href="../shared/shared-ref-overview.html"><em>Understanding UKCloud shared services</em></a>.</p>
+<h3 id="testing-your-environment">Testing your environment</h3>
+<p>When you've built your VMs and networking, you can start to test the environment. If you've configured the networking correctly, your VMs should be able to talk to each other across the Walled Garden. If you have any issues, check your network rules.</p>
+<h3 id="performing-the-it-health-check">Performing the IT Health Check</h3>
+<p>After you've implemented your CDSZ, we strongly advise that you perform an IT Health Check (ITHC) on the environment. The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.</p>
+<p>The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can verify appropriate providers on the <a href="https://www.ncsc.gov.uk/section/products-services/verify-supplier/">NCSC web site</a>.</p>
+<p>Before beginning the ITHC, notify UKCloud by raising a service request in <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> and completing the ESRT / Pen Test template. Ideally, we require five working days' notice before the work is due to be carried out. For more information, see <a href="../other/other-ref-external-security-review-testing.html"><em>External security review testing</em></a>.</p>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to the Cross Domain Security Zone Walled Garden.</p>
+<p><strong>Application process</strong>  A process for ensuring that you understand, have identified and can mitigate potential risks when using a customer-defined solution within the UKCloud platform.</p>
+<p><strong>Assured OFFICIAL</strong>  A security domain on the UKCloud platform that provides access to public networks, such as PSN (Assured), HSCN, Janet or the internet.</p>
+<p><strong>Cross Domain Security Zone (CDSZ)</strong>  A UKCloud IaaS service that provides the ability to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using The Walled Garden and our Secure Remote Access service.</p>
+<p><strong>Elevated OFFICIAL</strong>  A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN (Protected) and MCN where appropriate.</p>
+<p><strong>Good Practice Guide 13 (GPG13)</strong>  A set of controls covering protective monitoring, such as event log management and intrusion detection and prevention systems, required to prevent accidental or malicious data loss. Also referred to as Protective Monitoring Controls (PMCs).</p>
+<p><strong>IT Health Check (ITHC)</strong>  An IT security assessment, performed by an independent security organisation, to confirm that a service provides the appropriate level of security required by the data owner.</p>
+<p><strong>National Cyber Security Centre (NCSC)</strong>  A department of GCHQ that acts as a bridge between industry and government to help reduce the cyber security risk to the UK by providing cyber security advice and cyber incident management.</p>
+<p><strong>Protective Monitoring Controls (PMC)</strong>  <em>See</em> GPG13.</p>
+<p><strong>Senior Information Risk Owner (SIRO)</strong>  The person within an organisation who owns the organisation's information risk policy.</p>
+<p><strong>Walled Garden</strong>  A Cross Domain Security Zone (CDSZ) service option that provides you with self-service access to the CSDZ so that you can design, implement and manage your own cross-domain solution, using technology and application services of your choice.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

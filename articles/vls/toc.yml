@@ -1,0 +1,30 @@
+- name: About
+  items:
+  - name: VMware Licensing & Support
+    href: vls-home.md
+- name: FAQs
+  items:
+  - name: VMware Licence Service FAQs
+    href: vls-faq.md
+- name: How To
+  items:
+  - name: Add products to the vCloud Usage Meter for VLS
+    href: vls-how-vls-add-products-4.md
+  - name: Add products to the vCloud Usage Meter for VMware Extended Support
+    href: vls-how-ves-add-products-3.md
+  - name: Install the vCloud Usage Meter for VLS
+    href: vls-how-vls-install-usage-meter-4.md
+  - name: Install the vCloud Usage Meter for VMware Extended Support
+    href: vls-how-ves-install-usage-meter-3.md
+  - name: Report licence usage for VMware Extended Support
+    href: vls-how-ves-report-usage-3.md
+  - name: Request a new VLS licence
+    href: vls-how-vls-request-licence.md
+- name: Service Information
+  items:
+  - name: UKCloud VMware Workspace ONE Managed Service Service Scope
+    href: vls-sco-ws1.md
+  - name: VMware Extended Support Service Scope
+    href: vls-sco-extended-vmw-support.md
+  - name: VMware Licence Service (VLS) Service Scope
+    href: vls-sco.md

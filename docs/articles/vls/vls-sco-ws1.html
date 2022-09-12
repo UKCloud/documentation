@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud VMware Workspace ONE Managed Service Service Scope </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud VMware Workspace ONE Managed Service Service Scope ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vls/vls-sco-ws1.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-vmware-workspace-one-managed-service-service-scope">UKCloud VMware Workspace ONE Managed Service Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This article describes the boundaries of the UKCloud VMware Workspace ONE Managed Service, along with the division of responsibilities between VMware, UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
+<h2 id="about-ukcloud-vmware-workspace-one-managed-service">About UKCloud VMware Workspace ONE Managed Service</h2>
+<h3 id="about-workspace-one-msp">About Workspace ONE MSP</h3>
+<p>The VMWare Workspace ONE® cloud service is operated by VMware and delivered to customers by UKCloud as a managed service. There are a variety of products available including Workspace ONE (three operating levels) and additional products such as Workspace ONE Intelligence and Workspace ONE Assist and UAT environments.</p>
+<p>UKCloud operates a master tenancy on the VMware Cloud. End customer tenancies sit within the UKCloud master tenancy.</p>
+<h3 id="about-vmware-workspace-one">About VMware Workspace ONE</h3>
+<p>VMware Workspace ONE is an intelligence-driven digital workspace platform that simply and securely delivers and manages any application on any device by integrating access control, application management and multi-platform endpoint management. Workspace ONE is built on the VMware Workspace ONE Unified Endpoint Management (UEM) technology and integrates with virtual application delivery on a common identity framework. With Workspace ONE, organisations can now evolve silo-ed cloud and mobile investments, enabling all employees, devices and things across the organisation to accelerate their digital transformation journey with a platform-based approach.</p>
+<p>Workspace ONE enables customers to drastically improve experiences and tasks that were previously costly, time consuming and resource intensive. With Workspace ONE, IT organisations can:</p>
+<ul>
+<li><p>Onboard a new employee with all of their applications and devices in under an hour, without tickets and help desk calls</p>
+</li>
+<li><p>Set and enforce access and data policies across all applications, devices and locations in ONE place</p>
+</li>
+<li><p>Complete business processes from a mobile device, similar to consumer experiences</p>
+</li>
+<li><p>Provision a new corporate laptop out of the box, anywhere in the world, from the cloud within minutes</p>
+</li>
+<li><p>Get insights and automation capabilities across the entire digital workspace environment</p>
+</li>
+</ul>
+<h2 id="service-architecture">Service architecture</h2>
+<p>The UKCloud service architecture is as follows:</p>
+<ul>
+<li><p><strong>Company.</strong> A contract with UKCloud is associated with a company, which provides a single owner for the contract, regardless of how many accounts are created.</p>
+</li>
+<li><p><strong>Account.</strong> We use accounts to separate financial ownership. An account could represent an organisation, a customer contract or a specific project. An account can also have several UKCloud or VMware services associated with it, such as VMware Workspace ONE, UKCloud for VMware or Cloud Storage. Customers can also use accounts to separate users based on access requirements or permissions.</p>
+</li>
+</ul>
+<h2 id="vmware-workspace-one-edition-provided-by-ukcloud">VMware Workspace ONE edition provided by UKCloud</h2>
+<p>VMware Workspace ONE is the simple and secure enterprise platform that delivers and manages any application on any smartphone, tablet or laptop. The UKCloud service is based on the Workspace ONE Standard Edition. Customers requiring other editions or add-on features should contact UKCloud for further discussion.</p>
+<p>The VMware Workspace ONE Editions comparison table is available <a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/workspace-one/vmw-workspace-one-edition-comparison-guide.pdf">here</a>.</p>
+<h2 id="application-process">Application process</h2>
+<p>Customers wanting to discuss the suitability of the service and gain a comparative cost estimate for their VMware Workspace ONE environment under the managed service programme should contact us at <a href="mailto:info@ukcloud.com">info@ukcloud.com</a> or contact their Client Director. To provide an indicative quote, we will need:</p>
+<ul>
+<li><p>The customer's written authorisation to request data from VMware on the existing licence estate and renewal details</p>
+</li>
+<li><p>The customer's VMware Entitlement Account (EA) number</p>
+</li>
+<li><p>Details of the customer's planned future use of VMware to ensure the correct bundles/features are provisioned in any proposal</p>
+</li>
+</ul>
+<p>We will then work with the customer to find the ideal solution to suit their requirements.</p>
+<p>Once the quote is supplied and the customer wants to place an order, they must provide a purchase order, with a call-off contract. Once received, the order will be confirmed by our sales operations team.</p>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>After UKCloud receives a purchase order for VMware Workspace ONE, we'll contact the customer to advise them when the environment will be available. Within 1 business day of accepting an order (shorter deployment times are typically achieved and can be prioritised on request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack, which includes the URL for the UKCloud Portal and any relevant documentation.</p>
+<p>The VMware Workspace UEM environment will be configured and available within 72 hours of receiving the order; shorter deployment times are typically achieved and can be prioritised on request.</p>
+<p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre.</p>
+<p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud can introduce customers to the right partner to suit their needs.</p>
+<h2 id="end-user-device-and-application-licensing-responsibilities">End user device and application licensing responsibilities</h2>
+<p>Each end user device requires a Workspace ONE licence. Each application hosted within the environment will have an appropriate licensing agreement that is required as well. The customer is responsible for all end user device and application software licensing.</p>
+<h2 id="platform-management">Platform management</h2>
+<p>Customers can access, manage and view the VMware Workspace ONE platform, accessing only those features allowed by their role, in any of the following ways:</p>
+<ul>
+<li><p><strong>Workspace ONE UEM portal.</strong> Provides a graphical user interface (GUI) to access the customer's Workspace ONE environment (depending on assigned permissions).</p>
+</li>
+<li><p><strong>Workspace ONE API.</strong> Enables the programmatic creation and management of the services inside the platform.</p>
+</li>
+<li><p><strong>UKCloud Portal.</strong> Provides access to incident and request management.</p>
+</li>
+</ul>
+<p>Customers cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware.</p>
+<h2 id="ukcloud-and-vmware-workspace-one-service-and-maintenance-status">UKCloud and VMware Workspace ONE service and maintenance status</h2>
+<p>Customers are advised to subscribe to notifications for information on services provided by UKCloud and VMware using the links below:</p>
+<ul>
+<li><p><a href="https://status.ukcloud.com/">https://status.ukcloud.com/</a> - Visibility and subscription for UKCloud platform maintenance notifications and service status reports</p>
+</li>
+<li><p><a href="https://status.workspaceone.com/">https://status.workspaceone.com/</a> - Visibility and subscription for VMware Workspace ONE maintenance notifications and service status reports</p>
+</li>
+</ul>
+<p>All Workspace ONE software upgrades will be managed by VMware. Customers will be notified of updates to the platform with 7 days' notice. Full details of the VMware Workspace ONE UEM maintenance windows are detailed <a href="https://kb.vmware.com/s/article/2960724">here</a>. The maintenance schedule for 2022 is available <a href="https://kb.vmware.com/s/article/81448">here</a>.</p>
+<h2 id="service-location">Service location</h2>
+<p>VMware Workspace ONE is a cloud service delivered by VMware out of an AWS data centre in Germany.</p>
+<p>The UKCloud Portal and support is delivered out of the UK.</p>
+<h2 id="billing-process">Billing process</h2>
+<p>Workspace ONE licences must be purchased upfront for the service term (either 1, 2 or 3 years).</p>
+<p>Each month UKCloud will check actual licence usage and where actual usage exceeds the agreed licence volume, an invoice will be raised to cover the additional licences used during the month.</p>
+<h2 id="requesting-additional-vmware-workspace-one-licences">Requesting additional VMware Workspace ONE licences</h2>
+<p>Customers requiring additional licences should contact their Client Director or Service Delivery Manager. All additional licences will be aligned to the existing service term.</p>
+<h2 id="customer-service">Customer service</h2>
+<p><strong>Service Delivery Manager (SDM).</strong> An assigned point of contact who will provide customers with any assistance required during their use of the service, including onboarding, service reviews and incident reporting and escalation.</p>
+<p><strong>Support Desk.</strong> After the initial onboarding and design phase, customers can utilise the standard UKCloud support entitlement. For more information, see <a href="../portal/ptl-ref-raise-escalate-service-request.html"><em>Raising and escalating support tickets with customer support</em></a>.</p>
+<h2 id="technical-support-levels-and-ownership">Technical support levels and ownership</h2>
+<h3 id="customer-responsibilities">Customer responsibilities</h3>
+<p>The customer is responsible for:</p>
+<ul>
+<li><p>Assessing whether the VMware Workspace ONE platform can support the various requirements of their application.</p>
+</li>
+<li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
+</li>
+<li><p>Determining if a problem is related to the device, rather than the platform, and confirming that a solution is not already documented in VMware publications; reviewing the symptoms-solutions database for known problem resolutions.</p>
+</li>
+</ul>
+<p>The Workspace ONE Knowledge Base is available at <a href="https://support.workspaceone.com/">https://support.workspaceone.com/</a>.</p>
+<h3 id="ukcloud-and-vmware-responsibilities">UKCloud and VMware responsibilities</h3>
+<p>Services are provided by VMware to resolve problems that are determined to, or highly probable to:</p>
+<ul>
+<li><p>Be the result of a design or manufacturing defect</p>
+</li>
+<li><p>Be the result of a complex interaction between VMware's product and another product</p>
+</li>
+<li><p>Not be possible to be resolved by the customer</p>
+</li>
+<li><p>Require product design knowledge or expertise to isolate and effect a problem resolution</p>
+</li>
+</ul>
+<p>During Level 3 support interactions, UKCloud is responsible for managing the support relationship and ongoing communication with the customer via the UKCloud Portal and support team.</p>
+<h3 id="professional-services">Professional Services</h3>
+<p>This Service Scope sets out the responsibilities of UKCloud and the customer. Although the actions that the customer is responsible for are supported by UKCloud via Knowledge Centre articles and the support team, if a customer requires additional support with their Workspace ONE environment, we can arrange for our Professional Services team to assist.</p>
+<p>These additional services are charged as per our <a href="https://ukcloud.com/sfia">SFIA Rate Card</a>.</p>
+<p>If a customer requires the assistance of our Professional Services team, they can either contact our support team or their Service Delivery Manager.</p>
+<h3 id="service-level-agreement">Service level agreement</h3>
+<p>VMware Workspace ONE is a SaaS solution delivered by VMware. VMware will use commercially reasonable efforts to ensure that each component of the service offering maintains at least 99.9% availability during a given billing period.</p>
+<p>For more details, see <a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/support/vmw-workspace-one-uem-sla.pdf">https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/support/vmw-workspace-one-uem-sla.pdf</a>.</p>
+<h3 id="service-constraints">Service constraints</h3>
+<p>For information about UKCloud Planned and Emergency Maintenance, see <a href="../other/other-ref-maintenance-windows.html"><em>Understanding UKCloud service maintenance windows</em></a>.</p>
+<h3 id="support-target-response-times">Support target response times</h3>
+<p>Customer experience is important to us. We measure our performance against service targets across our customers to ensure that we provide a service our customers can trust.</p>
+<table>
+<thead>
+<tr>
+<th>Ticket priority</th>
+<th>Initial response target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 incident</td>
+<td>30 minutes or less; 24 x 7</td>
+</tr>
+<tr>
+<td>P2 incident</td>
+<td>4 business hours; 12 x 5</td>
+</tr>
+<tr>
+<td>P3 incident</td>
+<td>8 business hours; 12 x 5</td>
+</tr>
+<tr>
+<td>P4 incident</td>
+<td>12 business hours; 12 x 5</td>
+</tr>
+</tbody>
+</table>
+<p>Root cause analysis can be provided on request via the support team for P1 support requests.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

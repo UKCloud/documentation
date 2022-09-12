@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for Secure Remote Access </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for Secure Remote Access ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/security/sra-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="getting-started-guide-for-secure-remote-access">Getting Started Guide for Secure Remote Access</h1>
+
+<h2 id="overview">Overview</h2>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This document is for customers who have:</p>
+<ul>
+<li><p>Completed the UKCloud Assurance Wrap</p>
+</li>
+<li><p>Been approved to use the Secure Remote Access (SRA) service to manage services in the Elevated OFFICIAL security domain on the UKCloud platform</p>
+</li>
+</ul>
+<h2 id="post-approval">Post approval</h2>
+<p>Once the SRA Assurance Wrap has been approved, we'll raise a Service Request for the implementation of the SRA virtual data centre (VDC) and, if needed, an Elevated VDC. If a Service Request for this VDC implementation already exists, we'll provide updates in that one rather than create a new one.</p>
+<p>You can track the progress of the Service Request using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>As part of the build, we may reach out to confirm some of the following details if not already defined and where appropriate:</p>
+<ul>
+<li><p>Confirm your Elevated OFFICIAL customer account number as we'll create a new Org under that account to contain the SRA VDC. The Org number is used as an identifier when signing certificates.</p>
+</li>
+<li><p>The preferred IP pool you want to use for your client devices. If the IP pool you'd prefer is in use by another customer then we'll need to choose a different one. We'll inform you if this is the case.</p>
+</li>
+<li><p>If you want to specify an IP from the IP pool for each device, we'll need you to supply the mapping.</p>
+</li>
+<li><p>Any specified DNS servers.</p>
+</li>
+<li><p>A certificate signing request for each remote access device.</p>
+</li>
+</ul>
+<h2 id="certificate-signing-request-csr-generation">Certificate Signing Request (CSR) generation</h2>
+<p>To enable SRA access, we'll need the certificate-signing request (CSR) from each remote access device you'll be using. The certificate-generation process will vary depending on the OS of the client device.</p>
+<h3 id="windows">Windows</h3>
+<p>Follow the steps below to generate the CSR for a Windows device.</p>
+<ol>
+<li><p>Open the Certificates MMC snap-in (click <strong>Start</strong>, click <strong>Run</strong>, type <code>mmc</code> and then press <strong>Enter</strong>).</p>
+</li>
+<li><p>Select <strong>File</strong> &gt; <strong>Add/Remove Snap-in</strong> &gt; <strong>Certificates</strong> &gt; <strong>Add</strong> &gt; <strong>Computer Account</strong> &gt; <strong>Next</strong> &gt; <strong>Local computer</strong> &gt; <strong>Finish</strong>.</p>
+</li>
+<li><p>In the console tree, double-click <strong>Personal</strong> and then click <strong>Certificates</strong>.</p>
+</li>
+<li><p>On the <strong>Actions</strong> menu, point to <strong>All Tasks</strong>, <strong>Advanced Options</strong> and then click <strong>Create Custom Request</strong> to start the <em>Certificate Enrolment</em> wizard. Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Custom request</em> page, from the <strong>Templates</strong> list, we recommend using the <strong>Custom Request</strong> option as your domain policy may be incompatible with the SRA service.</p>
+<ul>
+<li>Select <strong>Proceed without enrolment policy</strong> and click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li><p>Select <strong>(No template) CNG key</strong> and ensure the <strong>PKCS#10</strong> radio button is selected, then click <strong>Next</strong>.</p>
+</li>
+<li><p>At the <strong>Certificate Information</strong> page, click the down arrow next to <strong>Details</strong> then click the <strong>Properties</strong> button.</p>
+</li>
+<li><p>Click the <strong>Private Key</strong> tab, then the down arrow to the right of <strong>Key options</strong>.</p>
+</li>
+<li><p>Change the <strong>Key size</strong> to <strong>2048</strong> and click <strong>Apply</strong>.</p>
+<ul>
+<li><strong>Optional:</strong> If you want to back up the certificate (to protect against client device failure) click the check boxes for the <strong>private key</strong>. You'll be asked for a password.</li>
+</ul>
+</li>
+<li><p>For the file format, select <strong>Base 64</strong> and then save the CSR.</p>
+</li>
+</ol>
+<h3 id="linux-and-mac-os">Linux and Mac OS</h3>
+<p>For Linux and Mac OS, an equivalent OpenSSL command would be the following:</p>
+<pre><code class="lang-none">openssl req -nodes -newkey rsa:2048 -keyout myserver.key -out server.csr
+</code></pre>
+<p>Ensure that the key file is preserved for the later installation steps below, as without this the AnyConnect client will not be able to connect the SRA service.</p>
+<h2 id="csr-submission-to-ukcloud">CSR submission to UKCloud</h2>
+<p>We request that you provide the CSR in a Service Request via the Elevated UKCloud Portal by adding it as an attachment to the ticket so that we can generate the associated certificate(s). Should you not have access to the Elevated Portal, or not be able to copy the CSR into the Elevated domain, get in touch and we'll advise an alternative way for you to send this to us.</p>
+<h2 id="cisco-anyconnect-client-setup">Cisco AnyConnect client setup</h2>
+<p>Upon completion of the build, as part of the Getting Started pack, we'ill provide you with access to the required Cisco AnyConnect Client installation files.</p>
+<p>Should you or any additional users need to acquire the AnyConnect installation files at a later date, raise a Service Request and we can provide access to the required files.</p>
+<h3 id="windows-1">Windows</h3>
+<p>Whilst the Windows installation may come with the full AnyConnect package, the only component required for connecting to the SRA VPN is the <code>core-vpn</code> component. You may install the additional components if you want.</p>
+<p>You can install the client in one of the following ways:</p>
+<ul>
+<li><p>Right-click the <code>anyconnect-win-&lt;version&gt;-core-vpn-predeploy-k9.msi</code> file and select install.</p>
+</li>
+<li><p>Run <code>setup.exe</code> and select the required components from the installation wizard.</p>
+</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<pre><code class="lang-none">tar zxvf anyconnect-linux-64-&lt;version number&gt;-k9.tar.gz
+
+cd anyconnect-&lt;version number&gt;-/vpn
+
+sudo ./vpn_install.sh
+</code></pre>
+<h3 id="mac-os">Mac OS</h3>
+<p>Double-click the <code>anyconnect-macos-&lt;version number&gt;-predeploy-k9.dmg</code> file.</p>
+<p>In the pop-up window, double click <code>AnyConnect.pkg</code> and then follow the installation wizard to install the AnyConnect software.</p>
+<p>If prompted to select which components to install, the only component required for the SRA VPN is the <code>core-vpn</code>.</p>
+<h2 id="post-installation-configuration">Post-installation configuration</h2>
+<p>Once you've installed the AnyConnect software and certificates on your device, you'll need to install the required connection profile. Access to the required connection profiles will be shared via the Getting Started pack, which is sent on completion of the solution build. Should you or any additional users need to acquire the profiles at a later date, raise a Service Request and we can provide access to the required files.</p>
+<p>Unzip the file and copy the XML file(s) to the following location:</p>
+<table>
+<thead>
+<tr>
+<th>OS type</th>
+<th>CPA XML location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td><code>C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile</code></td>
+</tr>
+<tr>
+<td>Linux/Mac OS</td>
+<td><code>/opt/cisco/anyconnect/profile</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-linux-only">For Linux only</h3>
+<p>In addition to the AnyConnect profile(s), you'll also need to install a local policy. If you want to connect from a Linux device, raise a Service Request and we can provide access to the required file.</p>
+<p>Once you've copied the connection profile and local policy to the correct locations, you need to restart the AnyConnect service (using the command <code>service vpnagentd restart</code>) or reboot your machine.</p>
+<h2 id="anyconnect-client-upgrades">AnyConnect client upgrades</h2>
+<p>UKCloud will periodically update the minimum AnyConnect client version required to connect to the Secure Remote Access service. As per our standard notice period, we'll always try to provide a minimum of two weeks' notice where possible before performing an upgrade but <strong>withhold the right to perform necessary upgrades at shorter notice where any security concerns dictate.</strong></p>
+<p>Automatic upgrades will be pushed to AnyConnect clients when connecting to the SRA VPN for the first time following an upgrade. To enable automatic upgrades, you must permit access to the SRAS VPN endpoints via port <code>TCP/443</code>. The AnyConnect upgrade <strong>does not</strong> require administrative privileges on the device. Any custom measures implemented through Group Policy that restrict the installation of software or network adapters may prevent the installation of the upgrade and you may need to install the updated client on the necessary machines prior to UKCloud performing the upgrade. If you require a manual installation or would like to install the updated client ahead of time, you can raise a Service Request via the UKCloud Portal and we can provide you with the required Cisco AnyConnect installation files.</p>
+<h2 id="certificate-installation">Certificate installation</h2>
+<p>Once we've set up your Secure Remote Access solution, we'll send you an email containing the certificates we've generated (based on the CSR sent to us as above), which you'll need to install on your remote access device.</p>
+<p>For each customer SRA service, a unique IssuingCA certificate is generated and used to sign each individual device certificates. The IssuingCA certificate along with the specific certificate for the device will be emailed. You need to install both the certificates.</p>
+<p>The certificates sent through will be named as below:</p>
+<ul>
+<li><p><strong>IssuingCA</strong> – <code>clientcert.pem</code></p>
+</li>
+<li><p><strong>Device Certificate</strong> - <code>E51FFC7D50C&lt;HEX VALUE&gt;.pem</code></p>
+</li>
+</ul>
+<h3 id="windows-certificate-store">Windows certificate store</h3>
+<p>Follow the steps below to import the certificates into the Windows certificate store. This assumes that you have the certificates we sent accessible to the MMC:</p>
+<ol>
+<li><p>Open the Certificates MMC snap-in (click <strong>Start</strong>, click <strong>Run</strong>, type <strong>mmc</strong>, and then press <strong>Enter</strong>). Select <strong>Certificates</strong> and then <strong>Local Computer Account</strong>.</p>
+</li>
+<li><p>In the console tree, open <strong>Trusted Root Certification Authorities</strong>, right-click <strong>Certificates</strong> and select <strong>All tasks – Import - Next</strong>.</p>
+</li>
+<li><p>Click <strong>Browse</strong> and change the filter from **X.509 Certificate (<em>.cer, <em>.crt)</em></em> to <strong>All files</strong>.</p>
+</li>
+<li><p>Find the IssuingCA sent to you, double-click <strong>clientcert.pem</strong> and click <strong>Next</strong>.</p>
+</li>
+<li><p>Ensure that the <strong>Place all certificates</strong> radio button has <strong>Trusted Root Certification Authorities</strong> selected then click <strong>Next</strong> then <strong>Finish</strong>.</p>
+</li>
+<li><p>In the console tree, open <strong>Personal</strong>, right click <strong>Certificates</strong> and select <strong>All tasks – Import - Next</strong>.</p>
+</li>
+<li><p>Click <strong>Browse</strong> and change the filter from **X.509 Certificate (<em>.cer, <em>.crt)</em></em> to <strong>All files</strong>.</p>
+</li>
+<li><p>Find the device certificate sent to you, double-click <strong>E51FFC7D50C<hex value="">.pem</hex></strong> and click <strong>Next</strong>.</p>
+</li>
+<li><p>Ensure that the <strong>Place all certificates</strong> radio button has <strong>Personal</strong> selected then click <strong>Next</strong> then <strong>Finish</strong>.</p>
+</li>
+<li><p>Using the example customer <strong>SRAS-1-1-2</strong> you should now see the client certificate in the Personal store.</p>
+</li>
+<li><p>You should now see the client certificate in the <strong>Personal</strong> store. For example, the certificate for customer <strong>SRAS-1-1-2</strong> would look like the following:</p>
+<p><img src="images/sra-windows-certificate-store.png" alt="Windows certificate store"></p>
+</li>
+<li><p>Double-click the certificate:</p>
+<ul>
+<li><p>On the <strong>General</strong> tab you should see the following text: <strong>You have a private key that corresponds to this certificate</strong>.</p>
+<p><img src="images/sra-windows-certificate-general.png" alt="General tab of Certificate dialog"></p>
+</li>
+<li><p>The UID is displayed in the <strong>Subject</strong> line on the <strong>Details</strong> tab, for example, <strong>SRAS-1-1-2-<em>xxx</em></strong>.</p>
+<p><img src="images/sra-windows-certificate-details.png" alt="Details tab of Certificate dialog"></p>
+</li>
+<li><p>The certification path listed on the <strong>Certification Path</strong> tab shows the IssuingCA, for example:</p>
+<p><img src="images/sra-windows-certificate-path.png" alt="Certification Path of Certificate dialog"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="linux-and-mac-os-1">Linux and Mac OS</h3>
+<p>The Linux and Mac OS certificate store is just a file structure under the user account you'll be using to connect to the SRA VPN. For the AnyConnect client to work, the following must be true:</p>
+<ul>
+<li><p>All certificate files must end with the extension <code>.pem</code></p>
+</li>
+<li><p>All private key files must end with the extension <code>.key</code></p>
+</li>
+<li><p>A client certificate and its corresponding private key must have the same file name, for example <code>client.pem</code> and <code>client.key</code></p>
+</li>
+<li><p><strong>The certificate and key must be owned by the same user and stored in that user's file structure.</strong></p>
+</li>
+</ul>
+<p>Using the example customer issued certificate SRAS1-1-2-001.pem, the files would be stored in the following locations for root. You must move and rename the key file generated above appropriately.</p>
+<table>
+<thead>
+<tr>
+<th>PEM file certificate store folders</th>
+<th>Type of certificates stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.cisco/certificates/client/private/SRAS1-1-2-001.key</code></td>
+<td>Private keys</td>
+</tr>
+<tr>
+<td><code>~/.cisco/certificates/client/SRAS1-1-2-001.pem</code></td>
+<td>Client certificates</td>
+</tr>
+<tr>
+<td><code>~/.cisco/certificates/ca/clientcert.pem</code></td>
+<td>Trusted CA and root certificates</td>
+</tr>
+</tbody>
+</table>
+<p>If the above directories do not already exist, you can create them manually.</p>
+<h2 id="connecting-to-sra">Connecting to SRA</h2>
+<p>Once connected to the SRA VPN, you can access your Elevated OFFICIAL environment via IP address or DNS name (if you have DNS configured), providing you have permitted connectivity from your assigned SRA VPN subnet. Client connection methods are listed below.</p>
+<h3 id="windows-2">Windows</h3>
+<p>When you open the Cisco AnyConnect client, you'll see a window appear. Providing you have installed the SRA XML profile as explained previously, you'll be able to select the SRA VPN endpoint from the dropdown box.</p>
+<p><img src="images/sra-windows-anyconnect-client.png" alt="Cisco AnyConnect Secure Mobility Client connection dialog box"></p>
+<p>Click the <strong>Connect</strong> button and after a couple of status checks the client should scan the certificate store and give you the option to select a certificate to connect with. If you have multiple certificates installed on your machine, you may need to select <strong>More Choices</strong> to reveal the required certificate.</p>
+<p><img src="images/sra-windows-anyconnect-select-certificate.png" alt="Cisco AnyConnect Secure Mobility Client certificate selection"></p>
+<p>Once you've selected the require certificate, AnyConnect should connect you to the SRA VPN.</p>
+<h3 id="linux-and-mac-os-2">Linux and Mac OS</h3>
+<p>Once you've restarted AnyConnect and installed the certificates, you can use the client with the following command line (SRA endpoints are defined in the connection profiles installed previously):</p>
+<pre><code class="lang-none">/opt/cisco/anyconnect/bin/vpn connect \&lt;sras-endpoint\&gt;
+</code></pre>
+<p>If you use MacOS or a Linux Desktop distribution, you should be able to use the Cisco AnyConnect Graphical User Interface (GUI).</p>
+<h2 id="accessing-the-ukcloud-portal-using-sra">Accessing the UKCloud Portal using SRA</h2>
+<p>There is no direct access to the UKCloud Elevated Portal once the Cisco AnyConnect client connects.</p>
+<p>In most cases, we'll create a virtual machine (<em>bastion VM</em>) within the SRA VDC that you can RDP to once connected to the VPN. From the bastion VM, you can access and log in to the UKCloud Elevated Portal to provision and manage your SRA and Elevated environments. Once we've deployed the bastion VM, it becomes your responsibility to manage and maintain it. This VM will be billed according to the standard UKCloud billing process.</p>
+<p>To obtain the IP addresses and domains for our additional shared services within the Elevated OFFICIAL platform, for example, WSUS and RHUI, raise a Service Request via the <strong>My Calls</strong> section of the UKCloud Portal.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="toggle-mode">
+                      <div class="icon">
+                        <i aria-hidden="true">☀</i>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="switch-style">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="icon">
+                        <i aria-hidden="true">☾</i>
+                      </div>
+                      <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="https://ukcloud.com">UKCloud Ltd</a>, 2022. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              The <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    <!-- Enable Terraform syntax highlighting -->
+    <script type="text/javascript" src="../../styles/terraform.js"></script>
+    <script type="text/javascript">
+      hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+      hljs.initHighlightingOnLoad();
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>
+  </body>
+</html>

@@ -54,12 +54,8 @@
     href: conn-ref-psn-core-services.md
 - name: Service Information
   items:
-  - name: Neustar DDoS Protection from UKCloud Service Definition
-    href: conn-sd-ddosprotect.md
   - name: Neustar DDoS Protection from UKCloud Service Scope
     href: conn-sco-app-ddos.md
-  - name: Neustar UltraDNS from UKCloud Service Definition
-    href: conn-sd-ultradns.md
   - name: Neustar UltraDNS from UKCloud Service Scope
     href: conn-sco-glb.md
 - name: Troubleshooting

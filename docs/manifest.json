@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "vcJKRPR2ErPd+z0O47qEIh2EJ97Ubb9OHx4UV3MXeYs="
+          "hash": "iiK2JbfGd1jlUdYQJAFKQYCvjmFl877QqaSZxFf9oU4="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "YkhiCywaFClgJjEygzGLZ/eR4AkonbHmcOwqDtNqmCY="
+          "hash": "PVPIMlGz2nD5uD75WlhDwoNSwPmkwI/vEDS3NT5dmqc="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "AYgDoBadLFmbPpyz6HL2F0YQAA4JLetQLQ0LjiegavY="
+          "hash": "D6KI7WVGEX1CNEqDAAJNOj131g16ANqyyjPP36Rgi5w="
         }
       },
       "is_incremental": false,
@@ -621,19 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "q/hX4TgBLgJOqg10LNkyJYSblgAm71zYgJMA/1//dn8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/azs-sd.html",
-          "hash": "62AI5A3j3Ye+99wuGq5iHxwRE6Z0TIR9VsOXNGPFL1o="
+          "hash": "mx2IQ7zUWiysFf8Dg0QHul3Am0cJZgWkKryiaqTvc00="
         }
       },
       "is_incremental": false,
@@ -2666,17 +2654,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azs-product-options-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-public-browser-add-connection-blade.png",
       "output": {
         "resource": {
@@ -3249,6 +3226,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/banner.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/banner.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/home-ukc-logo.png",
       "output": {
         "resource": {
@@ -3260,10 +3248,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/ukc-services-g12.png",
+      "source_relative_path": "articles/azure/images/ukc-services-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/ukc-services-g12.png"
+          "relative_path": "articles/azure/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -3275,192 +3263,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "N5n1o/6TWVwvpfX54crsdXXb/TyVxkpvh+cEIwlSXro="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-faq.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "KpcmBmybiBlPJ+QCiCI5wmq4nTY22qKexuO5b2g3zUo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-gs-walled-garden.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "qkOL4ji3BVgEEYHVzeA70Gpper+WPowd8GX77nYwJsY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
-          "hash": "pDt/mxmjeyhuAb1JFsMIjpb84TGgw/q9zm4CAVZdGhc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-ref-application-process.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-ref-application-process.html",
-          "hash": "xKRLkwLktE2vvTV6BH2EgsjTEAQiktSz1gaVJCQ0Dek="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-ref-bp-overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-ref-bp-overview.html",
-          "hash": "V72dEvcIH9kbBj+OQ30QqVilhQp5DG70iHwkx70b0wI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-ref-pricing.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-ref-pricing.html",
-          "hash": "gyJ2wWm/eIFcH2rErNllBuL2G7VE0Tu0tLWiWCnOch0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-sco.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-sco.html",
-          "hash": "PdgfKB/aSnezPUzjq4JfyoiDp4/OVFw32M5988ySa9I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-sd.html",
-          "hash": "wMBUDOULM4dgNywLINAV+IBv+aUTZVVDxmjkq0+zyXk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/cdsz-example-setup.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/cdsz-example-setup.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/cdsz-network-topography.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/cdsz-network-topography.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/cdsz-process-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/cdsz-process-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/cdsz-snat-dnat.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/cdsz-snat-dnat.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/cdsz-static-routes-snat.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/cdsz-static-routes-snat.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/cdsz-walled-garden.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/cdsz-walled-garden.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cdsz/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cdsz/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/cdsz/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/toc.html",
-          "hash": "XgdaRFXkgJkuQiZXfnQ8yKCUlm3w3s96hTlUCGB4QPg="
+          "hash": "O3C78KqIIal/eBajVoUgfFgjlv/o8QzGagSpXkw5ABA="
         }
       },
       "is_incremental": false,
@@ -3472,7 +3275,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "Soch76clgw8sYJfkL1TDRWwQbUOBJoisMa+nHJLAa4s="
+          "hash": "+h9jLjt+z9nkkyC7vKv9u58PP1CmTZ76T8D76ovAL6Y="
         }
       },
       "is_incremental": false,
@@ -3485,6 +3288,18 @@
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
           "hash": "jTdzhkGT3BsC2vl/IH+tVLvXc5gWv+qJwiTtdXKEUn4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-home.html",
+          "hash": "3+cbd3hoCPIUG8jVpKMw1kCeXoRiRjSlJ9zMmfK1yqM="
         }
       },
       "is_incremental": false,
@@ -3592,19 +3407,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "klsQsq+Bo4TofIjNQF9MI/T9X3Kbb/6PvPEoqSnPsk0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cloud-storage/cs-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cloud-storage/cs-sd.html",
-          "hash": "brlmUY6x8nJ3pOiPfegGguHQcmaO6cMHgv0Kbt8pHsU="
+          "hash": "Fpcdz58sYDrgbgmZvpd5zqHkYpautRc2W4+AzOgO1iw="
         }
       },
       "is_incremental": false,
@@ -3617,6 +3420,17 @@
         ".html": {
           "relative_path": "articles/cloud-storage/cs-vid-geodrive2-client-overview.html",
           "hash": "UvxYl9U71HCpxa4jI5dEqbFUURAz2ebjdkJWExnLRDg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/banner.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -3976,10 +3790,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-product-options-g12.png",
+      "source_relative_path": "articles/cloud-storage/images/cs-s3browser-edit-account.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-product-options-g12.png"
+          "relative_path": "articles/cloud-storage/images/cs-s3browser-edit-account.png"
         }
       },
       "is_incremental": false,
@@ -3987,10 +3801,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-s3browser-edit-account.png",
+      "source_relative_path": "articles/cloud-storage/images/home-ukc-logo.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-s3browser-edit-account.png"
+          "relative_path": "articles/cloud-storage/images/home-ukc-logo.png"
         }
       },
       "is_incremental": false,
@@ -4009,10 +3823,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/ukc-services-g12.png",
+      "source_relative_path": "articles/cloud-storage/images/ukc-services-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/cloud-storage/images/ukc-services-g12.png"
+          "relative_path": "articles/cloud-storage/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -4024,7 +3838,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "OlqlRrl1U1Xy39B1h+olKgaPNJOtEFIoUrHSSCZeIiM="
+          "hash": "JUS5hrFzEIzsLjDyuzaeGkIxU7Y0jkzj37xtHb27pxA="
         }
       },
       "is_incremental": false,
@@ -4192,7 +4006,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
-          "hash": "G63otsgvTYPMlma8SjqueKz67cadcOZ1fVyKL9oD1Ak="
+          "hash": "4yT78weQokfgoHowssdGnx6Uh0kNku6dQWHMUGwjwMQ="
         }
       },
       "is_incremental": false,
@@ -4367,41 +4181,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/connectivity/conn-sd-ddosprotect.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/connectivity/conn-sd-ddosprotect.html",
-          "hash": "jm6txFnW6ZdPjYAy6lkU1xJwDBV0r63JLC/wBQpuYKk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/connectivity/conn-sd-ultradns.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/connectivity/conn-sd-ultradns.html",
-          "hash": "5ahuDUWIo5YJBjcQyb9dOKdsbEtpaHcChCm8LgnBLjs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/connectivity/images/conn-ddosprotect-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/connectivity/images/conn-ddosprotect-product-options-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "articles/connectivity/images/conn-internet-allow-list-ports-v1_4.png",
       "output": {
@@ -4429,17 +4208,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/connectivity/images/conn-psn-flattening.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/connectivity/images/conn-ultradns-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/connectivity/images/conn-ultradns-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -4501,23 +4269,24 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/connectivity/images/ukc-services-g12.png",
+      "type": "Toc",
+      "source_relative_path": "articles/connectivity/toc.yml",
       "output": {
-        "resource": {
-          "relative_path": "articles/connectivity/images/ukc-services-g12.png"
+        ".html": {
+          "relative_path": "articles/connectivity/toc.html",
+          "hash": "CS8lWcEi+0XWvZiFAaNRunxvJrr7wOIn4tsoRD31mWU="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "articles/connectivity/toc.yml",
+      "type": "Conceptual",
+      "source_relative_path": "articles/daas/daas-home.md",
       "output": {
         ".html": {
-          "relative_path": "articles/connectivity/toc.html",
-          "hash": "Rxu27SeJoTrhsVYIzTt2Pklcjn+GpCQWKHDSPJRLO1k="
+          "relative_path": "articles/daas/daas-home.html",
+          "hash": "Or7EG0tkSOHWEIvnicJJSVdzlqtChzix0mjpR/9Ywcs="
         }
       },
       "is_incremental": false,
@@ -4536,12 +4305,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/daas/daas-sd.md",
+      "type": "Resource",
+      "source_relative_path": "articles/daas/images/banner.jpg",
       "output": {
-        ".html": {
-          "relative_path": "articles/daas/daas-sd.html",
-          "hash": "PlSsx/BJT2Q3WqbHltTsIh6IHUfNL9vcBqD6ddtZj6Q="
+        "resource": {
+          "relative_path": "articles/daas/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -4549,10 +4317,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/daas/images/ukc-services-g12.png",
+      "source_relative_path": "articles/daas/images/home-ukc-logo.png",
       "output": {
         "resource": {
-          "relative_path": "articles/daas/images/ukc-services-g12.png"
+          "relative_path": "articles/daas/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/daas/images/ukc-services-g13.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/daas/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -4564,227 +4343,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/daas/toc.html",
-          "hash": "mGKgaUqK5tGroYv46akKsYlMWSi0tTjji2aPUPpexnk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/dedicated-compute/dc-sco.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/dedicated-compute/dc-sco.html",
-          "hash": "evtLANfr2UOGCWUkWYDzyJhPppns5fc6WtFTjU/c4ow="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/dedicated-compute/dc-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/dedicated-compute/dc-sd.html",
-          "hash": "GioLaKFK65Kmp9+wC2bED1DSw34NpcLRgGRFdx10jvM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/dedicated-compute/images/dc-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/dedicated-compute/images/dc-product-options-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/dedicated-compute/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/dedicated-compute/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/dedicated-compute/images/vmw-dc-contingency1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/dedicated-compute/images/vmw-dc-contingency1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/dedicated-compute/images/vmw-dc-contingency2.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/dedicated-compute/images/vmw-dc-contingency2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/dedicated-compute/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/dedicated-compute/toc.html",
-          "hash": "p0HvF/IWJ/S4CC3CbufcxZa2FXSCLqeY5074udTcXCI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-faq.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-faq.html",
-          "hash": "rlzj/wVLIWqnbGpD1ms9/lz6luOCms3RIhXCHVhBDJ4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-gs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-gs.html",
-          "hash": "scjGIoQjM7pIm2D3iUXQDsroHJ3oQ0f7GFtxGc93W+k="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-how-zerto-install-local.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-how-zerto-install-local.html",
-          "hash": "W94P5sg9aQ1NcFahU9KP6qVzr8Hdc9Edys/xPAyn9v8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-ref-troubleshooting.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-ref-troubleshooting.html",
-          "hash": "LTOzhVuVAShDXpDPOAJyLJnZg8HV4fMp2DUFY2TNMIo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-sco.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-sco.html",
-          "hash": "o55KwYr0IGmxdTW1ot6oKSBtzleTJWONzSgl+GJw6ak="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-sd.html",
-          "hash": "YDM+r9aXjvRM7XhmND5VH3sSkt34pR46I/Uq9aD0W6w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-vid-zerto-dr.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/draas-vid-zerto-dr.html",
-          "hash": "nexruPgccRpj8Fv3wgnFZo3chetpZEleLhvNpuV41d8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/draas/images/draas-configure-zerto-ipsec.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/draas/images/draas-configure-zerto-ipsec.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/draas/images/draas-zerto-draas.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/draas/images/draas-zerto-draas.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/draas/images/draas-zerto-recovery.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/draas/images/draas-zerto-recovery.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/draas/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/draas/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/draas/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/draas/toc.html",
-          "hash": "3HoZVbXBVYy/PaU4IhPubFviAYxhQwzJ3/f5+58uQQw="
+          "hash": "OGK3CC1QzOAoTI5S3ecXvWgtXEo6eGYzdfWj7AE497s="
         }
       },
       "is_incremental": false,
@@ -4898,6 +4457,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-home.html",
+          "hash": "QZPg1PjH73IOkuN2MiGmULOs4xMaCEleucnFTxetumE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-how-migrate-edge-config.md",
       "output": {
         ".html": {
@@ -4927,18 +4498,6 @@
         ".html": {
           "relative_path": "articles/enablement/enbl-how-zerto-migrate-between-regions.html",
           "hash": "VXnUn56qtXF0jiMsZJ4DbHldCHUjJRbwybUSFsSiQW4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/enablement/enbl-ref-services.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/enablement/enbl-ref-services.html",
-          "hash": "2eBwOSKjI0OWyln17V0rmim9E5lu70Qnc9EieBJkj8c="
         }
       },
       "is_incremental": false,
@@ -4998,7 +4557,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-assured-elevated.html",
-          "hash": "kHcR056zZDheWKCVg2jsHdN3D+QzUvqFkIxEcAAfyZo="
+          "hash": "rH45IwS8s5ATec2pNzn/my5XltGB59P7Ao8FCJvvy+Q="
         }
       },
       "is_incremental": false,
@@ -5011,6 +4570,17 @@
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-transfer-regions.html",
           "hash": "VmSrOYeaDSmSF2Hf+/IIs6calcHbRu96AmmJmdhIC28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/banner.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -5066,6 +4636,61 @@
       "output": {
         "resource": {
           "relative_path": "articles/enablement/images/enbl-zerto-move-vpgs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/home-ukc-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/migr-zerto-mnu-move-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/migr-zerto-mnu-move-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/migr-zerto-move-params.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/migr-zerto-move-params.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/migr-zerto-move-vpgs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/migr-zerto-move-vpgs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/ukc-services-g13.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -5523,12 +5148,36 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/migr-how-zerto-migrate-to-ukcloud.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/migr-how-zerto-migrate-to-ukcloud.html",
+          "hash": "juDxKjjEWsVnILNywPGrqDFvLtMv3FqR9IzOBaTSmig="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/migr-ref-troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/migr-ref-troubleshooting.html",
+          "hash": "ff8+YzYLE0HxYbglgbr3JpVPkM/k9GA54a1My4fhj4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/enablement/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "s3tBx5oEeaoInvcUxOw05upqB1RsghmNPQJSx/wbz8g="
+          "hash": "PharPZlDajkAeQpD5oOYGxxkldxG5EY4PNed7czh8ak="
         }
       },
       "is_incremental": false,
@@ -5747,32 +5396,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/managed-operations/images/man-sd-managed-it-ops.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/managed-operations/images/man-sd-managed-it-ops.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/managed-operations/images/man-update-playbook.png",
       "output": {
         "resource": {
           "relative_path": "articles/managed-operations/images/man-update-playbook.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/managed-operations/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/managed-operations/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -5784,7 +5411,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-adv-support-svcs.html",
-          "hash": "jv5C1HTCuhONN4Q87yPFWkKCs6fxyx7iFLmuKDZRdRQ="
+          "hash": "/a4tsmyllyOLgDdUkuTDB5PQX1vQZboJqRYtnI29fO4="
         }
       },
       "is_incremental": false,
@@ -5796,7 +5423,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-antivirus.html",
-          "hash": "wgSWmS4db736CTU2x86n1eCGFwHbF8/u1k6TXk/hnek="
+          "hash": "sf7toTvfsgisT7Xst1yISY38hjFpr7ZgXYeEGSptQqg="
         }
       },
       "is_incremental": false,
@@ -5808,7 +5435,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-monitoring.html",
-          "hash": "UyskaCQxURXpHNcAJ1FbP87UTQoh0tpfy1RcOmUqSoI="
+          "hash": "TgcyfOyxlrjYZcR4yUrIufrbA0U7Z96RO8gEq+3gSSc="
         }
       },
       "is_incremental": false,
@@ -5820,7 +5447,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-faq-patching.html",
-          "hash": "y0jAmBi6bdKV6i1/Kr92spR6GyjlXQkHh6cVuaXzwu8="
+          "hash": "gfJfbPORHfw712oUTf1nFcsUWMssQrNlo/oyto3mgRQ="
         }
       },
       "is_incremental": false,
@@ -5832,7 +5459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-home.html",
-          "hash": "FPti8kdjI6oRCt3uviJq6dAUFG2sEYEyHG479wqO9KE="
+          "hash": "4bzH8nNJKRGymoYjfhjnnzLFyJgT3ouTTUhzrRUVkXk="
         }
       },
       "is_incremental": false,
@@ -5928,7 +5555,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-ref-customer-prereqs.html",
-          "hash": "ecNQtnMphkM0be1DEV/QeKcOhHvNTYJ4MmB6sRTcztc="
+          "hash": "IWWFVF+t/xUH+Od2A/N7cQwvkcn2A/MdB4tOcPk4abg="
         }
       },
       "is_incremental": false,
@@ -5952,7 +5579,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-ref-sentinelone-datacollection.html",
-          "hash": "+xFmJvv164NOo+hAf4TGq9yi+3Ste0nQeIGqGx+oUK8="
+          "hash": "//NYBEGaZlXxBex3ONecnMVan00L9+mPeUFpqCJ4Jys="
         }
       },
       "is_incremental": false,
@@ -5976,7 +5603,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/man-sco-antivirus.html",
-          "hash": "oj84JXkXM7NKlCIJVQklSOhtawY+XkTRfPzhlEAXDBk="
+          "hash": "MD1G+kMdBuns3v3ESxYzmT2wS+gjATL1M19Os99NzoI="
         }
       },
       "is_incremental": false,
@@ -6031,84 +5658,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-operations/man-sd-ad.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-operations/man-sd-ad.html",
-          "hash": "ioijeqkexYSGackKhjL9K2BrKq9qvnd37NhMo7oHE2E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-operations/man-sd-managed-it-ops.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-operations/man-sd-managed-it-ops.html",
-          "hash": "jojq8DxPOzwWufNIk/8v6II50QtVW3s0ZZDq9PO3Ye4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-operations/man-sd-network.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-operations/man-sd-network.html",
-          "hash": "surhd2oggly9Tm01yo2yw+WE9rZ/EU+yV0fHP+zF76w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-operations/man-sd-rds.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-operations/man-sd-rds.html",
-          "hash": "mrUV1bIARYh4Sxc9tk+3ie72fok/FrVWyKEsPhm3gs4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-operations/man-sd-sqlserver.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-operations/man-sd-sqlserver.html",
-          "hash": "ytRW0Y8OjLMSAmB0gwqA3OZpzymMIW4d/kHvS7Bbo7o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/managed-operations/man-sd-webserver.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/managed-operations/man-sd-webserver.html",
-          "hash": "0qqcQ+1M0aLjd+Y2aLrupfvQmhv05pEt5Rrqjj7fSd0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/managed-operations/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/managed-operations/toc.html",
-          "hash": "QixBcWa7KarPMGCSlTHcn7eOtH7EzEUE3MFIneLZgA8="
+          "hash": "Nl6iNpmk8A5QlLV3pn+do9RI3Sa8KnZceaL8GgWoYdU="
         }
       },
       "is_incremental": false,
@@ -6116,91 +5671,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/migration/images/migr-zerto-mnu-move-vpg.png",
+      "source_relative_path": "articles/openshift/images/banner.jpg",
       "output": {
         "resource": {
-          "relative_path": "articles/migration/images/migr-zerto-mnu-move-vpg.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/migration/images/migr-zerto-move-params.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/migration/images/migr-zerto-move-params.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/migration/images/migr-zerto-move-vpgs.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/migration/images/migr-zerto-move-vpgs.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/migration/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/migration/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
-          "hash": "fZE/hIXGRR3mXNihfjtiDnWlsBRWzCxo5vL1jhxtsqs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/migration/migr-ref-troubleshooting.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/migration/migr-ref-troubleshooting.html",
-          "hash": "zlr2HejPIucilW/v9R5P36W7EcYnfoZU7EHPKexLDDU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/migration/migr-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/migration/migr-sd.html",
-          "hash": "/BfRrWxeCr+ZKQlU043jSm4N0rMOiqPDu6D6geNuHTs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/migration/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/migration/toc.html",
-          "hash": "McuL/5fzkX74AzKZuVzs46NVRkodw30OznQKLirRNsk="
+          "relative_path": "articles/openshift/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -6333,17 +5807,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/oshift-pods-containers.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/openshift/images/oshift-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openshift/images/oshift-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -6505,10 +5968,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openshift/images/ukc-services-g12.png",
+      "source_relative_path": "articles/openshift/images/ukc-services-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openshift/images/ukc-services-g12.png"
+          "relative_path": "articles/openshift/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -6520,7 +5983,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "tssBMPc543XwQOhX5AmZoKghu78wUHMDpKJhmX91YQY="
+          "hash": "x6KofVGpCxNbYRcYAFgC4wh/VBDrhlEf1pUVN73IhD4="
         }
       },
       "is_incremental": false,
@@ -6556,7 +6019,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "grC30C/mbdadlJDMfZLpOdCicHURyOo/cQeHzdZ6/Pc="
+          "hash": "bak4V+gA27pmEr9cW2sJn18skHFbp+k7h8NlbLliTG0="
         }
       },
       "is_incremental": false,
@@ -6892,7 +6355,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "x8sGybWgArCOknqrG+FbyiceBdvIlJLzFbffaYgrBxk="
+          "hash": "GjGRQnBUDD+vvIfUJ/clu6ngjD5pl8NgFxvJR0KEaug="
         }
       },
       "is_incremental": false,
@@ -6940,19 +6403,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "f9Et1zggINQVnbLBczgSInHyAT4fgs5F/pZVXFuSRwE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/openshift/oshift-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "9um2UD0esrNeoboTY3Q/0fXdN30ZF3lVNSjsgOyVQ+Y="
+          "hash": "nkBrWLOTEKTsqfM0Slh+v1OX7JQL+pQWxNKTCboM/Dg="
         }
       },
       "is_incremental": false,
@@ -6964,7 +6415,18 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "ayYPcBTHsBW9EK6Ajp3OutTIHBuwzEV0caocEawf7po="
+          "hash": "IAbw7ijeAbJuUWgggTMeZTj7yXeFxRaNk1Vt5+pTqgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/banner.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -8644,17 +8106,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-product-options-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-ps-openrc-unblock.png",
       "output": {
         "resource": {
@@ -9051,10 +8502,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ukc-services-g12.png",
+      "source_relative_path": "articles/openstack/images/ukc-services-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/openstack/images/ukc-services-g12.png"
+          "relative_path": "articles/openstack/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -9066,7 +8517,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "xq3KGuUygCHOkNDTKyj/wiIT6ndtAe85b5oFvB8UHTw="
+          "hash": "hKAO10E12v8QebXe9JzkYe4TS0nw5JshxqTpybKsoxA="
         }
       },
       "is_incremental": false,
@@ -9090,7 +8541,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "gKJN+L3xWhTRPWNkW6g+kKK5m+BKcJZbzbmHXLsey+s="
+          "hash": "4YRqK0cxb/cXJasOiF//RxbQ+sVjLeewrPzTFsA+Wl4="
         }
       },
       "is_incremental": false,
@@ -9402,7 +8853,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "ZNKRfOjnetjiHrxnBr5L4/L1Oy+w7hOWqZG18q8Q/7k="
+          "hash": "HCXTWN+NgWYEaN5GlIj/us5oI0r0gjea4ahnSPr6aHQ="
         }
       },
       "is_incremental": false,
@@ -9450,19 +8901,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco.html",
-          "hash": "/ZVyJC+A/SYmEb/WFcHzddy3xrpDcy8muZVz2RvG/Y0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/openstack/ostack-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/openstack/ostack-sd.html",
-          "hash": "44u0VnE1h7E3u8mWx/RFR/5oHdyYhRnYIovDQI5GKCc="
+          "hash": "Q2ktTulBr0UvhjfAEv8jijLBqRZVRGLbyJKofOrM+R4="
         }
       },
       "is_incremental": false,
@@ -9498,7 +8937,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "3m9UNHarTcEMeK/gTvmxLK3EXwwDrsYWtfchzE0M83s="
+          "hash": "LwK0tHMRha0berVX0iYuhVoR3wKiGQBYfo1U1knAawk="
         }
       },
       "is_incremental": false,
@@ -9869,43 +9308,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/oracle/images/orcl-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/oracle/images/orcl-product-options-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/oracle/images/orcl-product-options-private-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/oracle/images/orcl-product-options-private-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/oracle/images/orcl-solaris-aix.png",
       "output": {
         "resource": {
           "relative_path": "articles/oracle/images/orcl-solaris-aix.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/oracle/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/oracle/images/ukc-services-g12.png"
         }
       },
       "is_incremental": false,
@@ -9917,7 +9323,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "0J0zhgzE555CRJ13PXKpPFpP23C989ygaZ0HVw3jTGw="
+          "hash": "JCv5mUJ4SyfoXMn2q8JqrTY21C0jcu4ruHsZyrgMB8M="
         }
       },
       "is_incremental": false,
@@ -10073,31 +9479,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "XSjDF1URZn4Qbd0X3V4p7uy1vzwYF+LW5YgYyCHWJIk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/oracle/orcl-sd-private.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/oracle/orcl-sd-private.html",
-          "hash": "ryJQ06MiSgZ5poJ8I41xERKyPW6a6XSTdyEn4/ggvWY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/oracle/orcl-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "9889rrUnW5UYUyRDUkZ0G2g7VnOl6cYRBZhG3AR7g5U="
+          "hash": "UH120mmMOB30itG9+YPBlH6HJ3g4/ZNbcVZwYt22ZD8="
         }
       },
       "is_incremental": false,
@@ -10121,7 +9503,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "fS+XFBE0YSNhuX7iBqrxVYMW3Q3eU/hSNiS1fbMBYmA="
+          "hash": "ICQbfdkdQbuCCACzDhvDmUOl2YHavDu/JzZHqOQL8tE="
         }
       },
       "is_incremental": false,
@@ -10144,17 +9526,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/other/images/kms_client_info.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/mcbs-product-options-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/mcbs-product-options-g12.png"
         }
       },
       "is_incremental": false,
@@ -10678,17 +10049,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/ukc-services-g12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-billing.md",
       "output": {
@@ -10742,7 +10102,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "suTcVtVAyi27zEYZKmNcBQ0cC8PoGqN+vg0HOFql92I="
+          "hash": "NYmaQQZw/iyqFis98FJBqIXdJyNFVLN7tMplkJ+y9J4="
         }
       },
       "is_incremental": false,
@@ -10790,7 +10150,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-best-practice-guide.html",
-          "hash": "5nROfxooPrdjGinRE4T9hxlbFgkajF4b4QVKef0tcxk="
+          "hash": "nc84wKLKhU44PYW77ZIVp6FgxSod+IeZANtxCaMgH7k="
         }
       },
       "is_incremental": false,
@@ -10886,7 +10246,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "uDfkAuF79hB8ZCgjkuikcs0BxewNDnWNRvUteFGktzQ="
+          "hash": "UR/ZqoYNT7Nuuwclemwv4540weJZ1Xj9Mj8kf1h7pIQ="
         }
       },
       "is_incremental": false,
@@ -10898,7 +10258,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-high-availability.html",
-          "hash": "rI2H+HtmnPPuK9qzIKzMf/poU8IjSriiznX7kuY3xag="
+          "hash": "K0vtWAjYfZ/yMCytyPWSUT2Q9ArkIS5ijTbG0z01Be4="
         }
       },
       "is_incremental": false,
@@ -10970,7 +10330,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "sMeXYzIE1/tddEgE3y5lfPhW/AoWVe1mcGMDWysRpO4="
+          "hash": "QtMxfHRyb3Wl7KTVx2RumdSGHVg57x+pLEQY3/ZgCRA="
         }
       },
       "is_incremental": false,
@@ -10994,7 +10354,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-status.html",
-          "hash": "mqs7BvwZ7kaATey9/OwNDwW4oMATA6pnUVdjVm84iN8="
+          "hash": "mL5n8XLFkZsZkdMML/3ZBbfM/fbyZDmzpuBIXo5D4Kw="
         }
       },
       "is_incremental": false,
@@ -11006,7 +10366,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-products-overview.html",
-          "hash": "ABOCUyzHuqDBIIK1Tg2yiQwS/gBbTX9huKDTJvPC/oM="
+          "hash": "x5hBQ0LORvTAsGbCo4+EJG1TOqJ8hQgFy0IK/6fYT2M="
         }
       },
       "is_incremental": false,
@@ -11018,7 +10378,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-promon.html",
-          "hash": "tLBiQ3OkYFVeFj+kS0A4AewBMOd1/k1Cs6qTou8mlmU="
+          "hash": "O9VUb4nlFzQnWP23w9HoY51+te0KiqKnUsnStRh4uxA="
         }
       },
       "is_incremental": false,
@@ -11030,7 +10390,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "+KR1TzHWcEo1H/imJx0HtzyFQB+G1XG/L2L/ltuyUq8="
+          "hash": "FALfTf0/erTep8RUtR7mnAFaLv5TgFhx7wFf7HwPMEs="
         }
       },
       "is_incremental": false,
@@ -12287,7 +11647,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "ajeG2feKh3VedVXgOGorhS36tTUEdnZZhWlUy45HwJI="
+          "hash": "j4iu8TEXBDwUvaahAR3B4mS90nYr086uvMHu4w9cnNs="
         }
       },
       "is_incremental": false,
@@ -12607,10 +11967,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/private-cloud/images/prc-product-options-g12.png",
+      "source_relative_path": "articles/private-cloud/images/banner.jpg",
       "output": {
         "resource": {
-          "relative_path": "articles/private-cloud/images/prc-product-options-g12.png"
+          "relative_path": "articles/private-cloud/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -12618,10 +11978,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/private-cloud/images/prc-storage-product-options-g12.png",
+      "source_relative_path": "articles/private-cloud/images/home-ukc-logo.png",
       "output": {
         "resource": {
-          "relative_path": "articles/private-cloud/images/prc-storage-product-options-g12.png"
+          "relative_path": "articles/private-cloud/images/home-ukc-logo.png"
         }
       },
       "is_incremental": false,
@@ -12629,10 +11989,32 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/private-cloud/images/ukc-services-g12.png",
+      "source_relative_path": "articles/private-cloud/images/ukc-services-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/private-cloud/images/ukc-services-g12.png"
+          "relative_path": "articles/private-cloud/images/ukc-services-g13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/private-cloud/images/vmw-dc-contingency1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/private-cloud/images/vmw-dc-contingency1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/private-cloud/images/vmw-dc-contingency2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/private-cloud/images/vmw-dc-contingency2.png"
         }
       },
       "is_incremental": false,
@@ -12644,7 +12026,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-faq-storage.html",
-          "hash": "eRPyZNcnEiMSoyTQWq1t/e/NY96T9RnSdnxKgZhIvbs="
+          "hash": "X7HRLQgVrm/PzahoIb/yTNoolAdwqqspS2tlGi4ake0="
         }
       },
       "is_incremental": false,
@@ -12656,7 +12038,31 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-faq.html",
-          "hash": "0VTfYoKZeWwN5IS85w2PP+YXycg0hXwW3a8Dseazil0="
+          "hash": "II6O4E2s9MBOdD98QVM56srrr1qsKYcRX1GYw+daZpM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-home.html",
+          "hash": "rxsyYyefjoPh5v9N7aFpvyVRRUTqQBU5tA9VkCNr1KI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-sco-dc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-sco-dc.html",
+          "hash": "NoEK5H9kuOrI5NSWXOunTLs5RQ2qKpd88mv4qU6iWcw="
         }
       },
       "is_incremental": false,
@@ -12668,7 +12074,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sco-storage.html",
-          "hash": "MtRpt2j9IC0Aa2dceH6K57i8LT4TU1TkXjjotUWNnWc="
+          "hash": "8JdIsqjqw4JzbELxjbGfgt+X8r8MgVyAvkRWu8V8DAc="
         }
       },
       "is_incremental": false,
@@ -12687,36 +12093,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/private-cloud/prc-sd-storage.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/private-cloud/prc-sd-storage.html",
-          "hash": "4W04Q6JpJOYROx5Ai1rWjeOYfgw15dgKGfX9TRyO2Q8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/private-cloud/prc-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/private-cloud/prc-sd.html",
-          "hash": "9aSxV61vA4EcItcR1UPfBueJuunzrP9ebdM9pf5DrjM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/private-cloud/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/toc.html",
-          "hash": "5tpcTJCgiN53eDgcnpwzLDzLtRGy/Dkzd4wJobIGAtY="
+          "hash": "dafJQuBMqI+PsiBsjoB7TB2MyvVwe46rvvj6G+XztDE="
         }
       },
       "is_incremental": false,
@@ -12724,10 +12106,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/pro-services/images/ps-product-options-g12.png",
+      "source_relative_path": "articles/pro-services/images/banner.jpg",
       "output": {
         "resource": {
-          "relative_path": "articles/pro-services/images/ps-product-options-g12.png"
+          "relative_path": "articles/pro-services/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -12735,10 +12117,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/pro-services/images/ukc-services-g12.png",
+      "source_relative_path": "articles/pro-services/images/home-ukc-logo.png",
       "output": {
         "resource": {
-          "relative_path": "articles/pro-services/images/ukc-services-g12.png"
+          "relative_path": "articles/pro-services/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/pro-services/images/ukc-services-g13.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/pro-services/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -12758,11 +12151,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/pro-services/ps-sd.md",
+      "source_relative_path": "articles/pro-services/ps-home.md",
       "output": {
         ".html": {
-          "relative_path": "articles/pro-services/ps-sd.html",
-          "hash": "8U5o1mCbjOfWbFAs1XiU680AL4HvBsNaYtZ3Lv847oE="
+          "relative_path": "articles/pro-services/ps-home.html",
+          "hash": "ZdQ0va83aBDIO+RN+9LRONRODWDwl6xxN4/Mioa/AvQ="
         }
       },
       "is_incremental": false,
@@ -12774,7 +12167,457 @@
       "output": {
         ".html": {
           "relative_path": "articles/pro-services/toc.html",
-          "hash": "gRWaeVBObxEsP6NbwK0Jl8GBcDUAjCd1HEBzGaXzb9A="
+          "hash": "4pSVaTHfcVK4nDeXEC/jTZeFSgOVbx2XgqBzFO7qK8w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-faq.html",
+          "hash": "au3J81IDnYRkNcE7sawzG7NPH9/D8ffXHdDCxRxUI6o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-gs-walled-garden.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-gs-walled-garden.html",
+          "hash": "TzlrwLxlEbYqEHlGxMgqCz/Fk94VvWYrNJREVLIQ5zo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-how-access-services-walled-garden.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-how-access-services-walled-garden.html",
+          "hash": "YMHbe6tc5XMdO1XelQDiMAuPUn9vGNNo0Mf/afR7ILs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-ref-application-process.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-ref-application-process.html",
+          "hash": "TbclWDL+zI6iwZ7boIcQ7T4rAYpjjSNXUKEE6j7NmsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-ref-bp-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-ref-bp-overview.html",
+          "hash": "lbJqAxfLeFhv8AKICb69edkTn74eCYHWLFfZQ2/4RR0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-ref-pricing.html",
+          "hash": "rCeJ4/nGHB44UBmDZWigQLdYLcp69wZ9DipUhtS3IeE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/cdsz-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/cdsz-sco.html",
+          "hash": "78BQFC/hdcBoAf5TMkYsi/UdKbVVXRmzz4UMk2bRnZg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/draas-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/draas-faq.html",
+          "hash": "wz6kGiYeplGUWLcyNXLlECh7xsoUj4Vaom1u8h8cozo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/draas-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/draas-gs.html",
+          "hash": "zoiL2UkgxxLU4IRFsR7q1KAnboW0xlwsvkHhXkpQu8w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/draas-how-zerto-install-local.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/draas-how-zerto-install-local.html",
+          "hash": "dx5hJMcEK6OO0+6nZ5dB84/mlOghU9Quw8r8ZtBCSxw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/draas-ref-troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/draas-ref-troubleshooting.html",
+          "hash": "2UV7SlSjVCDw750lOA5OwuuInQoeSGa1Pj5T2Xl0J3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/draas-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/draas-sco.html",
+          "hash": "yHAUsHDXlDlXo5cqv6kp/WIHO0brjJdEjATvdV2Bid8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/draas-vid-zerto-dr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/draas-vid-zerto-dr.html",
+          "hash": "eJD4uAaLHREMmf0rZ/BIDS5AmvEj6YPtF++pMIbLuCw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/banner.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/banner.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/cdsz-example-setup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/cdsz-example-setup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/cdsz-network-topography.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/cdsz-network-topography.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/cdsz-process-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/cdsz-process-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/cdsz-snat-dnat.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/cdsz-snat-dnat.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/cdsz-static-routes-snat.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/cdsz-static-routes-snat.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/cdsz-walled-garden.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/cdsz-walled-garden.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/draas-configure-zerto-ipsec.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/draas-configure-zerto-ipsec.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/draas-zerto-draas.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/draas-zerto-draas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/draas-zerto-recovery.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/draas-zerto-recovery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/home-ukc-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/home-ukc-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/sra-windows-anyconnect-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/sra-windows-anyconnect-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/sra-windows-anyconnect-select-certificate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/sra-windows-anyconnect-select-certificate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/sra-windows-certificate-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/sra-windows-certificate-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/sra-windows-certificate-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/sra-windows-certificate-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/sra-windows-certificate-path.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/sra-windows-certificate-path.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/sra-windows-certificate-store.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/sra-windows-certificate-store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/security/images/ukc-services-g13.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/security/images/ukc-services-g13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/sec-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/sec-home.html",
+          "hash": "wKIVVBKknv7PLGDtHtbOBehYWERHYR5qTAOktsN0NAs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/soc-vid-intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/soc-vid-intro.html",
+          "hash": "46HBMWKv8vD2JJgw0EwAj16KZO8/4nOpAPfXyWsgWmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/sra-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/sra-faq.html",
+          "hash": "AKEnCIL2bFuC7sMGxr8oxBiumBJn7IKNDYM1LMHfXoA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/sra-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/sra-gs.html",
+          "hash": "bJAaVai2BqRvBYxY0oBpaC9IuJw+Lf/U0DoAm4d2nBM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/sra-how-add-remove-users.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/sra-how-add-remove-users.html",
+          "hash": "OGVLNx08y5cjCZVBCsykwJcHFRZOSbb+TkOgyf71zM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/sra-ref-pricing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/sra-ref-pricing.html",
+          "hash": "XUjN4VqoZMsEF4/8+pKMOmMnqWDPkIbE7d0lv+YLm2k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/security/sra-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/sra-sco.html",
+          "hash": "y4xxjCnolFIHCD96NLUM7EskQOqEHHrAjuYOQy4RgqY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/security/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/security/toc.html",
+          "hash": "giFk/S5l0JB1SZhAs3DUZtFo7qIJjkYJS+FoCJLBt38="
         }
       },
       "is_incremental": false,
@@ -12874,7 +12717,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-access-centos-update-servers.html",
-          "hash": "hyeLDm8ooO/XRUvTjQkykS+ViD5DkHRlIvcwI/UwLFk="
+          "hash": "4W0zh/d6P3KJVBrdsVF0XUEWqxUqVZnAKHOY6p8ZYPU="
         }
       },
       "is_incremental": false,
@@ -12898,7 +12741,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-how-access-ubuntu-update-servers.html",
-          "hash": "6PHyoLsAHnuKaBhsZr2fT8cmQWzU/gPiGKEdJTMztGA="
+          "hash": "d2D0Tr+d72nZ7Y7ehJYTaUAZHxQw2awMZeeoOpcqqBs="
         }
       },
       "is_incremental": false,
@@ -12970,7 +12813,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shared/shared-ref-access-to-vms.html",
-          "hash": "hxcluyExAlYNrq6aCd+CjExmqn6Sq1i/L9G00m5/Wf8="
+          "hash": "tgftnq9mBZSZuttz0HGYTZvCFHkLGxI9KWc7mrdxN0k="
         }
       },
       "is_incremental": false,
@@ -13038,34 +12881,32 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/soc/images/ukc-services-g12.png",
+      "source_relative_path": "articles/vls/images/banner.jpg",
       "output": {
         "resource": {
-          "relative_path": "articles/soc/images/ukc-services-g12.png"
+          "relative_path": "articles/vls/images/banner.jpg"
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/soc/soc-sd.md",
+      "type": "Resource",
+      "source_relative_path": "articles/vls/images/home-ukc-logo.png",
       "output": {
-        ".html": {
-          "relative_path": "articles/soc/soc-sd.html",
-          "hash": "XuSDPJb6W/Q2NuUw2L/vR3R0+z6J4MNCaYxvyiTnlGo="
+        "resource": {
+          "relative_path": "articles/vls/images/home-ukc-logo.png"
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/soc/soc-vid-intro.md",
+      "type": "Resource",
+      "source_relative_path": "articles/vls/images/ukc-services-g13.png",
       "output": {
-        ".html": {
-          "relative_path": "articles/soc/soc-vid-intro.html",
-          "hash": "dCHpaL1FSVu31TSIZ4pQdyv4JISUT7zr83xbapF2BEk="
+        "resource": {
+          "relative_path": "articles/vls/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -13073,88 +12914,11 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "articles/soc/toc.yml",
+      "source_relative_path": "articles/vls/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/soc/toc.html",
-          "hash": "zVJPNekTgvlQ90WH2UG2f6Du9CtRCagJA5s6Ar+Yvp4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/sra-windows-anyconnect-client.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/sra-windows-anyconnect-client.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/sra-windows-anyconnect-select-certificate.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/sra-windows-anyconnect-select-certificate.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/sra-windows-certificate-details.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/sra-windows-certificate-details.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/sra-windows-certificate-general.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/sra-windows-certificate-general.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/sra-windows-certificate-path.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/sra-windows-certificate-path.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/sra-windows-certificate-store.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/sra-windows-certificate-store.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/sra/images/ukc-services-g12.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/sra/images/ukc-services-g12.png"
+          "relative_path": "articles/vls/toc.html",
+          "hash": "Il/hRHuyjVRDYwVRFirNNqahNddrkDNQbCX51TLYFVs="
         }
       },
       "is_incremental": false,
@@ -13162,11 +12926,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/sra/sra-faq.md",
+      "source_relative_path": "articles/vls/vls-faq.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/sra-faq.html",
-          "hash": "kyiyeF6HnimgvhOKwvG25eRzh64+AtpR5qOQasgk628="
+          "relative_path": "articles/vls/vls-faq.html",
+          "hash": "yol8H4CFtHVmE5g0WWdASafVhODuItCGjBeJ46hXlbo="
         }
       },
       "is_incremental": false,
@@ -13174,11 +12938,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/sra/sra-gs.md",
+      "source_relative_path": "articles/vls/vls-home.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/sra-gs.html",
-          "hash": "CJ8SWiil7QEpFoDp1M2ynNm4ofqG06tZk0S+DOhy+as="
+          "relative_path": "articles/vls/vls-home.html",
+          "hash": "JH9P9GfmsJbJ3PN5MeXr6qGNO7MflZVkLylPrlLGqnI="
         }
       },
       "is_incremental": false,
@@ -13186,11 +12950,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/sra/sra-how-add-remove-users.md",
+      "source_relative_path": "articles/vls/vls-how-ves-add-products-3.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/sra-how-add-remove-users.html",
-          "hash": "lGVoXJV4XLPoYAW52BBrqMoe9fCiYJ9lWWbEzBsUIMo="
+          "relative_path": "articles/vls/vls-how-ves-add-products-3.html",
+          "hash": "NtYjIbVZRWe11QQp57uaHc2skBAcSiSGW+XQ/q/Z5yY="
         }
       },
       "is_incremental": false,
@@ -13198,11 +12962,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/sra/sra-ref-pricing.md",
+      "source_relative_path": "articles/vls/vls-how-ves-install-usage-meter-3.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/sra-ref-pricing.html",
-          "hash": "a0rnjyJk3dmxgxz9Yfzlr81VXLzaNaUNLT0n+A5Ffd8="
+          "relative_path": "articles/vls/vls-how-ves-install-usage-meter-3.html",
+          "hash": "9C9+6mEOiHUmG3Jj+Y+PsLRBGhY10N6HP+x6aFIEwdM="
         }
       },
       "is_incremental": false,
@@ -13210,11 +12974,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/sra/sra-sco.md",
+      "source_relative_path": "articles/vls/vls-how-ves-report-usage-3.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/sra-sco.html",
-          "hash": "9fjxC96NV7rDc+FFL+rBVkq32QiDv/Q6ls5z3W1u44w="
+          "relative_path": "articles/vls/vls-how-ves-report-usage-3.html",
+          "hash": "qGe6ktH1l+ka6hbPT5L2lv3BRof5i9dOEbkHZSgkCmM="
         }
       },
       "is_incremental": false,
@@ -13222,23 +12986,82 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/sra/sra-sd.md",
+      "source_relative_path": "articles/vls/vls-how-vls-add-products-4.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/sra-sd.html",
-          "hash": "DBQIokgHc4PRfCLLOsduJstJn8fOQgsEOgjMNk4mYFk="
+          "relative_path": "articles/vls/vls-how-vls-add-products-4.html",
+          "hash": "VBcQny6fddVHoOr2utAEXp05E2NP9fDw1zby5owbeNQ="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "articles/sra/toc.yml",
+      "type": "Conceptual",
+      "source_relative_path": "articles/vls/vls-how-vls-install-usage-meter-4.md",
       "output": {
         ".html": {
-          "relative_path": "articles/sra/toc.html",
-          "hash": "M7ONXtGDCbPQpUXj7tmzA1mFHKf51quyJRZo1CuOZf4="
+          "relative_path": "articles/vls/vls-how-vls-install-usage-meter-4.html",
+          "hash": "gbDdz2LsXjhyDcOX2lSXk2Cft9EEQUpqXSiRRUswK5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vls/vls-how-vls-request-licence.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vls/vls-how-vls-request-licence.html",
+          "hash": "bWSxSi1QKDNWhVodM8oj4HyRsgK134JYSSg9b7+HBxg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vls/vls-sco-extended-vmw-support.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vls/vls-sco-extended-vmw-support.html",
+          "hash": "gRx/Pa1xYIkokaNBIjXSoswX7CwHfqkQ3hoWZQWeWKk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vls/vls-sco-ws1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vls/vls-sco-ws1.html",
+          "hash": "BpyrsOVDLVWTDhR3235Fe7n7jFjCaOgdXhly2cqnO/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vls/vls-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vls/vls-sco.html",
+          "hash": "HRMrBNBNg16ejEGs9HSzQUhlxs+/CFwUByLOekDCQFg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/banner.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/banner.jpg"
         }
       },
       "is_incremental": false,
@@ -13840,10 +13663,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/ukc-services-g12.png",
+      "source_relative_path": "articles/vmware/images/ukc-services-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/ukc-services-g12.png"
+          "relative_path": "articles/vmware/images/ukc-services-g13.png"
         }
       },
       "is_incremental": false,
@@ -14280,10 +14103,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-product-options-g12.png",
+      "source_relative_path": "articles/vmware/images/vmw-product-options-g13.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/vmw-product-options-g12.png"
+          "relative_path": "articles/vmware/images/vmw-product-options-g13.png"
         }
       },
       "is_incremental": false,
@@ -17342,7 +17165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "HLd+LOY8oxQovUK5OEnOKlE7CjSAngDrj3LMXD7+eVM="
+          "hash": "5yldGrybqRdOPP4WFEaL8D9XnXK/YGC7j4mXCM5gi40="
         }
       },
       "is_incremental": false,
@@ -17398,23 +17221,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-faq-vls.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-faq-vls.html",
-          "hash": "bQ/3PyF+/YoFhhDNHp+LZinGzwT7qexo+yDHUS2SvS4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "KVm5HnyxhHVVidh89BAgT47PAZ8S3QrohoJKcnYtOdk="
+          "hash": "uXEdYv1kPgy5r1rbXPwrVRHnosRlrhhNe8njltM5lgo="
         }
       },
       "is_incremental": false,
@@ -17462,7 +17273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "LTYDJZLV+dkXcBNODDtF3w1JzWJY7Gzjxk1mLqhDSV8="
+          "hash": "fAlyQPSY2WAxbr8Cj2idvF1LtDP+f9jSlK9kKQrklHA="
         }
       },
       "is_incremental": false,
@@ -17950,83 +17761,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-ves-add-products-3.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-ves-add-products-3.html",
-          "hash": "QefPJisyP2rDgKQLTNuDiw7s0fwAK+A09wa0q/FsxPA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-ves-install-usage-meter-3.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-ves-install-usage-meter-3.html",
-          "hash": "oaov9QjLZNTlXtTm9BaFCme/gRZ6jPBi/6cFMcaI8zU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-ves-report-usage-3.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-ves-report-usage-3.html",
-          "hash": "F1hMohjQnoOPAJoRlf7gC9Dg74oKjlNyQIPYT2kH4hQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-view-storage-usage.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-view-storage-usage.html",
           "hash": "kVuQl/xSwO7gYcMUemCWTSDHT+vMcTMK2p5SLko/JhM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-vls-add-products-4.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-vls-add-products-4.html",
-          "hash": "t4xfuigl7Hq07dagPkebuOOP2oUKTFM6PQGczoYmTfI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-vls-install-usage-meter-4.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-vls-install-usage-meter-4.html",
-          "hash": "LhjENG2Qz2+o5u2Vu+/QV/w01C6D5a6EqKJE05iezqM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-how-vls-request-licence.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-how-vls-request-licence.html",
-          "hash": "YCuMH2NbWeB2JJyr88vj6jSCsCFF5UJjCSdVknHuYsQ="
         }
       },
       "is_incremental": false,
@@ -18074,7 +17813,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-access-zssp.html",
-          "hash": "j9NYvzZy5pwbMFi0tNyjHEJrAlm3pmA2D9IBOrtUns4="
+          "hash": "VGZdPQ9UjxxFlp6AsDMGeCIK5+isJs/y6TcM8+wuYbU="
         }
       },
       "is_incremental": false,
@@ -18086,7 +17825,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-create-vpg.html",
-          "hash": "y27ft3D+Gp4iiREA7ToBZN3b8I1TmNKTovstru5L4Co="
+          "hash": "SQbFy2MQM/2BcgcOmaLLQlFaLcXU81kLrw5jv6Dk+P0="
         }
       },
       "is_incremental": false,
@@ -18194,7 +17933,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-onboarding.html",
-          "hash": "geAKSVWKgVi5o59pwmNV6xzUn8FwmmkMWonMY+jJBOE="
+          "hash": "K3aM8sbWGIKEljXvvdNTu7EZ9I4H1XnnT53rYsuSVoI="
         }
       },
       "is_incremental": false,
@@ -18242,7 +17981,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-service-options.html",
-          "hash": "4h2/xZaYRSQEAfo/5FEYpqeSvxd7+MYqs0oO3ttJYSU="
+          "hash": "7wKRelO0a1WAmkNcd4BF1yGHxqiHYvbVuQ/9LbGynaM="
         }
       },
       "is_incremental": false,
@@ -18314,7 +18053,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcloud-connector.html",
-          "hash": "ZV3ry5ibjmNb/S2CvLsfoFEqd39OYXE5E2NpbM3KCaY="
+          "hash": "VmBqt4cqVNpdRpy4OsawNIsO8HYN9ibfhZ/iYT6PNhs="
         }
       },
       "is_incremental": false,
@@ -18434,19 +18173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-dedicated-compute.html",
-          "hash": "XNmoafkWbb479cDEiM0uJGEi+R/Zxv38WKZchOe63us="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-sco-extended-vmw-support.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-sco-extended-vmw-support.html",
-          "hash": "VwOtlCl2AkkO2SVV2YiOMTRN4O0fr6uHRvz+O+pOU5U="
+          "hash": "Ug1jtUR7m+uO/fd67LQo2aEY/h5xfBLxLhIaFo5POQU="
         }
       },
       "is_incremental": false,
@@ -18490,71 +18217,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-sco-vls.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-sco-vls.html",
-          "hash": "Cxk09qVGJ7Wv9NAiBwjC5QM4WdQzOB2wtqg8MpBYQTQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-sco-ws1.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-sco-ws1.html",
-          "hash": "g8wZQOnZeKPAu6PYANLxRy/XRaU7vj3VIbS4pyWvzAE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "QUrmkdsC6gvpmes2xeoWdZlajTWnwBM0lTHKHhIcO7E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-sd-extended-vmw-support.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-sd-extended-vmw-support.html",
-          "hash": "z3nxwhq5ySLipBN5sDq03IoGMdaGOFC0QCJqtpUxDh4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-sd-vls.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-sd-vls.html",
-          "hash": "WlB+sx4Ewi6B20M6K1NAzF3U3RFVURsKgOrXwt6VFpA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-sd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-sd.html",
-          "hash": "cTTYyeG9a5/JdxlyOJrjdsYPXVhBhgfFCuRIXGI7wgw="
+          "hash": "8hHfMM19OkInpO3e9MZRllgCSYe0gwkaVxlAyRSgm50="
         }
       },
       "is_incremental": false,
@@ -18613,7 +18280,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "hiklfrvqbUz8M89TC5i8SSeOuL4TEN2hh5vCIQxdTiI="
+          "hash": "QUR9PcqulE/QtqL3hrIDUn39rKFQ96Bqax4f+d4MAME="
         }
       },
       "is_incremental": false,
@@ -18636,7 +18303,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "ubwlCSaMaiPnBwy3xIqVCIoC8S6HV/UK/qcWkedxb90="
+          "hash": "Lst9BKOLbYLq0saFtqfgWblyDB3PSwjzgabUIkODQA4="
         }
       },
       "is_incremental": false,
@@ -18657,7 +18324,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 453,
+          "total_file_count": 432,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
