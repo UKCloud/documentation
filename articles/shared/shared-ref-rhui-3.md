@@ -4,7 +4,7 @@ description: Provides information about the UKCloud Red Hat Update Infrastructur
 services: shared-services
 author: shighmoor
 reviewer: pcantle
-lastreviewed: 28/09/2021
+lastreviewed: 05/09/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
