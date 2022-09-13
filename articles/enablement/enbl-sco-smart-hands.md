@@ -2,9 +2,9 @@
 title: Smart Hands Service Scope
 description: Outlines important details regarding the Smart Hands service
 services: enablement
-author: Steve Hall
+author: shall
 reviewer: bchallis
-lastreviewed: 28/09/2021
+lastreviewed: 12/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
