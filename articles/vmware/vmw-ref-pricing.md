@@ -4,7 +4,7 @@ description: Provides useful information about UKCloud for VMware pricing, inclu
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 24/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: Service Information
 toc_sub1: UKCloud for VMware
 toc_sub2:
@@ -35,17 +35,19 @@ Follow these easy steps to define your solution and calculate the costs:
 
 2. Choose the workload type and VM size that best suits your application, for example a Medium POWER VM:
 
-    - **ESSENTIAL.** Automated rebalancing is enabled to ensure the workload receives the requested performance. VMs can have contended resource allocation.
+   - **ESSENTIAL.** Automated rebalancing is enabled to ensure the workload receives the requested performance. VMs can have contended resource allocation. Best for low priority and test applications.
 
-    - **POWER.** VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is enabled to pre-emptively optimise performance and availability.
+   - **POWER.** VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is enabled to pre-emptively optimise performance and availability. Best for intensive applications.
 
-    - **PRIORITY.** VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
+   - **PRIORITY.** VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption. Best for applications requiring reduced mobility.
 
-3. (Optional) Choose any additional storage needed to support your application. You can add as many storage options as you need for the different aspects of your application, for example, Tier 1 for a high I/O database application and Tier 2 to store infrequently accessed media.
+   VM size refers to the vCPU and memory requirements of the VM. For example, a Medium VM has 4 vCPUs and 8 GiB of memory.
 
-4. (Optional) Choose the VM protection and block storage protection needed for your solution. This could be either Snapshot Protection, Journaling Protection or both. However, you must match your VM protection and block storage protection in each case. For example, if you choose Journaling Protection for your VM, you must also choose Journaling Protection for your block storage, that is, Journaling Protection will apply to both.
+3. (Optional) Choose any additional storage needed to support your application. You can add as many storage options as you need for the different aspects of your application, for example, Tier 1 for a high I/O database application and Tier 2 to store infrequently accessed media. For more information about storage options, see [*Storage options on the UKCloud platform*](../other/other-ref-storage-overview.md).
 
-5. (Optional) Add the Advanced Management option. This option includes Distributed Firewall (DFW), Distributed Logical Router (DLR), L2 VPN advanced networking options and advanced metrics and monitoring provided via the vRealize Operations Tenant Appliance.
+4. (Optional) Choose the VM protection and block storage protection needed for your solution. This could be either [*Snapshot Protection*](vmw-sco-snapshot-protection.md), [*Journaling Protection*](vmw-sco-journaling-protection.md) or both. However, you must match your VM protection and block storage protection in each case. For example, if you choose Journaling Protection for your VM, you must also choose Journaling Protection for your block storage, that is, Journaling Protection will apply to both.
+
+5. (Optional) Add the [*Advanced Management option*](vmw-ref-advanced-mgmt.md). This option includes Distributed Firewall (DFW), Distributed Logical Router (DLR), L2 VPN advanced networking options and advanced metrics and monitoring provided via the vRealize Operations Tenant Appliance.
 
 6. (Optional) Choose your operating system licensing, such as Microsoft Windows Server or Red Hat Enterprise Linux.
 
@@ -65,7 +67,9 @@ Follow these easy steps to define your solution and calculate the costs:
 
 ## Pricing examples
 
-### [Example 1](#tab/tabid-1)
+The following examples illustrate how to use the information in the Pricing Guide to calculate the cost of a UKCloud for VMware virtual machine. They are not intended to provide price comparisons between different options.
+
+### [Example 1: Small ESSENTIAL VM](#tab/tabid-1)
 
 An application with lower priority workloads, such as temporary applications, data processing or system modelling tasks.
 
@@ -113,7 +117,7 @@ VM cost per month | + | Storage cost per month | = | Total basic cost
 ------------------|---|------------------------|---|-----------------
 £102.20           | + | £8.00                  | = | **£110.20**
 
-### [Example 2](#tab/tabid-2)
+### [Example 2: Medium POWER VM](#tab/tabid-2)
 
 An application with key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services.
 
@@ -173,7 +177,7 @@ The following discount and purchase schemes are available with UKCloud for VMwar
 
 - Cloud Credits
 
-For more information about the discount and purchase schemes offered by UKCloud, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+For more information about the discount and purchase schemes offered by UKCloud, see [*UKCloud discount and purchase schemes*](../other/other-ref-discount-schemes.md).
 
 ## Additional pricing notes
 

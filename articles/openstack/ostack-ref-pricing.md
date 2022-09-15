@@ -4,7 +4,7 @@ description: Provides useful information about UKCloud for OpenStack pricing, in
 services: openstack
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -41,7 +41,7 @@ In addition, our Cloud Storage service is available to provide an API-accessible
 
 ## Self-service backup and restoration
 
-TrilioVault provides data protection through efficient point-in-time capture, storage and application recovery. TrilioVault is a scalable OpenStack backup and recovery platform that can recover from any point-in-time with a single click usign the Horizon dashboard or leveraging Trilio's rich set of APIs.
+[*TrilioVault*](ostack-sco-triliovault.md) provides data protection through efficient point-in-time capture, storage and application recovery. TrilioVault is a scalable OpenStack backup and recovery platform that can recover from any point-in-time with a single click usign the Horizon dashboard or leveraging Trilio's rich set of APIs.
 
 TrilioVault is agentless and non-disruptive by design, both during deployment and operation. You can also integrate it with your existing cloud lifecycle management to automate deployment via tools such as Ansible, Puppet, Salt and Chef.
 
@@ -52,6 +52,8 @@ The standard terms and conditions from Microsoft state that if you want to run a
 If you're licensing Microsoft Windows Server OS, Microsoft SQL Server, Microsoft RDS or Red Hat Enterprise Linux, licensing charges apply. You also have the option of utilising your own subscription-based Office365 and Windows 10 Enterprise licensing under the [QMTH program](https://ukcloud.com/qualified-multitenant-hoster-program/).
 
 ## Pricing example
+
+The following example illustrates how to use the information in the Pricing Guide to calculate the cost of a UKCloud for OpenStack instance.
 
 An application with lower priority workloads, such as temporary applications, data processing or system modelling tasks.
 
@@ -103,7 +105,7 @@ The following discount and purchase schemes are available with UKCloud for VMwar
 
 - Cloud Credits
 
-For more information about the discount and purchase schemes offered by UKCloud, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+For more information about the discount and purchase schemes offered by UKCloud, see [*UKCloud discount and purchase schemes*](../other/other-ref-discount-schemes.md).
 
 ## Additional pricing notes
 

@@ -3,8 +3,8 @@ title: Pricing information for UKCloud for Microsoft Azure
 description: Provides useful information about UKCloud for Microsoft Azure pricing, including pricing examples
 services: azure-stack
 author: shighmoor
-reviewer: Chris Black
-lastreviewed: 31/08/2021
+reviewer: shighmoor
+lastreviewed: 13/09/2022
 toc_rootlink: Users
 toc_sub1: Service Information
 toc_sub2:
@@ -40,6 +40,8 @@ With regards to Microsoft SQL Server, you can either bring your own SQL Server l
 Red Hat (once certified by Microsoft) is available via the BYOL process, or we can invoice you based on your exact usage.
 
 ## Pricing example
+
+The following example illustrates how to use the information in the Pricing Guide to calculate the cost of a UKCloud for Microsoft Azure virtual machine.
 
 **Security domain:** Assured OFFICIAL<br>
 **Machine type:** A-Series<br>
@@ -81,7 +83,7 @@ The following discount and purchase schemes are available with UKCloud for Micro
 
 - Cloud Credits
 
-For more information about the discount and purchase schemes offered by UKCloud, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+For more information about the discount and purchase schemes offered by UKCloud, see [*UKCloud discount and purchase schemes*](../other/other-ref-discount-schemes.md).
 
 ## Additional pricing notes
 

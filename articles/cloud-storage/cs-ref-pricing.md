@@ -4,7 +4,7 @@ description: Provides useful information about Cloud Storage pricing, including 
 services: cloud-storage
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -43,7 +43,9 @@ To establish your Cloud Storage pricing, follow these steps:
 
     - 1,000TiB+
 
-## Example
+## Pricing example
+
+The following example illustrates how to use the information in the Pricing Guide to calculate the cost of a UKCloud Cloud Storage.
 
 **Service level:** STANDARD<br>
 **Security domain:** Assured OFFICIAL<br>
@@ -67,7 +69,7 @@ The following discount and purchase schemes are available with Cloud Storage:
 
 - Cloud Credits
 
-For more information about the discount and purchase schemes offered by UKCloud, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+For more information about the discount and purchase schemes offered by UKCloud, see [*UKCloud discount and purchase schemes*](../other/other-ref-discount-schemes.md).
 
 ## Billing and payment information
 

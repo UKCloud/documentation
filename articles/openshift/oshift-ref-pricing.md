@@ -4,7 +4,7 @@ description: Provides useful information about UKCloud for Red Hat OpenShift pri
 services: openshift
 author: shighmoor
 reviewer:
-lastreviewed: 28/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -45,6 +45,8 @@ You'll need at least one application node to run your application and we recomme
 Application node pricing includes a Red Hat OpenShift subscription component.
 
 ## Pricing examples
+
+The following examples illustrate how to use the information in the Pricing Guide to calculate the cost of a UKCloud for Red Hat OpenShift deployment. They are not intended to provide price comparisons between different options.
 
 ### [Example 1: Small deployment](#tab/tabid-1)
 
@@ -176,7 +178,7 @@ The following discount and purchase schemes are available with UKCloud for Red H
 
 - Cloud Credits
 
-For more information about the discount and purchase schemes offered by UKCloud, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+For more information about the discount and purchase schemes offered by UKCloud, see [*UKCloud discount and purchase schemes*](../other/other-ref-discount-schemes.md).
 
 ## Additional pricing notes
 
