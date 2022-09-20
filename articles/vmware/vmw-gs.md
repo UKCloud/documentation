@@ -4,7 +4,7 @@ description: Provides information to get up and running with UKCloud for VMware
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 27/09/2021
+lastreviewed: 20/09/2022
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -26,7 +26,7 @@ This Getting Started Guide helps get you up and running using UKCloud for VMware
 
 ### Intended audience
 
-This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.
+This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a Cloud Director administrator.
 
 ## Introduction to UKCloud for VMware
 
@@ -67,42 +67,42 @@ If you have the appropriate permissions, you can use the Portal to create a comp
 > [!NOTE]
 > You can also create a compute service using the Portal API. For more information, see [*UKCloud Portal API Reference Guide*](../portal/ptl-ref-portal-api.md#post-apiaccountsaccount_idvorgs)
 
-1. In the UKCloud Portal, select the account in which you want to create the compute service.
+1. In the UKCloud Portal, if necessary, [*switch to the account*](../portal/ptl-how-switch-account.md) in which you want to create the compute service.
 
 2. In the navigation panel, expand **Tools** and then select **Create Compute Service**.
 
-    ![Create Compute Service menu option](images/vmw-portal-mnu-create-compute-service.png)
+   ![Create Compute Service menu option](images/vmw-portal-mnu-create-compute-service.png)
 
 3. On the *Build Compute Service* page, from the **Zone** radio buttons, select the zone in which you want to create the new compute service.
 
-    > [!NOTE]
-    > To create a compute service using the Portal, your environment must be in region 5, 6, 13 or 14.
+   > [!NOTE]
+   > To create a compute service using the Portal, your environment must be in region 5, 6, 13 or 14.
 
 4. Enter a **Compute Service Name**.
 
-    > [!TIP]
-    > The name can be up to 32 characters long and can include any character except +.
+   > [!TIP]
+   > The name can be up to 32 characters long and can include any character except +.
 
-    ![Build Compute Service page](images/vmw-portal-build-compute-service.png)
+   ![Build Compute Service page](images/vmw-portal-build-compute-service.png)
 
 5. Click **Build**.
 
 6. The *Build Compute Service Status* page displays information about the compute service you're building and lets you know how the build is progressing.
 
-    > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
+   > [!TIP]
+   > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
 
-    ![Build Compute Service Status page](images/vmw-portal-build-compute-service-status.png)
+   ![Build Compute Service Status page](images/vmw-portal-build-compute-service-status.png)
 
 7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can start building VDCs in your compute service (see [Building a virtual data centre](#building-a-virtual-data-centre)).
+   If the build is successful, you can start building VDCs in your compute service (see [Building a virtual data centre](#building-a-virtual-data-centre)).
 
-    ![Build Compute Service Status - success](images/vmw-portal-build-compute-service-success.png)
+   ![Build Compute Service Status - success](images/vmw-portal-build-compute-service-success.png)
 
-    If the build is unsuccessful, raise a support ticket (quoting the **Build ID**) to resolve any issues.
+   If the build is unsuccessful, raise a Service Request (quoting the **Build ID**) to resolve any issues.
 
-    ![Build Compute Service Status - failed](images/vmw-portal-build-compute-service-fail.png)
+   ![Build Compute Service Status - failed](images/vmw-portal-build-compute-service-fail.png)
 
 ### Building a virtual data centre
 
@@ -116,75 +116,75 @@ After creating your compute service, the next step is to create one or more VDCs
 
 1. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create the VDC.
 
-    > [!NOTE]
-    > To create a VDC using the Portal, the compute service must be in region 5, 6, 13 or 14.
+   > [!NOTE]
+   > To create a VDC using the Portal, the compute service must be in region 5, 6, 13 or 14.
 
-    ![Compute services menu option](images/vmw-portal-mnu-select-compute-service.png)
+   ![Compute services menu option](images/vmw-portal-mnu-select-compute-service.png)
 
 2. From the **Actions** menu, select **Build VDC**.
 
-    > [!NOTE]
-    > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5, 6, 13 or 14.
+   > [!NOTE]
+   > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5, 6, 13 or 14.
 
-    ![Build VDC menu option](images/vmw-portal-mnu-build-vdc.png)
+   ![Build VDC menu option](images/vmw-portal-mnu-build-vdc.png)
 
 3. On the *Build VDC* page, from the **VM Type** radio buttons, select the option that describes the characteristics of the workload of the VDC:
 
-    - **ESSENTIAL.** For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
+   - **ESSENTIAL.** For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
 
-    - **POWER.** For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
+   - **POWER.** For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
 
-    - **PRIORITY.** For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
+   - **PRIORITY.** For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
 
 4. Enter a **VDC Name**.
 
-    > [!TIP]
-    > The name can be up to 32 characters long and can include any character except `+`, `(` or `)`.
+   > [!TIP]
+   > The name can be up to 32 characters long and can include any character except `+`, `(` or `)`.
 
-    ![Build VDC page](images/vmw-portal-build-vdc.png)
+   ![Build VDC page](images/vmw-portal-build-vdc.png)
 
 5. Click **Build**.
 
 6. The *VDC Build Status* page displays information about the VDC you're building and lets you know how the build is progressing.
 
-    > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
+   > [!TIP]
+   > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
 
-    ![Build VDC Status page](images/vmw-portal-build-vdc-status.png)
+   ![Build VDC Status page](images/vmw-portal-build-vdc-status.png)
 
 7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md)).
+   If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md)).
 
-    ![Build VDC Status - success](images/vmw-portal-build-vdc-success.png)
+   ![Build VDC Status - success](images/vmw-portal-build-vdc-success.png)
 
-    If the build is unsuccessful, raise a support ticket (quoting the **Build ID**) to resolve any issues.
+   If the build is unsuccessful, raise a Service Request (quoting the **Build ID**) to resolve any issues.
 
-    ![Build VDC Status - failed](images/vmw-portal-build-vdc-fail.png)
+   ![Build VDC Status - failed](images/vmw-portal-build-vdc-fail.png)
 
 ## Logging in to VMware Cloud Director
 
 After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to VMware Cloud Director, which you can access from the UKCloud Portal.
 
-1. In the Portal navigation panel expand **VMware Cloud** then select your compute service.
+1. In the Portal navigation panel, expand **VMware Cloud** then select your compute service.
 
-    ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
+   ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
 
 2. On the **VMware Cloud Director** tab, for additional security, re-enter your UKCloud Portal password, then click **Confirm**.
 
-    ![VMware Cloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
+   ![VMware Cloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
 3. VMware Cloud Director launches in your browser window.
 
-    ![VMware Cloud Director Home page](images/vmw-vcd10.1-home-page.png)
+   ![VMware Cloud Director Home page](images/vmw-vcd10.1-home-page.png)
 
 4. The tasks you can perform in VMware Cloud Director will depend on the permissions you have been granted.
 
-    For more information, see [*How to manage permissions for VMware Cloud Director*](vmw-how-manage-vcd-permissions.md).
+   For more information, see [*How to manage permissions for VMware Cloud Director*](vmw-how-manage-vcd-permissions.md).
 
 5. To return to the UKCloud Portal, click your user name in the top right corner, and select **Log out**.
 
-    ![VMware Cloud Director Log out option](images/vmw-vcd10.1-logout-link.png)
+   ![VMware Cloud Director Log out option](images/vmw-vcd10.1-logout-link.png)
 
 ## Next steps
 
