@@ -3,8 +3,8 @@ title: Retrieving snapshot summaries for multiple accounts using the Portal API
 description: Provides an example script to show how to use the Portal API to retrieve information about the status of your Snapshot Protection backups across multiple accounts
 services: vmware
 author: Sue Highmoor
-reviewer: thallsmith
-lastreviewed: 19/08/2021
+reviewer: Ben Saunders
+lastreviewed: 16/09/2022
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
