@@ -95,7 +95,6 @@ Service                               | FAQ
 --------------------------------------|----
 Jumpstart                             | [here](../pro-services/ps-faq-jumpstart.md)
 Invoice and billing                   | [here](other-faq-billing.md)
-Service Level Agreement               | [here](other-faq-sla.md)
 MISO rebate                           | [here](other-faq-miso-rebate.md)
 Enterprise & Private Sector           | [here](other-faq-eps.md)
 
