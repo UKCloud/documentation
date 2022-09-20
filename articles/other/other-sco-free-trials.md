@@ -3,8 +3,8 @@ title: Free trials Service Scope
 description: Outlines important details regarding free trials
 services: other
 author: shall
-reviewer: jwalmsley
-lastreviewed: 14/09/2021
+reviewer: bbudgen
+lastreviewed: 15/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
@@ -41,9 +41,9 @@ Exclusions are:
 
 - Dedicated Compute option in UKCloud for VMware
 
-- Private Cloud for Compute
+- Private Cloud
 
-- Private Cloud for Storage
+- Private Cloud Storage
 
 - Private Cloud for Oracle Software
 
