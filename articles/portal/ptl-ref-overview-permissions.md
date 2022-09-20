@@ -4,7 +4,7 @@ description: A guide to the various permissions available to Portal users and wh
 services: portal
 author: shighmoor
 reviewer: bsaunders
-lastreviewed: 27/07/2021
+lastreviewed: 20/09/2022
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
