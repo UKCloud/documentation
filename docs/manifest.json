@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-pricing.html",
-          "hash": "I956tF1VxOQFDGH/gTUK1nndKih0L/6u4MwAe7S41wU="
+          "hash": "LSsSXDUrcoE7/mKL68yzBmloRPiTKyMyKIaBTM5CZVc="
         }
       },
       "is_incremental": false,
@@ -3383,7 +3383,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-ref-pricing.html",
-          "hash": "uUtkovI7+bRTr0yl+HqqUHmHEce8xsOajfudUmSxXnM="
+          "hash": "+weCB7f7PJNhwPSS8EXkU8GJ/jcil54tuZKsMyxG+9Y="
         }
       },
       "is_incremental": false,
@@ -4298,7 +4298,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/daas/daas-ref-pricing.html",
-          "hash": "ByY99BssLJmHGpCGWked9lT6YKXBwQ0YfejncVlyuMA="
+          "hash": "cCf7U3rZTsQ1VEPglhR8Xtna+ka4CwpiGnbdszT3kJ4="
         }
       },
       "is_incremental": false,
@@ -6355,7 +6355,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-pricing.html",
-          "hash": "GjGRQnBUDD+vvIfUJ/clu6ngjD5pl8NgFxvJR0KEaug="
+          "hash": "hfNjx/NPayDqQcmLdh3liosqbXo7+Fc5zKdvQ8IKk/M="
         }
       },
       "is_incremental": false,
@@ -8853,7 +8853,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-pricing.html",
-          "hash": "HCXTWN+NgWYEaN5GlIj/us5oI0r0gjea4ahnSPr6aHQ="
+          "hash": "s3UCqBZ5EpyzaVFV5JbVoHC2WlmjMu9Qo2W8c6glheo="
         }
       },
       "is_incremental": false,
@@ -9407,7 +9407,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-pricing.html",
-          "hash": "CboMWmEutG5cwo4Pkocy9yac5YomDmJRug7E/8s7TLw="
+          "hash": "nQK9aRT8EqOyWtD3hwRkYsJFA2qU9l9Erc2zEGdwVuQ="
         }
       },
       "is_incremental": false,
@@ -10522,7 +10522,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-sco-free-trials.html",
-          "hash": "tsBF6dy0rUGDbX7fc9z9Db7Y/GX4aUs49NjS/h0elAg="
+          "hash": "SjhkmZaHHuyrSld2MIHJVQH7GEncxc+t/1HnfPo5VKU="
         }
       },
       "is_incremental": false,
@@ -12239,7 +12239,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/security/cdsz-ref-pricing.html",
-          "hash": "rCeJ4/nGHB44UBmDZWigQLdYLcp69wZ9DipUhtS3IeE="
+          "hash": "pblW2gHWy+wHwaVPu6vlZlDs0zut2VzgyQRCcB580aw="
         }
       },
       "is_incremental": false,
@@ -12593,7 +12593,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/security/sra-ref-pricing.html",
-          "hash": "XUjN4VqoZMsEF4/8+pKMOmMnqWDPkIbE7d0lv+YLm2k="
+          "hash": "aWvFi7R+5DQBQOx+cq4+jyJqdXFgmV0SdByr1fSfUEQ="
         }
       },
       "is_incremental": false,
@@ -17969,7 +17969,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-pricing.html",
-          "hash": "K+usH075lXR5GIsHq4X/gqfFWURx91apza/rU5I7PCo="
+          "hash": "EX235cU0wOWA0xj2lCutyVmRlHjuJ6bsP280VVxEfsI="
         }
       },
       "is_incremental": false,

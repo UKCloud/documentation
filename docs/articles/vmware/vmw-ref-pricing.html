@@ -105,19 +105,20 @@
 </li>
 <li><p>Choose the workload type and VM size that best suits your application, for example a Medium POWER VM:</p>
 <ul>
-<li><p><strong>ESSENTIAL.</strong> Automated rebalancing is enabled to ensure the workload receives the requested performance. VMs can have contended resource allocation.</p>
+<li><p><strong>ESSENTIAL.</strong> Automated rebalancing is enabled to ensure the workload receives the requested performance. VMs can have contended resource allocation. Best for low priority and test applications.</p>
 </li>
-<li><p><strong>POWER.</strong> VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is enabled to pre-emptively optimise performance and availability.</p>
+<li><p><strong>POWER.</strong> VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is enabled to pre-emptively optimise performance and availability. Best for intensive applications.</p>
 </li>
-<li><p><strong>PRIORITY.</strong> VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.</p>
+<li><p><strong>PRIORITY.</strong> VMs have an uncontended compute (CPU/GiB) resource allocation. Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption. Best for applications requiring reduced mobility.</p>
 </li>
 </ul>
+<p>VM size refers to the vCPU and memory requirements of the VM. For example, a Medium VM has 4 vCPUs and 8 GiB of memory.</p>
 </li>
-<li><p>(Optional) Choose any additional storage needed to support your application. You can add as many storage options as you need for the different aspects of your application, for example, Tier 1 for a high I/O database application and Tier 2 to store infrequently accessed media.</p>
+<li><p>(Optional) Choose any additional storage needed to support your application. You can add as many storage options as you need for the different aspects of your application, for example, Tier 1 for a high I/O database application and Tier 2 to store infrequently accessed media. For more information about storage options, see <a href="../other/other-ref-storage-overview.html"><em>Storage options on the UKCloud platform</em></a>.</p>
 </li>
-<li><p>(Optional) Choose the VM protection and block storage protection needed for your solution. This could be either Snapshot Protection, Journaling Protection or both. However, you must match your VM protection and block storage protection in each case. For example, if you choose Journaling Protection for your VM, you must also choose Journaling Protection for your block storage, that is, Journaling Protection will apply to both.</p>
+<li><p>(Optional) Choose the VM protection and block storage protection needed for your solution. This could be either <a href="vmw-sco-snapshot-protection.html"><em>Snapshot Protection</em></a>, <a href="vmw-sco-journaling-protection.html"><em>Journaling Protection</em></a> or both. However, you must match your VM protection and block storage protection in each case. For example, if you choose Journaling Protection for your VM, you must also choose Journaling Protection for your block storage, that is, Journaling Protection will apply to both.</p>
 </li>
-<li><p>(Optional) Add the Advanced Management option. This option includes Distributed Firewall (DFW), Distributed Logical Router (DLR), L2 VPN advanced networking options and advanced metrics and monitoring provided via the vRealize Operations Tenant Appliance.</p>
+<li><p>(Optional) Add the <a href="vmw-ref-advanced-mgmt.html"><em>Advanced Management option</em></a>. This option includes Distributed Firewall (DFW), Distributed Logical Router (DLR), L2 VPN advanced networking options and advanced metrics and monitoring provided via the vRealize Operations Tenant Appliance.</p>
 </li>
 <li><p>(Optional) Choose your operating system licensing, such as Microsoft Windows Server or Red Hat Enterprise Linux.</p>
 </li>
@@ -141,13 +142,14 @@
 </li>
 </ol>
 <h2 id="pricing-examples">Pricing examples</h2>
+<p>The following examples illustrate how to use the information in the Pricing Guide to calculate the cost of a UKCloud for VMware virtual machine. They are not intended to provide price comparisons between different options.</p>
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Example 1</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Example 1: Small ESSENTIAL VM</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Example 2</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Example 2: Medium POWER VM</a>
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
@@ -351,7 +353,7 @@
 <li><p>Cloud Credits</p>
 </li>
 </ul>
-<p>For more information about the discount and purchase schemes offered by UKCloud, see the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
+<p>For more information about the discount and purchase schemes offered by UKCloud, see <a href="../other/other-ref-discount-schemes.html"><em>UKCloud discount and purchase schemes</em></a>.</p>
 <h2 id="additional-pricing-notes">Additional pricing notes</h2>
 <h3 id="vm-sizing">VM sizing</h3>
 <ul>
