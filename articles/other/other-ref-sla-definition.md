@@ -3,8 +3,8 @@ title: SLA definition
 description: Definition of the UKCloud service level agreement (SLA)
 services: other
 author: shighmoor
-reviewer: shall
-lastreviewed: 10/09/2021
+reviewer: shighmoor
+lastreviewed: 20/09/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,17 +19,42 @@ toc_mdlink: other-ref-sla-definition.md
 
 ## Availability
 
-UKCloud will use reasonable endeavours to ensure that the availability of the UKCloud service purchased by the customer (the service) in a given calendar month equals the applicable *availability commitment*. To define availability, UKCloud monitors a number of service elements — some generic, some service specific — which collectively enable the customer to use or access the service. If the availability of the service is less than the associated availability commitment, the customer may request Service Credits for the service within 30 calendar days of the service being deemed unavailable.
+UKCloud will use reasonable endeavours to ensure that the availability of the UKCloud service purchased by the customer in a given calendar month equals the applicable *availability commitment*.
+
+To define availability, UKCloud monitors a number of service elements &nbsp; some generic, some service specific &nbsp; which collectively enable the customer to use or access the service. These individual components are monitored and if one fails, the service may be deemed unavailable. We believe this approach gives a more representative and pragmatic view of service availability.
+
+UKCloud polls our services every minute using a variety of methods that range from a basic ping test to a synthetic transaction that replicates a user's journey. The method used will depend on the specific component or service being monitored.
+
+UKCloud also monitors the data centre network between the physical hypervisor hosts or storage platform and the outside interface connecting the data centre network to any third-party networks (for example, internet, PSN, Janet or private circuits).
+
+If the availability of the service is less than the associated availability commitment, the customer may request Service Credits for the service within 30 calendar days of the service being deemed unavailable.
+
+> [!NOTE]
+> UKCloud's monitoring tools, data and records (including support tickets) will be the sole source of information used to track and validate service availability.
 
 ## Unavailability and service level agreement events
 
 Subject to the service level agreement (SLA) limitations detailed below, the service will be considered unavailable (and an SLA event will be deemed as having taken place) if UKCloud's monitoring detects that the service or component has failed for five consecutive minutes. The total number of minutes that the service is unavailable is measured from the time that UKCloud confirms the SLA event has occurred until the time that UKCloud resolves the issue and the service becomes available to the customer. If two or more SLA events occur simultaneously, the SLA event with the longest duration will be used to determine the total number of minutes for which the service was unavailable.
+
+UKCloud calculates availability by monitoring specific components and then using the following formula to determine the percentage that a service was available for:
+
+`P = (A - B) x 100`
+
+Where:
+
+- `P` = Percentage availability
+
+- `A` = Total number of minutes in month
+
+- `B` = Total number of whole minutes that service is unavailable
 
 ## Service Credits
 
 If the availability of the service for a particular month falls below the availability commitment specified in the applicable SLA (subject to the SLA limitations provided below), customers will be eligible to request Service Credits.
 
 Service Credits will be calculated as a percentage of the fees billed for the monthly period during which the SLA event occurred (to be applied at the end of the billing cycle, or of the subsequent cycle if a claim is made after an invoice has been paid). For some examples of how this might work for different services, see [*Worked examples*](#worked-examples) later in this article.
+
+To request a Service Credit, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal within 30 calendar days of the suspected SLA event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
 
 > [!NOTE]
 > You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
@@ -52,7 +77,9 @@ The following will be excluded from any time-based calculations related to the s
 
 - Any customer-defined or customer-controlled event (for example, unavailability of service resulting from inadequate customer-subscribed services, resources or configuration)
 
-The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or they are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
+If you want to co-locate additional devices in UKCloud's data centres, this falls outside of UKCloud's responsibility and control, and therefore the devices will not be covered by a UKCloud SLA. If you're co-locating devices in our data centres, you should be aware that doing so could introduce single points of failure.
+
+You will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or you are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
 
 ## Service level agreement claims
 
