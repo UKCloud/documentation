@@ -4,7 +4,7 @@ description: Provides useful information about UKCloud for Oracle Software prici
 services: oracle
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: UKCloud for Oracle Software
 toc_sub1: Service Information
 toc_sub2:
@@ -37,6 +37,8 @@ Our service doesn't include licences for the Oracle applications and databases y
 If you need help defining the best licensing approach for your situation, we can introduce you to one of our partners who specialise in Oracle licensing compliance, optimisation and fulfillment.
 
 ## Pricing example
+
+The following example illustrates how to use the information in the Pricing Guide to calculate the cost of a UKCloud for Oracle Software virtual machine.
 
 **Oracle flavour:** x86<br>
 **Machine size:** 2 cores<sup>*</sup>, 4GiB RAM<br>
@@ -76,7 +78,7 @@ The following discount and purchase schemes are available with UKCloud for Oracl
 
 - Cloud Credits
 
-For more information about the discount and purchase schemes offered by UKCloud, see the [UKCloud Pricing Guide](https://ukcloud.com/pricing-guide).
+For more information about the discount and purchase schemes offered by UKCloud, see [*UKCloud discount and purchase schemes*](../other/other-ref-discount-schemes.md).
 
 ## Additional pricing notes
 
@@ -96,7 +98,7 @@ There are no termination fees for the service. You are responsible for extractin
 
 ## Free trials
 
-We offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs. If you're new to UKCloud, you can request a trial via the UKCloud [Free Trial page](https://ukcloud.com/free-trials/). If you're an existing customer, contact your Service Delivery Manager. For more information about free trials, see the [*Free Trials Service Scope*](../other/other-sco-free-trials.md).
+UKCloud for Oracle Software has been retired from sale by UKCloud, therefore we currently do not offer a free trial for this service.
 
 ## Service scope
 

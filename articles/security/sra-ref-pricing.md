@@ -4,7 +4,7 @@ description: Provides useful information about Secure Remote Access pricing, inc
 services: sra
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: Secure Remote Access
 toc_sub1: 
 toc_sub2:
@@ -51,7 +51,9 @@ There's no limit to the number of hosts you can provision in SRA.
 
 ## Pricing example
 
-**Remote access pack:** 10 licences
+The following example illustrates how to use the information in the Pricing Guide to calculate the cost of UKCloud's Secure Remote Access service.
+
+**Remote access pack:** 10 licences<br>
 **Bastion hosts:** 1 Medium VM<br>
 **Block storage used:** 80GiB Tier 2 block storage<br>
 **Protection option:** 14-day Snapshot Protection<br>
