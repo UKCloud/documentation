@@ -36,25 +36,11 @@ If the availability of the service is less than the associated availability comm
 
 Subject to the service level agreement (SLA) limitations detailed below, the service will be considered unavailable (and an SLA event will be deemed as having taken place) if UKCloud's monitoring detects that the service or component has failed for five consecutive minutes. The total number of minutes that the service is unavailable is measured from the time that UKCloud confirms the SLA event has occurred until the time that UKCloud resolves the issue and the service becomes available to the customer. If two or more SLA events occur simultaneously, the SLA event with the longest duration will be used to determine the total number of minutes for which the service was unavailable.
 
-UKCloud calculates availability by monitoring specific components and then using the following formula to determine the percentage that a service was available for:
-
-`P = (A - B) x 100`
-
-Where:
-
-- `P` = Percentage availability
-
-- `A` = Total number of minutes in month
-
-- `B` = Total number of whole minutes that service is unavailable
-
 ## Service Credits
 
 If the availability of the service for a particular month falls below the availability commitment specified in the applicable SLA (subject to the SLA limitations provided below), customers will be eligible to request Service Credits.
 
 Service Credits will be calculated as a percentage of the fees billed for the monthly period during which the SLA event occurred (to be applied at the end of the billing cycle, or of the subsequent cycle if a claim is made after an invoice has been paid). For some examples of how this might work for different services, see [*Worked examples*](#worked-examples) later in this article.
-
-To request a Service Credit, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal within 30 calendar days of the suspected SLA event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
 
 > [!NOTE]
 > You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud's Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
@@ -83,7 +69,7 @@ You will not be eligible to receive a Service Credit if the service account has 
 
 ## Service level agreement claims
 
-To request a Service Credit, the customer must file a support ticket within thirty (30) calendar days of the relevant suspected SLA event. UKCloud will review the request and issue a Service Credit if applicable.
+To request a Service Credit, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal within 30 calendar days of the relevant suspected SLA event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
 
 Service Credits will be issued only to the customer that UKCloud invoices for the applicable instance of the service as a separate credit note that can be applied towards a future invoice for that service only. If the customer's contract term for the service expires or is terminated prior to a Service Credit being issued, the Service Credit will become void as of the date of the expiration or termination.
 
@@ -399,7 +385,15 @@ UKCloud only offers an SLA covering the availability of the service, not the dur
 
 UKCloud uses the following formula to determine the percentage that a service was available for:
 
-P = A-B x 100 / A, where: P= Percentage availability A= Total number of minutes in month B = Total number of whole minutes that service is unavailable
+`P = A - B x 100 / A`
+
+Where:
+
+- `P` = Percentage availability
+
+- `A` = Total number of minutes in month
+
+- `B` = Total number of whole minutes that service is unavailable
 
 ### UKCloud for OpenStack
 
