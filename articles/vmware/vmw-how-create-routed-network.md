@@ -1,10 +1,10 @@
 ---
 title: How to create a routed VDC network
-description: Shows how to create a routed VDC network within the VMware Cloud Director tenant portal
+description: Shows how to create a routed VDC network using VMware Cloud Director
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 28/09/2021
+lastreviewed: 20/09/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -22,7 +22,7 @@ toc_mdlink: vmw-how-create-routed-network.md
 
 An organisation virtual data centre (VDC) network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.
 
-There are two network flavours, isolated and routed:
+There are two types of organisation VDC networks:
 
 - An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in [*How to create an isolated VDC network*](vmw-how-create-isolated-network.md).
 
@@ -34,58 +34,58 @@ There are two network flavours, isolated and routed:
 
 2. In the left navigation panel, under *Networking*, select **Networks**.
 
-    ![Networks tab in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
+   ![Networks tab in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. Click **New**.
 
-    ![New network button](images/vmw-vcd10.1-btn-new-network.png)
+   ![New network button](images/vmw-vcd10.1-btn-new-network.png)
 
-4. On the *Network Type* page of the *New Organization VDC Network* dialog box, select **Routed**, then click **Next**.
+4. On the *Scope* page of the *New Organization VDC Network* dialog box, **Current Organization Virtual Data Center** should already be selected, so click **Next**.
 
-    ![New Organization VDC Network dialog box - Network Type page - Routed network](images/vmw-vcd10.1-new-network-routed-type.png)
+5. On the *Network Type* page, select **Routed**, then click **Next**.
 
-5. On the *General* page:
+   ![New Organization VDC Network dialog box - Network Type page - Routed network](images/vmw-vcd10.1-new-network-routed-type.png)
 
-    - Enter a **Name** and **Description** for the network.
+6. On the *Edge Connection* page:
 
-    - In the **Gateway CIDR** field, enter the gateway address for the network.
+   - Select the edge gateway that you want your network to connect to.
 
-    - Select the **Shared** option to make the network available to other VDCs within the same organisation.
+   - From the **Connection Type** list, select **Internal**.
 
-    ![New Organization VDC Network dialog box - General page](images/vmw-vcd10.1-new-network-general.png)
+     > [!NOTE]
+     > For information about **Distributed** networks, see [*How to configure a Distributed Logical Router*](vmw-how-configure-distributed-logical-router.md). For information about creating a routed network as a **Subinterface** for L2 VPN, see [*How to configure an L2 VPN*](vmw-how-configure-l2-vpn.md).
 
-6. Click **Next**.
+   - Select the **Guest VLAN Allowed** option to enable tagging of guest VLANs on this network.
 
-7. On the *Edge Connection* page:
+   ![New Organization VDC Network dialog box - Edge Connection page](images/vmw-vcd10.1-new-network-routed-edge.png)
 
-    - Select the edge gateway that you want your network to connect to.
+7. Click **Next**.
 
-    - From the **Interface Type** list, select **Internal**.
+8. On the *General* page:
 
-        > [!NOTE]
-        > For information about distributed networks, see [*How to configure a Distributed Logical Router*](vmw-how-configure-distributed-logical-router.md). For information about creating a routed network as a subinterface for L2 VPN, see [*How to configure an L2 VPN*](vmw-how-configure-l2-vpn.md).
+   - Enter a **Name** and **Description** for the network.
 
-    - Select the **Guest VLAN Allowed** option to enable tagging of guest VLANs on this network.
+   - In the **Gateway CIDR** field, enter the gateway address for the network.
 
-    ![New Organization VDC Network dialog box - Edge Connection page](images/vmw-vcd10.1-new-network-routed-edge.png)
+   - Select the **Shared** option to make the network available to other VDCs within the same organisation.
 
-8. Click **Next**.
+   ![New Organization VDC Network dialog box - General page](images/vmw-vcd10.1-new-network-general.png)
 
-9. On the *Static IP Pools* page, in the **Static IP Pools** field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
+9. Click **Next**.
 
-    As an example, if you give the gateway address as `192.168.1.1/24`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
+10. On the *Static IP Pools* page, in the **Static IP Pools** field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
+
+    As an example, if you give the gateway address as `192.168.1.1/24`, you may then want to create a static IP pool of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
 
     You can add multiple IP pools.
 
     ![New Organization VDC Network dialog box - Static IP Pools page](images/vmw-vcd10.1-new-network-ip-pool.png)
 
-10. Click **Next**.
+11. Click **Next**.
 
-11. On the *DNS* page, enter DNS information if possible.
+12. On the *DNS* page, enter DNS information if applicable, then click **Next**.
 
     ![New Organization VDC Network dialog box - DNS page](images/vmw-vcd10.1-new-network-dns.png)
-
-12. Click **Next**.
 
 13. On the *Ready to Complete* page, review your selections then click **Finish**.
 

@@ -1,10 +1,10 @@
 ---
 title: How to create an isolated VDC network
-description: Shows how to create an isolated VDC network within the VMware Cloud Director tenant portal
+description: Shows how to create an isolated VDC network using VMware Cloud Director
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 28/09/2021
+lastreviewed: 20/09/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -22,7 +22,7 @@ toc_mdlink: vmw-how-create-isolated-network.md
 
 An organisation virtual data centre network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.
 
-There are two network flavours, isolated and routed:
+There are two types of organisation VDC networks:
 
 - An isolated (internally connected) network is one that only VMs within the VDC can connect to. This article describes how to create an isolated VDC network.
 
@@ -34,43 +34,43 @@ There are two network flavours, isolated and routed:
 
 2. In the left navigation panel, under *Networking*, select **Networks**.
 
-    ![Networks tab in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
+   ![Networks tab in VMware Cloud Director](images/vmw-vcd10.1-mnu-networks.png)
 
 3. Click **New**.
 
-    ![Add network button](images/vmw-vcd10.1-btn-new-network.png)
+   ![Add network button](images/vmw-vcd10.1-btn-new-network.png)
 
-4. On the *Network Type* page of the *New Organization VDC Network* dialog box, select **Isolated**, then click **Next**.
+4. On the *Scope* page of the *New Organization VDC Network* dialog box, **Current Organization Virtual Data Center** should already be selected, so click **Next**.
 
-    ![New Organization VDC Network dialog box - Network Type page - Isolated network](images/vmw-vcd10.1-new-network-isolated.png)
+5. On the *Network Type* page, select **Isolated**, then click **Next**.
 
-5. On the *General* page:
+   ![New Organization VDC Network dialog box - Network Type page - Isolated network](images/vmw-vcd10.1-new-network-isolated.png)
 
-    - Enter a **Name** and **Description** for the network.
+6. On the *General* page:
 
-    - In the **Gateway CIDR** field, enter the gateway address for the network.
+   - Enter a **Name** and **Description** for the network.
 
-    - Select the **Shared** option to make the network available to other VDCs within the same organisation.
+   - In the **Gateway CIDR** field, enter the gateway address for the network.
 
-    ![New Organization VDC Network dialog box - General page](images/vmw-vcd10.1-new-network-general.png)
+   - Select the **Shared** option to make the network available to other VDCs within the same organisation.
 
-6. Click **Next**.
+   ![New Organization VDC Network dialog box - General page](images/vmw-vcd10.1-new-network-general.png)
 
-7. On the *Static IP Pools* page, in the **Static IP Pools** field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
+7. Click **Next**.
 
-    As an example, if you give the gateway address as `192.168.1.1/24`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
+8. On the *Static IP Pools* page, in the **Static IP Pools** field, enter a range of addresses to be consumed by the VMs connecting to the network, then click **Add**.
 
-    You can add multiple IP pools.
+   As an example, if you give the gateway address as `192.168.1.1/24`, you may then want to create a static IP pool of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
 
-    ![New Organization VDC Network dialog box - Static IP Pools page](images/vmw-vcd10.1-new-network-ip-pool.png)
+   You can add multiple IP pools.
 
-8. Click **Next**.
+   ![New Organization VDC Network dialog box - Static IP Pools page](images/vmw-vcd10.1-new-network-ip-pool.png)
 
-9. On the *DNS* page, enter DNS information if possible.
+9. Click **Next**.
+
+10. On the *DNS* page, enter DNS information if applicable, then click **Next**.
 
     ![New Organization VDC Network dialog box - DNS page](images/vmw-vcd10.1-new-network-dns-isolated.png)
-
-10. Click **Next**.
 
 11. On the *Ready to Complete* page, review your selections then click **Finish**.
 
