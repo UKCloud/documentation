@@ -4,7 +4,7 @@ description: Provides links to the UKCloud Pricing Guide and SFIA Rate Card
 services: other
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 14/09/2021
+lastreviewed: 13/09/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,7 +25,6 @@ This document provides the pricing for our multi-cloud technology and cloud supp
 
 UKCloud for Microsoft Azure<br>
 UKCloud for OpenStack<br>
-UKCloud for Oracle Software<br>
 UKCloud for Red Hat OpenShift<br>
 UKCloud for VMware<br>
 VMware Licence Service (VLS)<br>
@@ -45,6 +44,7 @@ Neustar DDoS Protection from UKCloud<br>
 Neustar UltraDNS from UKCloud<br>
 Private Cloud<br>
 Private Cloud for Oracle Software<br>
+Private Cloud Storage<br>
 Secure Remote Access<br>
 Security Operations Service<br>
 UKCloud Desktop as a Service<br>
@@ -58,7 +58,7 @@ This document outlines:
 
 - Standards for consultancy day rate cards
 
-- SFIA skill definitions
+- SFIA level definitions
 
 **Additional pricing information**
 
@@ -66,7 +66,6 @@ We also have additional pricing information, including pricing examples, for the
 
 [UKCloud for Microsoft Azure](../azure/azs-ref-pricing.md)<br>
 [UKCloud for OpenStack](../openstack/ostack-ref-pricing.md)<br>
-[UKCloud for Oracle Software](../oracle/orcl-ref-pricing.md)<br>
 [UKCloud for Red Hat OpenShift](../openshift/oshift-ref-pricing.md)<br>
 [UKCloud for VMware](../vmware/vmw-ref-pricing.md)<br>
 [Cloud Storage](../cloud-storage/cs-ref-pricing.md)<br>

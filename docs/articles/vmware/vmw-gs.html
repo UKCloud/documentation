@@ -97,7 +97,7 @@
 <p>UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that enables you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud.</p>
 <p>This Getting Started Guide helps get you up and running using UKCloud for VMware, providing basic information about how to log in and set up your environment.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a VMware Cloud Director administrator.</p>
+<p>This article is intended for any new UKCloud for VMware user. To complete the steps in this article you must have access to the UKCloud Portal and VMware Cloud Director. To build compute services and virtual data centres (VDCs) you must be a Cloud Director administrator.</p>
 <h2 id="introduction-to-ukcloud-for-vmware">Introduction to UKCloud for VMware</h2>
 <p>We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.</p>
 <p>You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you in to one service or size and you can always change it later.</p>
@@ -125,7 +125,7 @@
 <p>You can also create a compute service using the Portal API. For more information, see <a href="../portal/ptl-ref-portal-api.html#post-apiaccountsaccount_idvorgs"><em>UKCloud Portal API Reference Guide</em></a></p>
 </div>
 <ol>
-<li><p>In the UKCloud Portal, select the account in which you want to create the compute service.</p>
+<li><p>In the UKCloud Portal, if necessary, <a href="../portal/ptl-how-switch-account.html"><em>switch to the account</em></a> in which you want to create the compute service.</p>
 </li>
 <li><p>In the navigation panel, expand <strong>Tools</strong> and then select <strong>Create Compute Service</strong>.</p>
 <p><img src="images/vmw-portal-mnu-create-compute-service.png" alt="Create Compute Service menu option"></p>
@@ -155,7 +155,7 @@
 <li><p>When the build is complete, the page displays either a success or fail message.</p>
 <p>If the build is successful, you can start building VDCs in your compute service (see <a href="#building-a-virtual-data-centre">Building a virtual data centre</a>).</p>
 <p><img src="images/vmw-portal-build-compute-service-success.png" alt="Build Compute Service Status - success"></p>
-<p>If the build is unsuccessful, raise a support ticket (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
+<p>If the build is unsuccessful, raise a Service Request (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
 <p><img src="images/vmw-portal-build-compute-service-fail.png" alt="Build Compute Service Status - failed"></p>
 </li>
 </ol>
@@ -213,14 +213,14 @@
 <li><p>When the build is complete, the page displays either a success or fail message.</p>
 <p>If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see <a href="vmw-how-build-edge.html"><em>How to build an edge gateway using the UKCloud Portal</em></a>).</p>
 <p><img src="images/vmw-portal-build-vdc-success.png" alt="Build VDC Status - success"></p>
-<p>If the build is unsuccessful, raise a support ticket (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
+<p>If the build is unsuccessful, raise a Service Request (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
 <p><img src="images/vmw-portal-build-vdc-fail.png" alt="Build VDC Status - failed"></p>
 </li>
 </ol>
 <h2 id="logging-in-to-vmware-cloud-director">Logging in to VMware Cloud Director</h2>
 <p>After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to VMware Cloud Director, which you can access from the UKCloud Portal.</p>
 <ol>
-<li><p>In the Portal navigation panel expand <strong>VMware Cloud</strong> then select your compute service.</p>
+<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> then select your compute service.</p>
 <p><img src="images/vmw-portal-mnu-compute-services.png" alt="Compute services menu option"></p>
 </li>
 <li><p>On the <strong>VMware Cloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
