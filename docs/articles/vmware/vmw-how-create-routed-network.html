@@ -95,7 +95,7 @@
 
 <h2 id="overview">Overview</h2>
 <p>An organisation virtual data centre (VDC) network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.</p>
-<p>There are two network flavours, isolated and routed:</p>
+<p>There are two types of organisation VDC networks:</p>
 <ul>
 <li><p>An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</p>
 </li>
@@ -112,8 +112,27 @@
 <li><p>Click <strong>New</strong>.</p>
 <p><img src="images/vmw-vcd10.1-btn-new-network.png" alt="New network button"></p>
 </li>
-<li><p>On the <em>Network Type</em> page of the <em>New Organization VDC Network</em> dialog box, select <strong>Routed</strong>, then click <strong>Next</strong>.</p>
+<li><p>On the <em>Scope</em> page of the <em>New Organization VDC Network</em> dialog box, <strong>Current Organization Virtual Data Center</strong> should already be selected, so click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Network Type</em> page, select <strong>Routed</strong>, then click <strong>Next</strong>.</p>
 <p><img src="images/vmw-vcd10.1-new-network-routed-type.png" alt="New Organization VDC Network dialog box - Network Type page - Routed network"></p>
+</li>
+<li><p>On the <em>Edge Connection</em> page:</p>
+<ul>
+<li><p>Select the edge gateway that you want your network to connect to.</p>
+</li>
+<li><p>From the <strong>Connection Type</strong> list, select <strong>Internal</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For information about <strong>Distributed</strong> networks, see <a href="vmw-how-configure-distributed-logical-router.html"><em>How to configure a Distributed Logical Router</em></a>. For information about creating a routed network as a <strong>Subinterface</strong> for L2 VPN, see <a href="vmw-how-configure-l2-vpn.html"><em>How to configure an L2 VPN</em></a>.</p>
+</div>
+</li>
+<li><p>Select the <strong>Guest VLAN Allowed</strong> option to enable tagging of guest VLANs on this network.</p>
+</li>
+</ul>
+<p><img src="images/vmw-vcd10.1-new-network-routed-edge.png" alt="New Organization VDC Network dialog box - Edge Connection page"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
 <li><p>On the <em>General</em> page:</p>
 <ul>
@@ -128,34 +147,15 @@
 </li>
 <li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>On the <em>Edge Connection</em> page:</p>
-<ul>
-<li><p>Select the edge gateway that you want your network to connect to.</p>
-</li>
-<li><p>From the <strong>Interface Type</strong> list, select <strong>Internal</strong>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For information about distributed networks, see <a href="vmw-how-configure-distributed-logical-router.html"><em>How to configure a Distributed Logical Router</em></a>. For information about creating a routed network as a subinterface for L2 VPN, see <a href="vmw-how-configure-l2-vpn.html"><em>How to configure an L2 VPN</em></a>.</p>
-</div>
-</li>
-<li><p>Select the <strong>Guest VLAN Allowed</strong> option to enable tagging of guest VLANs on this network.</p>
-</li>
-</ul>
-<p><img src="images/vmw-vcd10.1-new-network-routed-edge.png" alt="New Organization VDC Network dialog box - Edge Connection page"></p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
 <li><p>On the <em>Static IP Pools</em> page, in the <strong>Static IP Pools</strong> field, enter a range of addresses to be consumed by the VMs connecting to the network, then click <strong>Add</strong>.</p>
-<p>As an example, if you give the gateway address as <code>192.168.1.1/24</code>, you may then want to create a <strong>Static IP Pool</strong> of <code>192.168.1.10-192.168.1.100</code>. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.</p>
+<p>As an example, if you give the gateway address as <code>192.168.1.1/24</code>, you may then want to create a static IP pool of <code>192.168.1.10-192.168.1.100</code>. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.</p>
 <p>You can add multiple IP pools.</p>
 <p><img src="images/vmw-vcd10.1-new-network-ip-pool.png" alt="New Organization VDC Network dialog box - Static IP Pools page"></p>
 </li>
 <li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>On the <em>DNS</em> page, enter DNS information if possible.</p>
+<li><p>On the <em>DNS</em> page, enter DNS information if applicable, then click <strong>Next</strong>.</p>
 <p><img src="images/vmw-vcd10.1-new-network-dns.png" alt="New Organization VDC Network dialog box - DNS page"></p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
 </li>
 <li><p>On the <em>Ready to Complete</em> page, review your selections then click <strong>Finish</strong>.</p>
 </li>
