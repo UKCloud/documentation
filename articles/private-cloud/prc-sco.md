@@ -3,8 +3,8 @@ title: Private Cloud Service Scope
 description: Outlines important details regarding Private Cloud
 services: private-cloud
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 14/09/2021
+reviewer: gmartin
+lastreviewed: 26/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
