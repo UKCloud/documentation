@@ -3,8 +3,8 @@ title: Snapshot Protection Service Scope
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
 author: shall
-reviewer: gsmith
-lastreviewed: 07/09/2021 
+reviewer: gmartin
+lastreviewed: 26/09/2022 
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
