@@ -3,8 +3,8 @@ title: Private Cloud FAQs
 description: Frequently asked questions for Private Cloud
 services: private-cloud
 author: mwarner
-reviewer: shighmoor
-lastreviewed: 14/09/2021
+reviewer: gmartin
+lastreviewed: 26/09/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

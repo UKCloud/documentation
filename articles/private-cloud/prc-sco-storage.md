@@ -1,31 +1,31 @@
 ---
-title: Private Cloud for Storage Service Scope
-description: Outlines important details regarding Private Cloud for Storage
+title: Private Cloud Storage Service Scope
+description: Outlines important details regarding Private Cloud Storage
 services: private-cloud
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 14/09/2021
+reviewer: gmartin
+lastreviewed: 26/09/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Private Cloud for Storage Service Scope
+toc_title: Private Cloud Storage Service Scope
 toc_fullpath: Service Information/prc-sco-storage.md
 toc_mdlink: prc-sco-storage.md
 ---
 
-# Private Cloud for Storage Service Scope
+# Private Cloud Storage Service Scope
 
 ## About the service
 
-This document describes the boundaries of the Private Cloud for Storage service, along with the responsibilities of both you and UKCloud to facilitate the installation and ongoing use of the service.
+This document describes the boundaries of the Private Cloud Storage service, along with the responsibilities of both you and UKCloud to facilitate the installation and ongoing use of the service.
 
-Our Private Cloud for Storage service is a single‑tenant (private cloud) storage infrastructure where your storage needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms; or in your Crown Hosting Data Centre (CHDC).
+Our Private Cloud Storage service is a single‑tenant (private cloud) storage infrastructure where your storage needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms; or in your Crown Hosting Data Centre (CHDC).
 
 This service offers an increase in both performance consistency and data security over traditional public cloud storage options.
 
-We can provide Private Cloud for Storage on an all-inclusive basis, or you can provide your own hardware, which we'll maintain on your behalf.
+We can provide Private Cloud Storage on an all-inclusive basis, or you can provide your own hardware, which we'll maintain on your behalf.
 
 ## Capturing your requirements
 
@@ -201,7 +201,7 @@ We will not supply you with root access to your hardware as your hardware will b
 
 ## To progress further
 
-For more information, see the [Private Cloud for Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-234-private-cloud-storage-service-definition-13.0-1.pdf). Contact your Service Delivery Manager to request further information or to place an order.
+For more information, see the [Private Cloud Storage Service Definition](https://ukcloud.com/app/uploads/2022/08/ukc-svc-234-private-cloud-storage-service-definition-13.0-1.pdf). Contact your Service Delivery Manager to request further information or to place an order.
 
 ## Feedback
 

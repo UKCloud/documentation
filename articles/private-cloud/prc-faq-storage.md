@@ -1,31 +1,31 @@
 ---
-title: Private Cloud for Storage FAQs
-description: Frequently asked questions for Private Cloud for Storage
+title: Private Cloud Storage FAQs
+description: Frequently asked questions for Private Cloud Storage
 services: private-cloud
 author: mwarner
-reviewer: shighmoor
-lastreviewed: 14/09/2021
+reviewer: gmartin
+lastreviewed: 26/09/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Private Cloud for Storage FAQs
+toc_title: Private Cloud Storage FAQs
 toc_fullpath: FAQs/prc-faq-storage.md
 toc_mdlink: prc-faq-storage.md
 ---
 
-# Private Cloud for Storage FAQs
+# Private Cloud Storage FAQs
 
 ## Service
 
 ### What is the service?
 
-Private Cloud for Storage provides single-tenant storage Infrastructure as a Service. Your data is hosted in one of our UK data centres; or in your Crown Hosting Data Centre (CHDC).
+Private Cloud Storage provides single-tenant storage Infrastructure as a Service. Your data is hosted in one of our UK data centres; or in your Crown Hosting Data Centre (CHDC).
 
-### How does Private Cloud for Storage differ from UKCloud's Cloud Storage?
+### How does Private Cloud Storage differ from UKCloud's Cloud Storage?
 
-The Platform Only package in Private Cloud for Storage provides you with the underlying Assured Cloud platform to host and manage dedicated storage hardware. You can arrange your own purchase of it, or UKCloud can broker it for you.
+The Platform Only package in Private Cloud Storage provides you with the underlying Assured Cloud platform to host and manage dedicated storage hardware. You can arrange your own purchase of it, or UKCloud can broker it for you.
 
 This service differs from Cloud Storage in that it allows you to purchase in bulk up front, to reduce the price per GiB.
 
@@ -43,7 +43,7 @@ Your data will be stored in our highly resilient, UK-sovereign tier 3 data centr
 
 ### How much data can I store?
 
-A core benefit of Private Cloud for Storage is that it can scale to meet the most demanding storage requirements.
+A core benefit of Private Cloud Storage is that it can scale to meet the most demanding storage requirements.
 
 ### What network protocols are supported on the platform?
 
@@ -57,7 +57,7 @@ Documentation on ways to interact with the platform is available from the UKClou
 
 ### What software tools are available?
 
-Advanced software features for Private Cloud for Storage include auto-tiering, deduplication, retention, replication, quotas and snapshots.
+Advanced software features for Private Cloud Storage include auto-tiering, deduplication, retention, replication, quotas and snapshots.
 
 ## Support
 
@@ -67,9 +67,9 @@ UKCloud's secure online Portal provides the most common service management funct
 
 ### How do I manage my services?
 
-Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+Private Cloud Storage on the Assured OFFICIAL domain can be managed over the internet (or other connectivity) by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-For the Elevated OFFICIAL (formerly IL3) domain, the security requirements are much stricter and require either a PSN-approved connection, UKCloud Secure Remote Access, or CAPS-approved encryption.
+For the Elevated OFFICIAL domain, the security requirements are much stricter and require either a PSN-approved connection, UKCloud Secure Remote Access, or CAPS-approved encryption.
 
 ### What are your service maintenance windows?
 
@@ -79,7 +79,7 @@ See [*Understanding UKCloud service maintenance windows*](../other/other-ref-mai
 
 ### How can I get started with the service?
 
-On acceptance of your order, we'll work with you to create a detailed design for your Private Cloud for Storage service. The design will formalise the dedicated components required for the solution, including storage hardware, storage software, network hardware and cables.
+On acceptance of your order, we'll work with you to create a detailed design for your Private Cloud Storage service. The design will formalise the dedicated components required for the solution, including storage hardware, storage software, network hardware and cables.
 
 If this is a new service for you, we will create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal for access to the Knowledge Centre and service management function.
 
@@ -89,7 +89,7 @@ If this is a new service for you, we will create your primary administrator acco
 
 Billing depends on the packaging option chosen. The smallest unit of time you will be billed for this service is monthly.
 
-Private Cloud for Storage is offered under a 24-month minimum term commitment.
+Private Cloud Storage is offered under a 24-month minimum term commitment.
 
 ### How can I pay for the services?
 
