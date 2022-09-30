@@ -107,7 +107,7 @@ Your experience is important to us. We measure our performance against service t
 
 Ticket priority | Initial response target | Resolution target
 ----------------|-------------------------|------------------
-**P1 incident** | 15 minutes | 90% in 12 hours
+**P1 incident** | 15 minutes | 90% in 4 hours
 **P2 incident** | 1 hour | 90% in 24 hours
 **P3 incident** | 1 hour | 90% in 5 days
 **P4 incident** | 1 hour | 90% in 5 days
