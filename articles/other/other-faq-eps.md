@@ -2,9 +2,9 @@
 title: Enterprise & Private Sector FAQs
 description: Frequently asked questions for Enterprise & Private Sector
 services: other
-author: Sue Highmoor
-reviewer: shall
-lastreviewed: 14/09/2021
+author: shighmoor
+reviewer: slawrence
+lastreviewed: 29/09/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
