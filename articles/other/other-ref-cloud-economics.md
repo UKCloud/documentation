@@ -4,7 +4,7 @@ description: One of the core benefits of true cloud services is the utility pric
 services: other
 author: mwarner
 reviewer: shall
-lastreviewed: 14/09/2021
+lastreviewed: 26/09/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
