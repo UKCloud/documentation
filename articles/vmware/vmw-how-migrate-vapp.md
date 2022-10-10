@@ -3,8 +3,8 @@ title: How to migrate vApps between virtual data centres
 description: Covers the ways in which customers can migrate their vApps between virtual data centres (VDCs)
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 17/11/2019
+reviewer: geverett
+lastreviewed: 10/10/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -37,7 +37,7 @@ To copy a vApp:
 
 2. In the left navigation panel, under *Compute*, select **vApps**.
 
-3. In the card for the vApp that you want to copy, select **Actions** then **Copy to**.
+3. In the card for the vApp that you want to copy, select **Actions** then **Copy**.
 
 4. In the *Copy* dialog box, enter a **Name** for the copied vApp and select which VDC you want to migrate it to. You can also change the storage policy for each virtual machines (VMs) within the vApp.
 
@@ -58,18 +58,18 @@ To move a vApp:
 
 2. In the left navigation panel, under *Compute*, click **vApps**.
 
-3. In the card for the vApp that you want to move, select **Actions** then **Move to**.
+3. In the card for the vApp that you want to move, select **Actions** then **Move**.
 
 4. In the *Move* dialog box, select which VDC you want to migrate the vApp to. You can also change the storage policy for each VMs within the vApp.
 
-    ![Move vApp dialog box](images/vmw-vcd10.1-move-vapp.png)
+    ![Move vApp dialog box](images/vmw-vcd10.3-move-vapp.png)
 
 5. When you're happy with the configuration, click **OK** to begin the move operation.
 
     > [!NOTE]
     > It may take some time to move the vApp from one VDC to another.
 
-6. When the move operation is complete, power the vApp back on by selecting **Actions** then **Power On**.
+6. When the move operation is complete, power the vApp back on by selecting **Actions** then **Power** > **Start**.
 
 ## Feedback
 
