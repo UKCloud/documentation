@@ -3,8 +3,8 @@ title: Benefits of VMware L2 VPN
 description: Shows a video that provides a technical explanation of VMware's L2 VPN feature
 services: vmware
 author: shighmoor
-reviewer: jmoore
-lastreviewed: 15/09/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 
 toc_rootlink: Videos
 toc_sub1: 
