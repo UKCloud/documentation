@@ -3,8 +3,8 @@ title: Sharing catalogs FAQs
 description: Frequently asked questions for sharing catalogs
 services: vmware
 author: shighmoor
-reviewer: swthomas
-lastreviewed: 27/10/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -35,7 +35,7 @@ A shared catalog appears in the public catalog on the destination vOrg, but will
 
 For information on permissions you as the customer can select, see:
 
-- [VMware Cloud Director 10.1](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
+- [VMware Cloud Director 10.3](https://docs.vmware.com/en/VMware-Cloud-Director/10.3/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
 
 ## How many vOrgs can a catalog be shared with?
 
@@ -57,7 +57,7 @@ You can delete the contents of a shared catalog as long as you have full control
 
 For information on permissions you as the customer can select, see:
 
-- [VMware Cloud Director 10.1](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
+- [VMware Cloud Director 10.3](https://docs.vmware.com/en/VMware-Cloud-Director/10.3/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html)
 
 ## Feedback
 
