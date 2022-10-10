@@ -3,8 +3,8 @@ title: How to locate your virtual data centre on the UKCloud platform
 description: Describes how to use the Tenant Portal or vCloud API to find out where your VDC is located within the UKCloud platform
 services: vmware
 author: shall
-reviewer: jpaddock
-lastreviewed: 12/10/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -73,7 +73,7 @@ If you set up your VDC to use Synchronous Protection, then the VDC is stretched 
 ## Finding the location of a VDC (Cloud Director API)
 
 You can also find the location of your VDC by calling the Cloud Director API. For more information about the Cloud Director API, see the [VMware Cloud Director API
-](https://code.vmware.com/apis/912/vmware-cloud-director).
+](https://code.vmware.com/apis/1232/vmware-cloud-director).
 
 For example, to retrieve all the metadata for a specified VDC, call the `GET /vcd/<id>/metadata` endpoint.
 
