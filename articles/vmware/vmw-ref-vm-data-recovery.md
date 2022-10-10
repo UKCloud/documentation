@@ -73,7 +73,7 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
-In the card for the VM that you want to copy, select **Actions** then **Copy to**.
+In the card for the VM that you want to copy, select **Actions** then **Copy**.
 
 ![Copy VM menu option](images/vmw-vcd-mnu-copy-vm.png)
 
