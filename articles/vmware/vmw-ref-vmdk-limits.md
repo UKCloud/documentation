@@ -3,8 +3,8 @@ title: Virtual machine disk limits and considerations
 description: Defines UKCloud's recommended soft limits regarding disk capacity and any associated operational considerations
 services: vmware
 author: shighmoor
-reviewer: jpaddock
-lastreviewed: 12/10/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
