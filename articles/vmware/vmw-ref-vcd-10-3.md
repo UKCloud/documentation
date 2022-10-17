@@ -51,7 +51,7 @@ The following API versions are still available:
 - 33.0 (deprecated)
 - 34.0
 - 35.0, 35.2
-- 36.0, 36.1
+- 36.0, 36.1, 36.2
 
 ### Changes to API authentication
 
