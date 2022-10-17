@@ -110,7 +110,10 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
     ![New VM dialog box - Networking](images/vmw-vm-dlg-new-vm-scratch-vcd10.3-network.png)
 
-11. When you're done, click **OK**.
+    > [!NOTE]
+    > We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.
+    >
+    > If you want a more comprehensive guide on network adapter types, see the VMware documentation for [Network Adapter Basics](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html).11. When you're done, click **OK**.
 
 12. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
 
@@ -162,6 +165,10 @@ When you create a VM from scratch, it's initially deployed without any operating
 10. Carry out the operating system install as normal.
 
     When you've finished, remember to install VMware Tools (for more information, see [*VMware Tools installation*](vmw-ref-vmware-tools-installation.md)).
+
+## Next steps
+
+After you initially create your VM, you may want to edit some of the properties to finish setting it up. For more information, see [*How to view and update virtual machine settings*](vmw-how-update-vm-settings.md).
 
 ## Feedback
 
