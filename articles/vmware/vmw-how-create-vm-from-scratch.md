@@ -115,7 +115,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
     >
     > If you want a more comprehensive guide on network adapter types, see the VMware documentation for [Network Adapter Basics](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html).11. When you're done, click **OK**.
 
-12. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
+11. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
 
     The VM will be deployed without any operating system.
 

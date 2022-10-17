@@ -4,7 +4,7 @@ description: Describes how to increase the block storage available to a virtual 
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 04/10/2021
+lastreviewed: 17/10/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -34,11 +34,11 @@ Before increasing block storage for a VM, you can check the storage allocation f
 
 2. In the left navigation panel, under *Storage* select **Storage Policies**.
 
-    ![Storage Policies menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-storage-policies.png)
+    ![Storage Policies menu option in VMware Cloud Director](images/vmw-mnu-storage-policies-vcd10.3.png)
 
 3. In the row for the appropriate storage policy, check the **Limit** column.
 
-    ![Storage policy limit](images/vmw-vcd10.1-storage-limit.png)
+    ![Storage policy limit](images/vmw-storage-policies-limit-vcd-10.3.png)
 
 > [!NOTE]
 > If you need to increase the storage allocation for your storage policy, raise a Service Request in the My Calls section of the UKCloud Portal.
@@ -49,26 +49,36 @@ To increase the amount of block storage for your VM:
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the VM.
 
-2. In the card for your VM, click **Details**.
+2. In the left navigation panel, under *Compute*, select **Virtual Machines** to view a list of VMs within the VDC.
 
-    ![VM Details menu option](images/vmw-vcd10.1-mnu-vm-details.png)
+   ![Virtual Machines menu option in VMware Cloud Director](images/vmw-mnu-vms-vcd10.3.png)
 
-3. Under *Hardware*, select **Hard Disks**.
+3. In the card for your VM, click **Details**.
 
-4. Click **Edit**.
+    ![VM Details menu option](images/vmw-vm-mnu-details.png)
 
-    ![Edit hard disks button](images/vmw-vcd10.1-btn-vm-hard-disks-edit.png)
+4. Under *Hardware*, select **Hard Disks**.
 
-5. In the *Edit Hard Disks* dialog box, in the row for the hard disk that you want to increase, enter the new value in the **Size** field.
+   ![Hard Disks menu option](images/vmw-vm-opt-hard-disks-vcd10.3.png)
 
-    ![Edit Hard Disks dialog box](images/vmw-vcd10.1-edit-hard-disks.png)
+5. Click **Edit**.
+
+    ![Edit hard disks button](images/vmw-vm-btn-hard-disks-edit-vcd10.3.png)
+
+6. In the *Edit Hard Disks* dialog box, in the row for the hard disk that you want to increase, enter the new value in the **Size** field.
+
+    ![Edit Hard Disks dialog box](images/vmw-vm-dlg-edit-hard-disks-vcd10.3.png)
 
     > [!TIP]
     > Make sure to select the correct units (**MB** or **GB**) from the list in the **Size** field.
 
-6. If required, you can add more hard disks to your VM by clicking **Add** and specifying the details for the new disk.
+7. If required, you can add more hard disks to your VM by clicking **Add** and specifying the details for the new disk.
 
-7. When you're done, click **Save**.
+8. When you're done, click **Save**.
+
+## Related articles
+
+To learn about other VM settings, see [*How to view and update virtual machine settings*](vmw-how-update-vm-settings.md).
 
 ## Feedback
 
