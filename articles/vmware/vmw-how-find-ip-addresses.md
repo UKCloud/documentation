@@ -4,7 +4,7 @@ description: Shows how to find your allocated external IP addresses within the V
 services: vmware
 author: shighmoor
 reviewer: shighmoor
-lastreviewed: 04/10/2021
+lastreviewed: 17/10/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-find-ip-addresses.md
 
 ## Overview
 
-To route traffic to your external network (for example internet, PSN), you need to know your  external IP addresses.
+To route traffic to your external network (for example the internet or PSN), you need to know your  external IP addresses.
 
 ## Finding your allocated external IP addresses
 
@@ -30,11 +30,13 @@ To find your allocated external IP address range:
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
 
-    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+    ![Edges menu option in VMware Cloud Director](images/vmw-mnu-edges-vcd10.3.png)
 
-3. On the *Edge Gateways* page, select the edge.
+3. On the *Edge Gateways* page, click the edge that you want to configure.
 
-4. Under *Configuration*, select **IP Allocations**.
+   ![Select edge gateway](images/vmw-edge-select.png)
+
+4. In the left navigation bar, under *Configuration*, select **IP Allocations**.
 
     ![IP Allocations menu option](images/vmw-vcd10.1-mnu-edge-ips.png)
 
@@ -46,15 +48,17 @@ To find your allocated external IP address range:
 
 ## Finding your primary external IP address
 
-For some tasks, such as configuring an IPsec VPN, you'll need to know your primary external IP address.
+For some tasks, such as configuring an IPSec VPN, you'll need to know your primary external IP address.
 
 1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the edge gateway.
 
 2. In the left navigation panel, under *Networking*, select **Edges**.
 
-    ![Edges menu option in VMware Cloud Director](images/vmw-vcd10.1-mnu-edges.png)
+    ![Edges menu option in VMware Cloud Director](images/vmw-mnu-edges-vcd10.3.png)
 
-3. On the *Edge Gateways* page, select the edge.
+3. On the *Edge Gateways* page, click the edge that you want to configure.
+
+   ![Select edge gateway](images/vmw-edge-select.png)
 
 4. Under *Configuration*, select **Gateway Interfaces**.
 
