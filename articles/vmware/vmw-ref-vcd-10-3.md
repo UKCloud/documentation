@@ -55,7 +55,7 @@ The following API versions are still available:
 
 ### Changes to API authentication
 
-The method of authentication for the Cloud Director API has changed. The `/api/sessions` API login endpoint is deprecated in VMware Cloud Director 10.3. You should now use '/cloudapi/1.0.0/sessions` to authenticate against the API.  For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
+The method of authentication for the Cloud Director API has changed. The `/api/sessions` API login endpoint is deprecated in VMware Cloud Director 10.3. You should now use '/cloudapi/1.0.0/sessions` to authenticate against the API. For more information, see [*How to access VMware Cloud Director through the Cloud Director API*](vmw-how-access-vcloud-api.md).
 
 ### Sandbox for testing Cloud Director API
 
