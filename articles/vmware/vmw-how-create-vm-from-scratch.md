@@ -113,9 +113,11 @@ For information about creating a VM from a template, see [*How to create a VM fr
     > [!NOTE]
     > We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.
     >
-    > If you want a more comprehensive guide on network adapter types, see the VMware documentation for [Network Adapter Basics](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html).11. When you're done, click **OK**.
+    > If you want a more comprehensive guide on network adapter types, see the VMware documentation for [Network Adapter Basics](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html).
 
-11. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
+11. When you're done, click **OK**.
+
+12. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
 
     The VM will be deployed without any operating system.
 
@@ -169,6 +171,10 @@ When you create a VM from scratch, it's initially deployed without any operating
 ## Next steps
 
 After you initially create your VM, you may want to edit some of the properties to finish setting it up. For more information, see [*How to view and update virtual machine settings*](vmw-how-update-vm-settings.md).
+
+If you haven't already, you may want to create networks to enable your VMs to communicate with each other and the outside world. For more information, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md) and [*How to create an isolated VDC network*](vmw-how-create-isolated-network.md).
+
+You may also want to create rules to enable traffic into and out of your VMs. For more information, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md) and [*How to create NAT rules*](vmw-how-create-nat-rules.md).
 
 ## Feedback
 
