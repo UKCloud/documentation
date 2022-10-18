@@ -67,7 +67,7 @@ To increase the amount of block storage for your VM:
 
 6. In the *Edit Hard Disks* dialog box, in the row for the hard disk that you want to increase, enter the new value in the **Size** field.
 
-    ![Edit Hard Disks dialog box](images/vmw-vm-dlg-edit-hard-disks-vcd10.3.png)
+    ![Edit Hard Disks dialog box](images/vmw-vm-dlg-edit-hard-disk-size-vcd10.3.png)
 
     > [!TIP]
     > Make sure to select the correct units (**MB** or **GB**) from the list in the **Size** field.
