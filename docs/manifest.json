@@ -4351,112 +4351,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/email/email-faq.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-faq.html",
-          "hash": "oRKMv+pA+yhkaqgrhiXx47neR8rr5P4VmYIJ6TgQdKg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/email/email-gs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-gs.html",
-          "hash": "81pHb0HruiLbt9GaIMijcRVIOif+lGv6I0eO3NizBQE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/email/email-how-setup-android.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-how-setup-android.html",
-          "hash": "Kwn45o9VnaUKoPLTKFAjOIvZOx6u3iGTgh/TAHUrBFI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/email/email-how-setup-iphone.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-how-setup-iphone.html",
-          "hash": "64e/6b4J0rllmTj6cUc/1T1Pac8R/rEfhrFwoKzOwFw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/email/email-how-use-with-app.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-how-use-with-app.html",
-          "hash": "plb5tKoHO3Ly+1On81SgJ2rOWT0CRZ9nskTrbHGM8K4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/email/email-ref-fair-use.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/email-ref-fair-use.html",
-          "hash": "C4ChCl/yHBKUAmjHFhMkh6NvezortkqFnpWiLIwwySs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-console-new-account.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-console-new-account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/email/images/email-stunnel.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/email/images/email-stunnel.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/email/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/email/toc.html",
-          "hash": "yGWev+ZrTJXSc9Kro9WfwFgOI5PUZVutZQHLmEbHKqY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-home.md",
       "output": {
         ".html": {
@@ -10342,7 +10236,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-product-status.html",
-          "hash": "mL5n8XLFkZsZkdMML/3ZBbfM/fbyZDmzpuBIXo5D4Kw="
+          "hash": "BCOCzSFC+wG3R+fC6nA1Zccpfx83dyrXvia9+2727X8="
         }
       },
       "is_incremental": false,
@@ -18291,7 +18185,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Lst9BKOLbYLq0saFtqfgWblyDB3PSwjzgabUIkODQA4="
+          "hash": "C0T6ksJzN8O9y9qnrT1q36s3lX5qvos2NjfyvesiSQM="
         }
       },
       "is_incremental": false,
@@ -18312,7 +18206,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 431,
+          "total_file_count": 425,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
