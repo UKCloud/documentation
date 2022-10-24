@@ -192,7 +192,7 @@
 </li>
 </ol>
 <h2 id="curl-example">Curl example</h2>
-<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/json;version=36.2' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 </code></pre>
 <h2 id="retrieving-historic-utilisation-metrics">Retrieving historic utilisation metrics</h2>
 <p>Historic metrics are collected and stored for three months. You can retrieve historic metrics for the last 24 hours of metric history.</p>
@@ -338,7 +338,7 @@
 </li>
 </ol>
 <h2 id="curl-example-1">Curl example</h2>
-<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+<pre><code class="lang-none">curl -i -XGET -H 'Accept: application/json;version=36.2' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 </code></pre>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>

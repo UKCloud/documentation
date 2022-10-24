@@ -101,21 +101,21 @@
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp in which you want to create the VM.</p>
 </li>
 <li><p>In the left navigation panel, under <em>Compute</em>, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd10.1-mnu-vapps.png" alt="vApps menu option in VMware Cloud Director"></p>
+<p><img src="images/vmw-mnu-vapps-vcd10.3.png" alt="vApps menu option in VMware Cloud Director"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>To create a standalone VM, in the left navigation panel, select <strong>Virtual Machines</strong>, then click <strong>New VM</strong>.</p>
 </div>
 </li>
-<li><p>In the card for the vApp in which you want to create the VM, select <strong>Actions</strong> then <strong>Add VM</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-add-vm.png" alt="Add VM menu option"></p>
+<li><p>In the card for the vApp in which you want to create the VM, select <strong>Actions</strong> &gt; <strong>Add</strong> &gt; <strong>Add VM</strong>.</p>
+<p><img src="images/vmw-vapp-mnu-add-vm-vcd10.3.png" alt="Add VM menu option"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
 </div>
 </li>
 <li><p>In the <em>Add VMs</em> dialog box, click <strong>Add Virtual Machine</strong>.</p>
-<p><img src="images/vmw-vcd10.1-btn-add-vm.png" alt="Add Virtual Machine button"></p>
+<p><img src="images/vmw-vapp-btn-add-vm-vcd10.3.png" alt="Add Virtual Machine button"></p>
 </li>
 <li><p>In the <em>New VM</em> dialog box, enter a <strong>Name</strong>, <strong>Computer Name</strong> and <strong>Description</strong> for your VM.</p>
 <div class="NOTE">
@@ -125,36 +125,101 @@
 </div>
 </li>
 <li><p>As you're creating the VM from scratch (not from a template), from the <strong>Type</strong> radio buttons, select <strong>New</strong>.</p>
+<p><img src="images/vmw-vm-dlg-new-vm-scratch-vcd10.3-type.png" alt="New VM dialog box - Type"></p>
 </li>
-<li><p>Select the <strong>OS Family</strong> to use for your VM, then from the <strong>Operating System</strong> list, select the specific OS that you want to use.</p>
-<p><img src="images/vmw-vcd10.1-new-vm-scratch.png" alt="New VM dialog box - Type"></p>
+<li><p>Select the <strong>OS family</strong> to use for your VM, then from the <strong>Operating System</strong> list, select the specific OS that you want to use.</p>
+<p><img src="images/vmw-vm-dlg-new-vm-scratch-vcd10.3-os.png" alt="New VM dialog box - Operating System"></p>
 </li>
-<li><p>From the <strong>Select a Size</strong> radio buttons, select a sizing option for your VM.</p>
-<p>You can select from <strong>Pre-defined Sizing Options</strong> or select <strong>Custom Sizing Options</strong> to enter specific compute, memory and storage settings.</p>
+<li><p>In the <em>Compute</em> section, select the compute and memory settings for your VM.</p>
+<p>Although you can build a VM to your own specification in terms of the number of vCPUs and amount of memory, you'll be billed based on the closest (next highest) match to a UKCloud pre-defined VM size.</p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>vCPU</th>
+<th>RAM (GiB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Micro</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Tiny</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Small</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Medium High Memory</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Large High Memory</td>
+<td>8</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Tier 1 Apps Small</td>
+<td>8</td>
+<td>48</td>
+</tr>
+<tr>
+<td>Tier 1 Apps Medium</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Tier 1 Apps Large</td>
+<td>8</td>
+<td>96</td>
+</tr>
+<tr>
+<td>Tier 1 Apps Extra Large</td>
+<td>12</td>
+<td>128</td>
+</tr>
+</tbody>
+</table>
+<p>For more information, see the <a href="https://ukcloud.com/pricing-guide">UKCloud Pricing Guide</a>.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <ul>
-<li><p>Although you can build a VM to your own specification in terms of the number of vCPUs and amount of memory and disk space, you'll be billed based on the closest (next highest) match to a UKCloud pre-defined VM size.</p>
-</li>
 <li><p>Given the flexibility of VMs, and the ability to change the number of vCPUs and amount of memory and disk space on the fly, it's often better to start small as you're not tied by the constraints of a physical server. Remember too, that more vCPUs or RAM won't necessarily make a server faster, and could cost a lot more. You need to understand how well your application can make use of multi-threading.</p>
 </li>
 <li><p>For Windows, select at least two vCPUs if you think you'll need two or more in the future, as the multi-processor HAL will be loaded as part of the OS build.</p>
 </li>
 </ul>
 </div>
+<p><img src="images/vmw-vm-dlg-new-vm-scratch-vcd10.3-compute.png" alt="New VM dialog box - Compute"></p>
 </li>
-<li><p>If you want to run virtualisation servers as a VM, you can edit the properties of the VM after it has been deployed and, in the <em>Hardware</em> section, select the <strong>Expose hardware-assisted CPU virtualization to guest OS</strong> check box.</p>
-<p>For example, you can run a Windows 2008 or 2012 server with Hyper‑V, or a VMware ESX host.</p>
-</li>
-<li><p>In the <em>Storage</em> section, set the <strong>Storage Policy</strong> and <strong>Size</strong> of storage for the VM. You can also add more disks.</p>
+<li><p>In the <em>Storage</em> section, set the <strong>Storage Policy</strong> and <strong>Size</strong> of storage for the VM. You can also add more disks if required.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>When setting the storage size, be sure to select the appropriate units (<strong>MB</strong>, <strong>GB</strong> or <strong>TB</strong>).</p>
 </div>
+<p><img src="images/vmw-vm-dlg-new-vm-scratch-vcd10.3-storage.png" alt="New VM dialog box - Storage"></p>
 </li>
 <li><p>In the <em>Networking</em> section, click <strong>Customize</strong> to configure network settings, if necessary. You can set the <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
 <ul>
-<li><p><strong>DHCP</strong> VMware Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</p>
+<li><p><strong>DHCP</strong> Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</p>
 </li>
 <li><p><strong>IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are
 created.</p>
@@ -162,10 +227,15 @@ created.</p>
 <li><p><strong>Manual IP</strong> is similar to IP Pool, but you need to enter a valid <strong>IP Address</strong> from the pool, which the VM will then keep.</p>
 </li>
 </ul>
-<p><img src="images/vmw-vcd10.1-new-vm-size.png" alt="Create VM dialog box"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>You can connect the VM to multiple networks, by clicking <strong>Add</strong>.</p>
+</div>
+<p><img src="images/vmw-vm-dlg-new-vm-scratch-vcd10.3-network.png" alt="New VM dialog box - Networking"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.</p>
+<p>If you want a more comprehensive guide on network adapter types, see the VMware documentation for <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html">Network Adapter Basics</a>.</p>
 </div>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
@@ -177,37 +247,45 @@ created.</p>
 <h2 id="installing-an-operating-system-into-the-vm">Installing an operating system into the VM</h2>
 <p>When you create a VM from scratch, it's initially deployed without any operating system. So, after you've created it, you need to install the appropriate operating system.</p>
 <ol>
-<li><p>On the card for the vApp that contains the VM, click <strong>Actions</strong> then select <strong>Power On</strong>.</p>
-<p>This starts the vApp and all the VMs within it.</p>
-</li>
 <li><p>In the card for the vApp that contains the new VM, click <strong>Details</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-vapp-details.png" alt="VM Details menu option"></p>
+<p><img src="images/vmw-vapp-mnu-details-vcd10.3.png" alt="VM Details menu option"></p>
 </li>
-<li><p>Select <strong>Virtual Machines</strong>.</p>
+<li><p>From the vApp navigation panel, select <strong>Virtual Machines</strong>.</p>
+<p><img src="images/vmw-vapp-opt-vms.png" alt="vApp options - Virtual Machines"></p>
 </li>
-<li><p>Click the <strong>VM Console</strong> option for the VM.</p>
+<li><p>From the VM menu (three dots) select <strong>Power</strong> &gt; <strong>Power On</strong>.</p>
+<p><img src="images/vmw-vm-mnu-power-on-vcd10.3.png" alt="VM menu Power On option"></p>
+</li>
+<li><p>Once the VM has powered on, click the <strong>VM Console</strong> option.</p>
+<p><img src="images/vmw-vm-opt-vm-console-vcd10.3.png" alt="VM Console option"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>For a standalone VM, in the left navigation panel, under <em>Compute</em>, select <strong>Virtual Machines</strong> to view a list of all VMs within the VDC. Then, in the card for your new VM, click <strong>VM Console</strong>.</p>
+<p><img src="images/vmw-vm-alone-opt-vm-console-vcd10.3.png" alt="VM Console option for standalone VM"></p>
 </div>
 </li>
 <li><p>As with a physical server, no virtual CD or DVD is available at first boot, so the server will attempt to PXE boot.</p>
 <p><img src="images/vmw-vcd-vm-console-bare-metal.png" alt="VM console"></p>
 </li>
-<li><p>In the main VMware Cloud Director interface (not the console), in the row for your VM, select the actions menu (three dots) then <strong>Insert Media</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-insert-media.png" alt="Insert Media menu option"></p>
+<li><p>In the main Cloud Director interface (not the console), from the VM menu select <strong>Media</strong> &gt; <strong>Insert Media</strong>.</p>
+<p><img src="images/vmw-vm-mnu-insert-media-vcd10.3.png" alt="Insert Media menu option"></p>
 </li>
 <li><p>In the <em>Insert CD</em> dialog box, select the ISO image you want to mount from a catalog, then click <strong>Insert</strong>.</p>
 </li>
-<li><p>In the row for the VM, select the actions menu (three dots) then <strong>Reset</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
-<p><img src="images/vmw-vcd10.1-mnu-reset-vm.png" alt="Reset VM menu option"></p>
-<p>After a short while the VM will start the boot process and pick up the CD/DVD. Resize the VM console if necessary or go to full screen.</p>
-<p><img src="images/vmw-vcd91-vm-install-os.png" alt="Installing CentOS Linux 7"></p>
+<li><p>In VM menu, select <strong>Power</strong> &gt; <strong>Reset</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
+<p><img src="images/vmw-vm-mnu-reset-vcd10.3.png" alt="Reset VM menu option"></p>
+</li>
+<li><p>After a short while the VM will start the boot process and pick up the CD/DVD. Resize the VM console if necessary or go to full screen.</p>
+<p><img src="images/vmw-vm-console-install-os.png" alt="Installing CentOS Linux 7"></p>
 </li>
 <li><p>Carry out the operating system install as normal.</p>
 <p>When you've finished, remember to install VMware Tools (for more information, see <a href="vmw-ref-vmware-tools-installation.html"><em>VMware Tools installation</em></a>).</p>
 </li>
 </ol>
+<h2 id="next-steps">Next steps</h2>
+<p>After you initially create your VM, you may want to edit some of the properties to finish setting it up. For more information, see <a href="vmw-how-update-vm-settings.html"><em>How to view and update virtual machine settings</em></a>.</p>
+<p>If you haven't already, you may want to create networks to enable your VMs to communicate with each other and the outside world. For more information, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a> and <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</p>
+<p>You may also want to create rules to enable traffic into and out of your VMs. For more information, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a> and <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

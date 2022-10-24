@@ -94,18 +94,19 @@
 <h1 id="how-to-find-your-allocated-external-ip-addresses">How to find your allocated external IP addresses</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To route traffic to your external network (for example internet, PSN), you need to know your  external IP addresses.</p>
+<p>To route traffic to your external network (for example the internet or PSN), you need to know your  external IP addresses.</p>
 <h2 id="finding-your-allocated-external-ip-addresses">Finding your allocated external IP addresses</h2>
 <p>To find your allocated external IP address range:</p>
 <ol>
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway.</p>
 </li>
 <li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
+<p><img src="images/vmw-mnu-edges-vcd10.3.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>On the <em>Edge Gateways</em> page, select the edge.</p>
+<li><p>On the <em>Edge Gateways</em> page, click the edge that you want to configure.</p>
+<p><img src="images/vmw-edge-select.png" alt="Select edge gateway"></p>
 </li>
-<li><p>Under <em>Configuration</em>, select <strong>IP Allocations</strong>.</p>
+<li><p>In the left navigation bar, under <em>Configuration</em>, select <strong>IP Allocations</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-edge-ips.png" alt="IP Allocations menu option"></p>
 </li>
 <li><p>In the <strong>IP Addresses</strong> column, you'll see the range of external IP addresses allocated for your use.</p>
@@ -114,14 +115,15 @@
 </li>
 </ol>
 <h2 id="finding-your-primary-external-ip-address">Finding your primary external IP address</h2>
-<p>For some tasks, such as configuring an IPsec VPN, you'll need to know your primary external IP address.</p>
+<p>For some tasks, such as configuring an IPSec VPN, you'll need to know your primary external IP address.</p>
 <ol>
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the edge gateway.</p>
 </li>
 <li><p>In the left navigation panel, under <em>Networking</em>, select <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-edges.png" alt="Edges menu option in VMware Cloud Director"></p>
+<p><img src="images/vmw-mnu-edges-vcd10.3.png" alt="Edges menu option in VMware Cloud Director"></p>
 </li>
-<li><p>On the <em>Edge Gateways</em> page, select the edge.</p>
+<li><p>On the <em>Edge Gateways</em> page, click the edge that you want to configure.</p>
+<p><img src="images/vmw-edge-select.png" alt="Select edge gateway"></p>
 </li>
 <li><p>Under <em>Configuration</em>, select <strong>Gateway Interfaces</strong>.</p>
 <p><img src="images/vmw-vcd10.1-mnu-edge-gateway.png" alt="IP Allocations menu option"></p>

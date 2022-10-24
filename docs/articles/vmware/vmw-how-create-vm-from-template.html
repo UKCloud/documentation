@@ -101,21 +101,21 @@
 <li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp in which you want to create the VM.</p>
 </li>
 <li><p>In the left navigation panel, under <em>Compute</em>, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd10.1-mnu-vapps.png" alt="vApps menu option in VMware Cloud Director"></p>
+<p><img src="images/vmw-mnu-vapps-vcd10.3.png" alt="vApps menu option in VMware Cloud Director"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>To create a standalone VM, in the left navigation panel, select <strong>Virtual Machines</strong>, then click <strong>New VM</strong>.</p>
 </div>
 </li>
-<li><p>In the card for the vApp in which you want to create the VM, select <strong>Actions</strong> then <strong>Add VM</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-add-vm.png" alt="Add VM icon"></p>
+<li><p>In the card for the vApp in which you want to create the VM, select <strong>Actions</strong> &gt; <strong>Add</strong> &gt; <strong>Add VM</strong>.</p>
+<p><img src="images/vmw-vapp-mnu-add-vm-vcd10.3.png" alt="Add VM menu option"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
 </div>
 </li>
 <li><p>In the <em>Add VMs</em> dialog box, click <strong>Add Virtual Machine</strong>.</p>
-<p><img src="images/vmw-vcd10.1-btn-add-vm.png" alt="Add Virtual Machine button"></p>
+<p><img src="images/vmw-vapp-btn-add-vm-vcd10.3.png" alt="Add Virtual Machine button"></p>
 </li>
 <li><p>In the <em>New VM</em> dialog box, enter a <strong>Name</strong>, <strong>Computer Name</strong> and <strong>Description</strong> for your VM.</p>
 <div class="NOTE">
@@ -125,12 +125,33 @@
 </div>
 </li>
 <li><p>From the <strong>Type</strong> radio buttons, select <strong>From Template</strong>.</p>
+<p><img src="images/vmw-vm-dlg-new-vm-template-vcd10.3-type.png" alt="New VM dialog box - Type"></p>
 </li>
 <li><p>In the <em>Templates</em> section, select the template that you want to use for your VM, depending on your required operating system and VM size.</p>
-<p><img src="images/vmw-vcd10.1-new-vm-template.png" alt="Create VM dialog box"></p>
+<p><img src="images/vmw-vm-dlg-new-vm-template-vcd10.3-template.png" alt="Create VM dialog box"></p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Creating vApp catalogs is covered in <a href="vmw-how-create-catalog.html"><em>How to create a vApp catalog</em></a></p>
+<p>For information about creating vApp catalogs, see <a href="vmw-how-create-catalog.html"><em>How to create a vApp catalog</em></a></p>
+</div>
+</li>
+<li><p>In the <em>Storage</em> section, set the <strong>Storage Policy</strong> for the VM.</p>
+<p><img src="images/vmw-vm-dlg-new-vm-template-vcd10.3-storage.png" alt="New VM dialog box - Storage"></p>
+</li>
+<li><p>In the <em>NICs</em> section, you can set the <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
+<ul>
+<li><p><strong>DHCP</strong> Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</p>
+</li>
+<li><p><strong>IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are
+created.</p>
+</li>
+<li><p><strong>Manual IP</strong> is similar to IP Pool, but you need to enter a valid <strong>IP Address</strong> from the pool, which the VM will then keep.</p>
+</li>
+</ul>
+<p><img src="images/vmw-vm-dlg-new-vm-template-vcd10.3-network.png" alt="New VM dialog box - NICs"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.</p>
+<p>If you want a more comprehensive guide on network adapter types, see the VMware documentation for <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html">Network Adapter Basics</a>.</p>
 </div>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
@@ -138,55 +159,10 @@
 <li><p>Back in the <em>Add VMs</em> dialog box, you can create more VMs or click <strong>Add</strong> when you're done.</p>
 </li>
 </ol>
-<h2 id="editing-the-properties-of-a-new-vm">Editing the properties of a new VM</h2>
-<p>After you initially create your VM, you'll probably want to edit some of the properties to finish setting it up.</p>
-<ol>
-<li><p>In the card for the vApp that contains the new VM, click <strong>Details</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-vapp-details.png" alt="VM Details menu option"></p>
-</li>
-<li><p>Select <strong>Virtual Machines</strong>.</p>
-</li>
-<li><p>Click the VM to edit its properties.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>To edit the properties of a standalone VM, in the left navigation panel, under <em>Compute</em>, select <strong>Virtual Machines</strong> to view a list of all VMs within the VDC. Then, in the card for your new VM, click <strong>Details</strong>.</p>
-</div>
-</li>
-<li><p>On the <em>General</em> page, click <strong>Edit</strong>.</p>
-<p><img src="images/vmw-vcd10.1-vm-details-general-edit.png" alt="VM details - General page - Edit button"></p>
-</li>
-<li><p>In the <em>Edit VM</em> dialog box, from the <strong>Storage Policy</strong> list, select a storage policy to assign the VM to, then click <strong>Save</strong>.</p>
-<p><img src="images/vmw-vcd10.1-vm-details-general.png" alt="Edit VM dialog box"></p>
-</li>
-<li><p>Under <em>Hardware</em>, select <strong>Hard Disks</strong>, then click <strong>Edit</strong> to configure storage or <strong>Add</strong> more disks. Click <strong>Save</strong> when done.</p>
-<p><img src="images/vmw-vcd10.1-vm-details-hard-disks.png" alt="VM details - Hard Disks page"></p>
-</li>
-<li><p>Select <strong>Compute</strong>, then click the appropriate <strong>Edit</strong> link to configure <em>CPU</em> and <em>Memory</em>.</p>
-<p><img src="images/vmw-vcd10.1-vm-details-compute.png" alt="VM details - Compute page"></p>
-</li>
-<li><p>Select <strong>NICs</strong>, then click <strong>Edit</strong> to configure network settings You can set the <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
-<ul>
-<li><p><strong>DHCP</strong> VMware Cloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</p>
-</li>
-<li><p><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are
-created.</p>
-</li>
-<li><p><strong>Static - Manual</strong> is similar to IP Pool, but you need to enter a valid <strong>IP Address</strong> from the pool, which the VM will then keep.</p>
-</li>
-</ul>
-<p>Click <strong>Save</strong> when done.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>If the MAC address for a newly added NIC is blank, click <strong>Save</strong> to generate one.</p>
-</div>
-<p><img src="images/vmw-vcd10.1-vm-details-nics.png" alt="VM details - NICs page"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend using the VMXNET3 network adapter where possible. The VMXNET virtual network adapter has no physical counterpart and is optimised for performance in a VM. Because operating system vendors don't provide built-in drivers for this card you must install VMware Tools to have a driver for the VMXNET network adapter available.</p>
-<p>If you want a more comprehensive guide on network adapter types, see the VMware documentation for <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AF9E24A8-2CFA-447B-AC83-35D563119667.html">Network Adapter Basics</a>.</p>
-</div>
-</li>
-</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>After you initially create your VM, you may want to edit some of the properties to finish setting it up. For more information, see <a href="vmw-how-update-vm-settings.html"><em>How to view and update virtual machine settings</em></a>.</p>
+<p>If you haven't already, you may want to create networks to enable your VMs to communicate with each other and the outside world. For more information, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a> and <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</p>
+<p>You may also want to create rules to enable traffic into and out of your VMs. For more information, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a> and <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 
