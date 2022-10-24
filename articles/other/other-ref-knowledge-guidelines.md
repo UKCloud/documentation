@@ -350,7 +350,7 @@ Element | Convention | Example
 --------|------------|--------
 All interactive UI elements (including tabs) | Use **bold** | Select the **Enable** check box.<br>From the **File** menu, select **Open**.<br>On the **VMs** tab, ...
 All non-interactive UI elements (for example, windows, pages, dialog boxes, sections on a page) | Use *italics* | On the *User account* page, ...<br>In the *Create new user* dialog box, ...<br>In the *Contact details* section of the *Create new user* dialog box, ...
-Commands, code, parameters, user-entered text | Use `monospace` | Use the `slmgr` command to ...<br>`application/*+xml;version=34.0`<br>In the **Name** field, enter `Accept`.
+Commands, code, parameters, user-entered text | Use `monospace` | Use the `slmgr` command to ...<br>`application/json;version=36.2`<br>In the **Name** field, enter `Accept`.
 
 ## Related articles
 

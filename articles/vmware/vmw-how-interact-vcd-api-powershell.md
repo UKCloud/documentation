@@ -21,9 +21,9 @@ toc_mdlink: vmw-how-interact-vcd-api-powershell.md
 
 ### Useful Links
 
-You can find the schema reference for version 34.0 of the Cloud Director API here:
+You can find the schema reference for version 36.2 of the Cloud Director API here:
 
-<https://code.vmware.com/apis/912/vmware-cloud-director>
+<https://developer.vmware.com/apis/1232/vmware-cloud-director>
 
 ### PowerShell
 
@@ -64,7 +64,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
    $Global:Authorization = ""
 
-   $Global:Accept = "application/*+xml;version=34.0"
+   $Global:Accept = "application/json;version=36.2"
 
    $Global:xvCloudAuthorization = ""
 
@@ -140,7 +140,7 @@ For more detailed instructions, see [*How to access VMware Cloud Director throug
 
    Authorization = ""
 
-   Accept = "application/*+xml;version=34.0"
+   Accept = "application/json;version=36.2"
 
    xvCloudAuthorization = ""
 
