@@ -113,7 +113,7 @@ You can retrieve current utilisation metrics for VMs in all regions.
 ## Curl example
 
 ```none
-curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+curl -i -XGET -H 'Accept: application/json;version=36.2' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
 ```
 
 ## Retrieving historic utilisation metrics
@@ -255,7 +255,7 @@ You can retrieve historic utilisation metrics for VMs in all regions.
 ## Curl example
 
 ```none
-curl -i -XGET -H 'Accept: application/*+xml;version=34.0' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+curl -i -XGET -H 'Accept: application/json;version=36.2' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
 ```
 
 ## Feedback
