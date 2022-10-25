@@ -2,9 +2,9 @@
 title: Journaling Protection Service Scope
 description: Outlines important details regarding the Journaling Protection service, powered by Zerto
 services: vmware
-author: shall
+author: acirel
 reviewer:
-lastreviewed: 24/06/2021
+lastreviewed: 21/10/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
