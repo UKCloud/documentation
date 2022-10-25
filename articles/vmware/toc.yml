@@ -134,6 +134,8 @@
     href: vmw-ref-virtual-hardware-v14.md
   - name: Changes in VMware Cloud Director 10.1
     href: vmw-ref-vcd-10-1.md
+  - name: Changes in VMware Cloud Director 10.3
+    href: vmw-ref-vcd-10-3.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
   - name: Identifying a VM in read-only mode

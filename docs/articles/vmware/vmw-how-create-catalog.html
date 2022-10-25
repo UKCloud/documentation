@@ -98,39 +98,42 @@
 <h2 id="creating-a-catalog">Creating a catalog</h2>
 <p>The first step is to create an empty catalog:</p>
 <ol>
-<li><p>In the VMware Cloud Director menu bar, select <strong>Libraries</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-libraries.png" alt="Libraries menu option in VMware Cloud Director"></p>
+<li><p>In the VMware Cloud Director top menu, select <strong>Libraries</strong>.</p>
+<p><img src="images/vmw-mnu-libraries-vcd10.3.png" alt="Libraries menu option in VMware Cloud Director"></p>
 </li>
 <li><p>In the left navigation panel, under <em>Content Libraries</em>, select <strong>Catalogs</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-catalogs.png" alt="Catalogs menu option"></p>
+<p><img src="images/vmw-mnu-catalogs-vcd10.3.png" alt="Catalogs menu option"></p>
 </li>
 <li><p>On the <em>Catalogs</em> page, click <strong>New</strong> to create a new catalog.</p>
-<p><img src="images/vmw-vcd10.1-catalog-btn-new.png" alt="New catalog button"></p>
+<p><img src="images/vmw-catalog-btn-new-vcd10.3.png" alt="New catalog button"></p>
 </li>
 <li><p>In the <em>Create Catalog</em> dialog box, enter a <strong>Name</strong> for the catalog and give it a <strong>Description</strong> if needed.</p>
+<p><img src="images/vmw-catalog-dlg-create-catalog-vcd10.3.png" alt="Create Catalog dialog box"></p>
 </li>
-<li><p>To specify a particular storage policy for the catalog, select the <strong>Pre-provision on specific storage policy</strong> option then select the desired <strong>Storage Policy</strong>:</p>
-<ul>
-<li><p><strong>Tier1</strong> is for high performance, high IOPS VMs</p>
-</li>
-<li><p><strong>Tier2</strong> is for everything else less demanding (recommended for ISO and templates)</p>
-</li>
-</ul>
-<p><img src="images/vmw-vcd10.1-create-catalog.png" alt="Create Catalog dialog box"></p>
+<li><p>To specify a particular storage policy for the catalog, select the <strong>Pre-provision on specific storage policy</strong> option. Select the appropriate <strong>Org VDC</strong>, then select the <strong>Storage Policy</strong>.</p>
+<p><img src="images/vmw-catalog-dlg-create-catalog-storage-policy-vcd10.3.png" alt="Create Catalog dialog box - Storage Policy"></p>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
 </li>
-<li><p>To make the catalog visible to others within your organisation, click the three vertical dots and select <strong>Share</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-share-catalog.png" alt="Share catalog menu option"></p>
+<li><p>To make the catalog visible to others within your organisation, click catalog menu (three vertical dots) and select <strong>Share</strong>.</p>
+<p><img src="images/vmw-catalog-mnu-share-vcd10.3.png" alt="Share catalog menu option"></p>
 </li>
 <li><p>In the <em>Share Catalog</em> dialog box, from the <strong>Share with</strong> radio buttons, select:</p>
 <ul>
 <li><p><strong>All Users and Groups</strong> to share the catalog with everyone in the organisation.</p>
 </li>
-<li><p><strong>Specific Users and Groups</strong> to share the catalog with individual users or groups of users. Select the users and groups from the lists below by selecting the check box for the user or group and selecting the appropriate access level (<strong>Read Only</strong>, <strong>Read/Write</strong> or <strong>Full Control</strong>).</p>
+<li><p><strong>Specific Users and Groups</strong> to share the catalog with individual users or groups of users. Select the users and groups from the list below by selecting the appropriate check boxes and selecting the appropriate access level (<strong>Read Only</strong>, <strong>Read/Write</strong> or <strong>Full Control</strong>) from the <strong>Access Level</strong> list.</p>
+<ul>
+<li><p><strong>Read Only</strong> to view the contents of the catalog</p>
+</li>
+<li><p><strong>Read/Write</strong> to view the contents of the catalog and add content to the catalog</p>
+</li>
+<li><p><strong>Full Control</strong> to have full control of the catalog's content and settings</p>
 </li>
 </ul>
-<p><img src="images/vmw-vcd10.1-share-catalog.png" alt="Share Catalog dialog box"></p>
+</li>
+</ul>
+<p><img src="images/vmw-catalog-dlg-share-catalog-vcd10.3.png" alt="Share Catalog dialog box"></p>
 </li>
 <li><p>When you've added all the people who you want to access the catalog, click <strong>Save</strong>.</p>
 </li>
@@ -144,20 +147,23 @@
 </li>
 </ul>
 <h3 id="creating-a-template-from-an-ovf-package">Creating a template from an OVF package</h3>
+<p>You can add items to a catalog by creating a vApp template from an OVF package.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Depending on the file size and network speed, the upload may take some time.</p>
+<p>Depending on the file size and network speed, the upload of the OVF file may take some time.</p>
 </div>
-<p>To upload an OVF package and assign it to a catalog:</p>
 <ol>
-<li><p>On the <em>Libraries</em> page, in the left navigation panel, under <em>Content Libraries</em>, select <strong>vApp Templates</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-vapp-templates.png" alt="vApp Templates menu option"></p>
+<li><p>In the VMware Cloud Director top menu, select <strong>Libraries</strong>.</p>
+<p><img src="images/vmw-mnu-libraries-vcd10.3.png" alt="Libraries menu option in VMware Cloud Director"></p>
+</li>
+<li><p>In the left navigation panel, under <em>Content Libraries</em>, select <strong>vApp Templates</strong>.</p>
+<p><img src="images/vmw-mnu-vapp-templates-vcd10.3.png" alt="Catalogs menu option"></p>
 </li>
 <li><p>On the <em>vApps Templates</em> page, click <strong>New</strong>.</p>
-<p><img src="images/vmw-vcd10.1-btn-add-vapp-template.png" alt="Add vApp template button"></p>
+<p><img src="images/vmw-catalog-btn-new-vapp-template-vcd10.3.png" alt="Add vApp template button"></p>
 </li>
 <li><p>In the <em>Create vApp template from OVF</em> dialog box, select the source of the OVF either by entering a <strong>URL</strong> or clicking the <strong>Browse</strong> icon to locate the file on your computer.</p>
-<p><img src="images/vmw-vcd10.1-create-vapp-template-source.png" alt="Create vApp template from OVF dialog box - Select Source page"></p>
+<p><img src="images/vmw-catalog-dlg-create-template-ovf-source-vcd10.3.png" alt="Create vApp template from OVF dialog box - Select Source page"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>You can select multiple files by pressing the CTRL key and selecting additional files.</p>
@@ -169,28 +175,47 @@
 </li>
 <li><p>On the <em>Select vApp Template Name</em> page, enter a <strong>Name</strong> and <strong>Description</strong> for the template.</p>
 </li>
-<li><p>From the <strong>Catalog</strong> list, select the catalog in which you want to put the OVF, then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd10.1-create-vapp-template-catalog.png" alt="Create vApp template from OVF dialog box - Select vApp Template Name page"></p>
+<li><p>From the <strong>Catalog</strong> list, select the catalog to which you want to add the template, then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-catalog-dlg-create-template-ovf-name-vcd10.3.png" alt="Create vApp template from OVF dialog box - Select vApp Template Name page"></p>
 </li>
 <li><p>On the <em>Ready to Complete</em> page, review the details of the vApp template and when you're done, click <strong>Finish</strong> to deploy.</p>
 </li>
 </ol>
-<h3 id="adding-an-existing-vapp">Adding an existing vApp</h3>
+<h3 id="creating-a-template-from-an-existing-vapp">Creating a template from an existing vApp</h3>
+<p>You can also add content to a catalog by creating a vApp template from an existing vApp.</p>
 <ol>
-<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC in which the vApp you want to use is located.</p>
+<li><p>In the VMware Cloud Director <em>Virtual Data Center</em> dashboard, select the VDC that contains the vApp you want to use for the template.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-vapps.png" alt="vApps menu option"></p>
+<p><img src="images/vmw-mnu-vapps-vcd10.3.png" alt="vApps menu option"></p>
 </li>
-<li><p>In the card for the vApp that you want to add to the catalog, select <strong>Actions</strong> then <strong>Add To Catalog</strong>.</p>
-<p><img src="images/vmw-vcd10.1-mnu-add-to-catalog.png" alt="Add To Catalog menu option"></p>
-<p>You can add both running and stopped vApps to the catalog, although it's worth noting that creating a catalog image from a running vApp could affect performance.</p>
+<li><p>In the card for the vApp that you want to use for the template, select <strong>Actions</strong> then <strong>Create Template</strong>.</p>
+<p><img src="images/vmw-vapp-mnu-create-template-vcd10.3.png" alt="Create Template menu option"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can use both running and stopped vApps to create a template, although it's worth noting that creating a template from a running vApp could affect performance.</p>
+</div>
 </li>
-<li><p>In the <em>Add to Catalog</em> dialog box, from the <strong>Catalog</strong> list, select the catalog you want to add the vApp to.</p>
+<li><p>In the <em>Add to Catalog</em> dialog box, from the <strong>Catalog</strong> list, select the catalog you want to add the vApp template to.</p>
+<p><img src="images/vmw-vapp-dlg-add-to-catalog-select-catalog-vcd10.3.png" alt="Add to Catalog dialog box - Select Catalog"></p>
 </li>
-<li><p>Give the vApp template a <strong>Name</strong> and <strong>Description</strong> and define whether vApps deployed using this template are identical or customisable.</p>
-<p>You can also overwrite an existing catalog item. If the catalog you're adding the vApp to is published externally, you'll see a warning.</p>
-<p><img src="images/vmw-vcd10.1-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
+<li><p>You can overwrite an existing template in the catalog by selecting <strong>Overwrite catalog item</strong> then selecting the item to overwrite. If the catalog you're adding the vApp to is published externally, you'll see a warning.</p>
+<p><img src="images/vmw-vapp-dlg-add-to-catalog-overwrite-item-vcd10.3.png" alt="Add to Catalog dialog box - Overwrite catalog item"></p>
+</li>
+<li><p>Give the vApp template a <strong>Name</strong> and <strong>Description</strong>.</p>
+<blockquote>
+<p>[TIP]
+If you've chosen to overwrite an existing catalog item, the name will be taken from that existing item and the <strong>Name</strong> field will not be available.</p>
+</blockquote>
+</li>
+<li><p>From the <strong>When using this template</strong> radio button, select what should happen when a vApp is created from this template:</p>
+<ul>
+<li><p><strong>Make identical copy</strong> creates an identical copy of the vApp on which the template is based</p>
+</li>
+<li><p><strong>Customize VM settings</strong> enables customisation of the VM settings</p>
+</li>
+</ul>
+<p><img src="images/vmw-vapp-dlg-add-to-catalog-vcd10.3.png" alt="Add to Catalog dialog box"></p>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
 <p>You can check the progress by expanding the <em>Recent Tasks</em> section at the bottom of the VMware Cloud Director interface.</p>

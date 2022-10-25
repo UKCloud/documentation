@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access VMware Cloud Director through the Cloud Director API </title>
+    <title>Changes in VMware Cloud Director 10.3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access VMware Cloud Director through the Cloud Director API ">
+    <meta name="title" content="Changes in VMware Cloud Director 10.3 ">
     <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-vcloud-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcd-10-3.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,98 +91,47 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-vmware-cloud-director-through-the-cloud-director-api">How to access VMware Cloud Director through the Cloud Director API</h1>
+<h1 id="changes-in-vmware-cloud-director-103">Changes in VMware Cloud Director 10.3</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To perform some tasks within your UKCloud for VMware environment, you may need to access VMware Cloud Director through the Cloud Director API. This guide shows you how to access the Cloud Director API.</p>
-<h2 id="before-you-begin">Before you begin</h2>
-<p>Before using the Cloud Director API, we recommend that you install a REST client that enables you to access the API using a more intuitive interface. The steps in this article use a plugin called YARC; if you use a different client, some of the steps will be different.</p>
-<h2 id="finding-your-cloud-director-api-credentials">Finding your Cloud Director API credentials</h2>
-<p>Before using the Cloud Director API, you first need to find your API credentials.</p>
-<ol>
-<li><p><a href="../portal/ptl-gs.html#logging-in-to-the-ukcloud-portal"><em>Log in to the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>Select your account.</p>
-</li>
-<li><p>In the top right corner of the page, click your username and then select <strong>API</strong>.</p>
-<p><img src="images/vmw-portal-mnu-api.png" alt="API menu option in UKCloud Portal"></p>
-</li>
-<li><p>The <em>API</em> page provides a view of your personal credentials for accessing the Cloud Director API. In particular, the page provides the following information for each compute service:</p>
+<p>This article provides information about the changes introduced in VMware Cloud Director 10.3.</p>
+<h2 id="new-features">New features</h2>
+<p>For information about new features in VMware Cloud Director 10.3, see <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.3/rn/VMware-Cloud-Director-1032-Release-Notes.html#What%27s%20New">https://docs.vmware.com/en/VMware-Cloud-Director/10.3/rn/VMware-Cloud-Director-1032-Release-Notes.html#What's%20New</a>.</p>
+<h2 id="browser-support">Browser support</h2>
+<p>VMware Cloud Director 10.3 is compatible with the current major and previous major releases of the following browsers:</p>
 <ul>
-<li><p><strong>API URL</strong> - Use this URL at the beginning of your calls to the Cloud Director API.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This URL will be different depending on the region in which your compute service is located.</p>
-</div>
-</li>
-<li><p><strong>API Username</strong> - The user ID to use to authenticate yourself with the Cloud Director API.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The compute service ID is added to the end of the username. This is because you may have access to multiple compute services.</p>
-</div>
-</li>
-<li><p><strong>Username</strong> - The API username without the appended compute service ID.</p>
-</li>
-<li><p><strong>Org ID</strong> - Use this to uniquely identify the compute service (or vOrg) when using the Cloud Director API.</p>
-</li>
-<li><p><strong>Password</strong> - For authentication with the Cloud Director API. This password is the same as the one you use to log in to the UKCloud Portal.</p>
-</li>
+<li>Google Chrome</li>
+<li>Mozilla Firefox</li>
+<li>Microsoft Edge</li>
 </ul>
-<p><img src="images/vmw-portal-api-details.png" alt="API page"></p>
-</li>
-<li><p>Make a note of the <strong>Org ID</strong>, the <strong>API URL</strong> and your <strong>API Username</strong>.</p>
-</li>
-</ol>
-<h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
-<p>To start interacting with the Cloud Director API, you first need to obtain an <code>x-vmware-vcloud-access-token</code> token; to do this you need to adjust some settings in your chosen REST client. The steps below provide an example of how to do this in YARC.</p>
-<ol>
-<li><p>Open your REST client.</p>
-</li>
-<li><p>Create a POST request to obtain the token using the API URL you recorded earlier, adding the following to the end of the URL:</p>
-<pre><code> /cloudapi/1.0.0/sessions
-</code></pre>
-<p>a. To do this in YARC, from the list of methods, select <strong>POST</strong>.</p>
-<p>b. In the <strong>URL</strong> field, enter the API URL followed by <code>/cloudapi/1.0.0/sessions</code>.</p>
-<p><img src="images/vmw-restclient-request-method-post1.PNG" alt="API URL"></p>
-</li>
-<li><p>Add a Basic Authentication header.</p>
-<p>a. To do this in YARC, expand the <em>Authentication</em> section and click <strong>Add Credentials</strong>.</p>
-<p><img src="images/vmw-restclient-basic-authentication1.PNG" alt="Basic Authentication section"></p>
-<p>b. In the <em>Basic Authorization</em> dialog box, in the <strong>Username</strong> field, enter your API username recorded earlier from the Portal API page.</p>
-<p>c. In the <strong>Password</strong> field, enter your UKCloud Portal password and then click <strong>Save</strong>.</p>
-<p><img src="images/vmw-restclient-authentication-details1.PNG" alt="Basic Authentication dialog box"></p>
-</li>
-<li><p>Add an Accept header.</p>
-<p>a. To do this in YARC, expand the <em>Custom Headers</em> section and click <strong>Add New Header</strong>.</p>
-<p><img src="images/vmw-restclient-custom-header1.PNG" alt="Custom Header section"></p>
-<p>b. In the <em>Header</em> dialog box, in the <strong>Name</strong> field, enter <code>Accept</code>.</p>
-<p>c. In the <strong>Value</strong> field enter <code>application/json;version=36.2</code> and then click <strong>Save</strong>.</p>
-<p><img src="images/vmw-restclient-request-headers1.png" alt="Header dialog box"></p>
-<p>d. The table in the <em>Headers</em> section now displays the Accept header.</p>
-<p><img src="images/vmw-restclient-accept-header1.PNG" alt="Headers section with Accept header"></p>
-</li>
-<li><p>Your REST client has now got all the required settings in place to make a request to the Cloud Director API to obtain a <code>x-vmware-vcloud-access-token</code> token, so send the request.</p>
-</li>
-<li><p>If the request is successful, in the response, you'll see an <code>x-vmware-vcloud-access-token</code> token.</p>
-<p>In YARC you can find this in the <em>Response</em> section on the <strong>Response Headers</strong> tab.</p>
-<p><img src="images/vmw-restclient-authentication-token.png" alt="API response with authentication token"></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If at any point while following the instructions in this article, the output displayed in the REST client does not look similar to that shown in the images, you can use the value of the returned HTTP response code to determine what went wrong and needs investigation. For a list of HTTP response codes, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP Response Codes</a>.</p>
+<p>VMware Cloud Director 10.3 does not support Internet Explorer 11; instead, you should use Microsoft Edge or another supported browser.</p>
 </div>
-</li>
-<li><p>The <code>x-vmware-vcloud-access-token</code> token becomes part of an Authorization header, which replaces the Basic Authentication header added earlier.</p>
-<p>In the response, highlight and copy the string of characters displayed after the word <code>x-vmware-vcloud-access-token</code>.</p>
-</li>
-<li><p>Add an Authorization header.</p>
-<p>a. To do this in YARC, in the <em>Headers</em> section, select <strong>Add New Header</strong>.</p>
-<p>b. In the <em>Header</em> dialog box, in the <strong>Name</strong> field enter <code>Authorization</code>.</p>
-<p>c. In the <strong>Value</strong> field, enter <code>Bearer </code> (with a trailing space) followed by the string of characters copied in the previous step, then click <strong>Save</strong>.</p>
-<p><img src="images/vmw-restclient-request-headers-token1.png" alt="Authorization token in request headers"></p>
-</li>
-<li><p>Now that you've obtained an <code>x-vmware-vcloud-access-token</code> token, you can remove the Basic Authentication that you added in step 3.</p>
-</li>
-</ol>
+<h2 id="changes-to-apis">Changes to APIs</h2>
+<h3 id="supported-api-versions">Supported API versions</h3>
+<p>VMware Cloud Director 10.3 supports the VMware Cloud Director API version 36.2 (see <a href="https://developer.vmware.com/apis/1232/vmware-cloud-director">https://developer.vmware.com/apis/1232/vmware-cloud-director</a>). For information about the changes to the VMware Cloud Director API for this version, see <a href="https://developer.vmware.com/apis/1232/vmware-cloud-director/doc/diff/index.html">VMware Cloud Director API Schema Differences</a>.</p>
+<p>The 31.0, 32.0 and 33.0 versions of the API are deprecated in this release and will not be supported in future releases.</p>
+<p>The following API versions are still available:</p>
+<ul>
+<li>31.0 (deprecated)</li>
+<li>32.0 (deprecated)</li>
+<li>33.0 (deprecated)</li>
+<li>34.0</li>
+<li>35.0, 35.2</li>
+<li>36.0, 36.1, 36.2</li>
+</ul>
+<h3 id="changes-to-api-authentication">Changes to API authentication</h3>
+<p>The method of authentication for the Cloud Director API has changed. The <code>/api/sessions</code> API login endpoint is deprecated in VMware Cloud Director 10.3. You should now use '/cloudapi/1.0.0/sessions` to authenticate against the API. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access VMware Cloud Director through the Cloud Director API</em></a>.</p>
+<h3 id="sandbox-for-testing-cloud-director-api">Sandbox for testing Cloud Director API</h3>
+<p>UKCloud provides sandboxes to enable you to test the next versions of the Cloud Director API so that you can prepare for VMware Cloud Director upgrades. Our latest sandbox (<a href="https://vcd.latest.ukcloud.com/login/">https://vcd.latest.ukcloud.com/login/</a>) will be upgraded soon.</p>
+<p>To gain access to the sandbox, raise a Service Request via My Calls on the UKCloud Portal.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some VMware Cloud Director features may be available in the sandbox that will not be enabled in UKCloud for VMware after the 10.1 upgrade. If there's a 10.1 feature that you're particularly interested in, contact your Service Delivery Manager to register interest so that we can consider it for our roadmap.</p>
+</div>
+<h2 id="known-issues">Known issues</h2>
+<p>For known issues, see <a href="https://docs.vmware.com/en/VMware-Cloud-Director/10.3/rn/VMware-Cloud-Director-1032-Release-Notes.html#knownissues">https://docs.vmware.com/en/VMware-Cloud-Director/10.3/rn/VMware-Cloud-Director-1032-Release-Notes.html#knownissues</a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find a problem with this article, click <strong>Improve this Doc</strong> to make the change yourself or raise an <a href="https://github.com/UKCloud/documentation/issues">issue</a> in GitHub. If you have an idea for how we could improve any of our services, send an email to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
 

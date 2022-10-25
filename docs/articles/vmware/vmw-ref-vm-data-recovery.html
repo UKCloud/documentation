@@ -114,8 +114,8 @@
 <h3 id="cons">Cons</h3>
 <p>You can create only one snapshot for each VM, with each subsequent snapshot overwriting the previous one. You should use snapshots only as a temporary solution, as the longer the snapshot is running, the more changes will be lost should the snapshot be restored. In addition, due to the way that snapshots capture all changes to a separate file, storage costs will increase as a result of having to store both the original master VM image and you may also encounter a negative impact to the overall performance of the VM.</p>
 <h3 id="how-to-create-a-vm-snapshot">How to create a VM snapshot</h3>
-<p>In the card for the VM that you want to create a snapshot for, select <strong>Actions</strong> then <strong>Create Snapshot</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-create-snapshot.png" alt="Create Snapshot menu option"></p>
+<p>In the card for the VM that you want to create a snapshot for, select <strong>Actions</strong> &gt; <strong>Snapshot</strong> &gt; <strong>Create Snapshot</strong>.</p>
+<p><img src="images/vmw-vm-mnu-create-snapshot-vcd-10.3.png" alt="Create Snapshot menu option"></p>
 <h2 id="vm-copy">VM copy</h2>
 <p>When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.</p>
 <p><img src="images/copy.png" alt="How Master and copy images differ with changes over time"></p>
@@ -126,8 +126,8 @@
 <h3 id="cons-1">Cons</h3>
 <p>You must power down the VM prior to taking a copy. Each additional copy will consume as much storage as the original and consume additional memory and CPU cycles while the VMs are running.</p>
 <h3 id="how-to-create-a-vm-copy">How to create a VM copy</h3>
-<p>In the card for the VM that you want to copy, select <strong>Actions</strong> then <strong>Copy to</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-copy-vm.png" alt="Copy VM menu option"></p>
+<p>In the card for the VM that you want to copy, select <strong>Actions</strong> then <strong>Copy</strong>.</p>
+<p><img src="images/vmw-vm-mnu-copy-vcd10.3.png" alt="Copy VM menu option"></p>
 <h2 id="vm-backup">VM backup</h2>
 <p>You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.</p>
 <p>You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis (Snapshot Protection). You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.</p>
