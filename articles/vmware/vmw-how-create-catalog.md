@@ -74,7 +74,7 @@ There are two ways to populate a catalog:
 
 - [*Create a template from an OVF package*](#creating-a-template-from-an-ovf-package)
 
-- [*Create a template from an existing vApp*](#adding-an-existing-vapp)
+- [*Create a template from an existing vApp*](#creating-a-template-from-an-existing-vapp)
 
 ### Creating a template from an OVF package
 
