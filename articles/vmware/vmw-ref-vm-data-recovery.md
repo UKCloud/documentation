@@ -3,8 +3,8 @@ title: Virtual machine data recovery options
 description: Provides an overview of the data recovery options available for your VMs
 services: vmware
 author: shighmoor
-reviewer: jpaddock
-lastreviewed: 28/06/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -49,9 +49,9 @@ You can create only one snapshot for each VM, with each subsequent snapshot over
 
 ### How to create a VM snapshot
 
-In the card for the VM that you want to create a snapshot for, select **Actions** then **Create Snapshot**.
+In the card for the VM that you want to create a snapshot for, select **Actions** > **Snapshot** > **Create Snapshot**.
 
-![Create Snapshot menu option](images/vmw-vcd-mnu-create-snapshot.png)
+![Create Snapshot menu option](images/vmw-vm-mnu-create-snapshot-vcd-10.3.png)
 
 ## VM copy
 
@@ -73,9 +73,9 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
-In the card for the VM that you want to copy, select **Actions** then **Copy to**.
+In the card for the VM that you want to copy, select **Actions** then **Copy**.
 
-![Copy VM menu option](images/vmw-vcd-mnu-copy-vm.png)
+![Copy VM menu option](images/vmw-vm-mnu-copy-vcd10.3.png)
 
 ## VM backup
 
