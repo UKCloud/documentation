@@ -3,8 +3,8 @@ title: Changes in VMware Cloud Director 10.1
 description: Provides information about the changes in VMware Cloud Director 10.1
 services: vmware
 author: shighmoor
-reviewer: swthomas
-lastreviewed: 09/11/2021
+reviewer: shighmoor
+lastreviewed: 17/10/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,8 +3,8 @@ title: How to access VMware Cloud Director through the Cloud Director API
 description: Describes how to get started with the Cloud Director API
 services: vmware
 author: shighmoor
-reviewer: gsmith
-lastreviewed: 27/08/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -68,11 +68,11 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
 2. Create a POST request to obtain the token using the API URL you recorded earlier, adding the following to the end of the URL:
 
-        /api/sessions
+        /cloudapi/1.0.0/sessions
 
    a. To do this in YARC, from the list of methods, select **POST**.
 
-   b. In the **URL** field, enter the API URL followed by `/api/sessions`.
+   b. In the **URL** field, enter the API URL followed by `/cloudapi/1.0.0/sessions`.
 
     ![API URL](images/vmw-restclient-request-method-post1.png)
 
@@ -96,7 +96,7 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
    b. In the *Header* dialog box, in the **Name** field, enter `Accept`.
 
-   c. In the **Value** field enter `application/*+xml;version=34.0` and then click **Save**.
+   c. In the **Value** field enter `application/json;version=36.2` and then click **Save**.
 
       ![Header dialog box](images/vmw-restclient-request-headers1.png)
 
@@ -112,12 +112,12 @@ To start interacting with the Cloud Director API, you first need to obtain an `x
 
    ![API response with authentication token](images/vmw-restclient-authentication-token.png)
 
+   > [!NOTE]
+   > If at any point while following the instructions in this article, the output displayed in the REST client does not look similar to that shown in the images, you can use the value of the returned HTTP response code to determine what went wrong and needs investigation. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
 7. The `x-vmware-vcloud-access-token` token becomes part of an Authorization header, which replaces the Basic Authentication header added earlier.
 
    In the response, highlight and copy the string of characters displayed after the word `x-vmware-vcloud-access-token`.
-
-   > [!NOTE]
-   > If at any point while following the instructions in this article, the output displayed in the REST client does not look similar to that shown in the images, you can use the value of the returned HTTP response code to determine what went wrong and needs investigation. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 8. Add an Authorization header.
 
