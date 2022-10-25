@@ -3,8 +3,8 @@ title: Cloning vApps using PowerCLI
 description: Provides customers with a scripted facility to clone an existing vApp.
 services: vmware
 author: shighmoor
-reviewer: jwhititngham
-lastreviewed: 28/06/2021
+reviewer: geverett
+lastreviewed: 10/10/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
