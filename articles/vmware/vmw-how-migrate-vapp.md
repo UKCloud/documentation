@@ -3,8 +3,8 @@ title: How to migrate vApps between virtual data centres
 description: Covers the ways in which customers can migrate their vApps between virtual data centres (VDCs)
 services: vmware
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 17/11/2019
+reviewer: geverett
+lastreviewed: 10/10/2022
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,43 +33,62 @@ You may want to copy your vApp from one VDC to another VDC, leaving the original
 
 To copy a vApp:
 
-1. In VMware Cloud Director, select the VDC that contains the vApp you want to copy.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the vApp you want to copy.
 
 2. In the left navigation panel, under *Compute*, select **vApps**.
 
-3. In the card for the vApp that you want to copy, select **Actions** then **Copy to**.
+   ![VMware Cloud Director vApps menu option](images/vmw-mnu-vapps-vcd10.3.png)
 
-4. In the *Copy* dialog box, enter a **Name** for the copied vApp and select which VDC you want to migrate it to. You can also change the storage policy for each virtual machines (VMs) within the vApp.
+3. In the card for the vApp that you want to copy, select **Actions** then **Copy**.
 
-    ![Copy vApp dialog box](images/vmw-vcd10.1-copy-vapp.png)
+   ![vApp Copy menu option](images/vmw-vapp-mnu-copy-vcd10.3.png)
 
-5. When you're happy with the configuration, click **OK** to begin the copy operation.
+4. In the *Copy* dialog box, enter a **Name** for the copied vApp and select which VDC you want to migrate it to.
+
+    ![Copy vApp dialog box](images/vmw-vapp-dlg-copy-vcd10.3.png)
+
+5. For each virtual machine (VM) in the vApp, you can change the storage policy if required.
+
+   ![Change storage policy](images/vmw-vapp-dlg-copy-storage-vcd10.3.png)
+
+6. When you're happy with the configuration, click **OK** to begin the copy operation.
 
     > [!NOTE]
     > The copy operation may take some time and the performance of any running VMs within the source vApp may be impacted due to the copy process.
 
 ## Moving a vApp
 
-You may want to completely move your vApp from one VDC to another VDC. This will remove the vApp from the source VDC and move it to the destination. To perform this operation, the vApp must be powered off.
+You may want to completely move your vApp from one VDC to another VDC. This will remove the vApp from the source VDC and move it to the destination.
+
+> [!IMPORTANT]
+> To perform this operation, you must first power off the vApp.
 
 To move a vApp:
 
-1. In VMware Cloud Director, select the VDC that contains the vApp you want to move.
+1. In the VMware Cloud Director *Virtual Data Center* dashboard, select the VDC that contains the vApp you want to move.
 
 2. In the left navigation panel, under *Compute*, click **vApps**.
 
-3. In the card for the vApp that you want to move, select **Actions** then **Move to**.
+   ![VMware Cloud Director vApps menu option](images/vmw-mnu-vapps-vcd10.3.png)
 
-4. In the *Move* dialog box, select which VDC you want to migrate the vApp to. You can also change the storage policy for each VMs within the vApp.
+3. In the card for the vApp that you want to move, select **Actions** then **Move**.
 
-    ![Move vApp dialog box](images/vmw-vcd10.1-move-vapp.png)
+   ![vApp Move menu option](images/vmw-vapp-mnu-move-vcd10.3.png)
 
-5. When you're happy with the configuration, click **OK** to begin the move operation.
+4. In the *Move* dialog box, select which VDC you want to migrate the vApp to.
 
-    > [!NOTE]
-    > It may take some time to move the vApp from one VDC to another.
+   ![Move vApp dialog box](images/vmw-vapp-dlg-move-vcd10.3.png)
 
-6. When the move operation is complete, power the vApp back on by selecting **Actions** then **Power On**.
+5. For each virtual machine (VM) in the vApp, you can change the storage policy if required.
+
+   ![Change storage policy](images/vmw-vapp-dlg-move-storage-vcd10.3.png)
+
+6. When you're happy with the configuration, click **OK** to begin the move operation.
+
+   > [!NOTE]
+   > It may take some time to move the vApp from one VDC to another.
+
+7. When the move operation is complete, power the vApp back on by selecting **Actions** > **Power** > **Start**.
 
 ## Feedback
 
