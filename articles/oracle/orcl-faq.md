@@ -3,8 +3,8 @@ title: UKCloud for Oracle Software FAQs
 description: Frequently asked questions for UKCloud for Oracle Software
 services: oracle
 author: mwarner
-reviewer: bchallis
-lastreviewed: 11/11/2021
+reviewer: awebb
+lastreviewed: 01/11/2022
 toc_rootlink: UKCloud for Oracle Software
 toc_sub1: FAQs
 toc_sub2:
