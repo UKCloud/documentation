@@ -15,6 +15,17 @@ toc_fullpath: Reference/other-ref-cloud-economics.md
 toc_mdlink: other-ref-cloud-economics.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # Cloud Economics
 
 Pricing for virtual machines (VMs) provided on UKCloud's multi-cloud platform, is based on actual consumption (per VM, per hour, per GiB per month). It's essential that you base your cloud solution on predicted usage rather than your predicted peak demand. Unlike traditional IT solutions, cloud-based computing can scale depending on workload requirements so you only need to account for standard usage.
