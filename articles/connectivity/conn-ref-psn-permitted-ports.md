@@ -15,6 +15,17 @@ toc_fullpath: Reference/conn-ref-psn-permitted-ports.md
 toc_mdlink: conn-ref-psn-permitted-ports.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # PSN Assured - permitted standard ports
 
 The following allow list of common ports will be open as standard on the platform and allow connectivity to/from the PSN network. This policy has been built in accordance with version 2.3(2) of the PSN Assured GCSX Take on Guide.
