@@ -15,6 +15,17 @@ toc_fullpath: Reference/ostack-ref-migrations.md
 toc_mdlink: ostack-ref-migrations.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # UKCloud region migration tooling
 
 If you need to migrate your OpenStack workloads to a different UKCloud region, you can use our [Hystax Acura Workload Migration](ostack-sco-hystax.md) service for the migration of instances and storage. Other items that make up your OpenStack projects, such as networks, security groups and routers, will need to be created manually in the destination region. UKCloud is working on a set of migration helper scripts to help you quickly and easily create the required infrastructure in the destination project.
