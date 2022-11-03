@@ -15,6 +15,17 @@ toc_fullpath: How To/vmw-how-deploy-multiple-vms-from-vapp.md
 toc_mdlink: vmw-how-deploy-multiple-vms-from-vapp.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # How to deploy multiple VMs from a vApp template simultaneously using the API
 
 If you intend to deploy multiple VMs simultaneously from a single vApp template, you'll need to raise a request through the UKCloud Portal requesting that Change Block Tracking (CBT) is disabled on your template. Alternatively, if your VMs are in the ESSENTIAL service level then these will not be backed up meaning CBT will not be enabled.

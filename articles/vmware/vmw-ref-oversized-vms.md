@@ -15,6 +15,17 @@ toc_fullpath: Reference/vmw-ref-oversized-vms.md
 toc_mdlink: vmw-ref-oversized-vms.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # Oversized VMs on UKCloud for VMware
 
 Although UKCloud recommend a maximum permitted configuration of 12 vCPU and 128 GiB RAM for virtual machines (VMs), a small number of customers have been creating customised VMs that exceed this configuration. We understand that customers may have been doing this in an effort to increase VM performance, and in the most extreme scenarios customers have assigned more vCPU and memory than is physically available on the host.
