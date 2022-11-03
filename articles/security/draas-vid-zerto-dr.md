@@ -15,6 +15,17 @@ toc_fullpath: Disaster Recovery as a Service/draas-vid-zerto-dr.md
 toc_mdlink: draas-vid-zerto-dr.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # Video: Using Zerto Virtual Manager to perform disaster recovery testing
 
 The following video shows how Zerto Virtual Manager can support your organisation with disaster recovery testing, making sure you can deliver services and face minimal disruption in the event of a disaster.
