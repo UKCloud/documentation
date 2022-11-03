@@ -16,6 +16,17 @@ toc_fullpath: Users/How To/azs-how-configure-powershell-users.md
 toc_mdlink: azs-how-configure-powershell-users.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # How to configure the Azure Stack Hub user's PowerShell environment
 
 As an Azure Stack Hub user, you can use PowerShell to manage Azure Stack Hub resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack Hub PowerShell, you will need to set up your environment. To do so follow the below guide:

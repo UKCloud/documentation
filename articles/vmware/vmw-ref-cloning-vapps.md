@@ -15,6 +15,17 @@ toc_fullpath: Reference/vmw-ref-cloning-vapps.md
 toc_mdlink: vmw-ref-cloning-vapps.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # Cloning vApps using PowerCLI
 
 You can clone a vApp whilst it's running as long as there's enough storage available on the source storage profiles associated with the existing vApp. There's a manual GUI option where you can copy a vApp, however this can be a lengthy process if there are number of vApps needing to be copied over. A good use case for this method is for utilising like for like copies of production for pre-production environments.

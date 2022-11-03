@@ -16,6 +16,17 @@ toc_fullpath: Operators/How To/azs-how-deploy-asdk.md
 toc_mdlink: azs-how-deploy-asdk.md
 ---
 
+#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+
+On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
+
+Further information regarding the Liquidations can be found here: <https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties>
+
+Contact details:<br>
+For any general queries relating to the Liquidations please email <ukcloud@uk.ey.com><br>
+For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
+For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
+
 # How to deploy and configure the Azure Stack Hub Development Kit
 
 The Azure Stack Hub Development Kit (ASDK) is a single server instance of Azure Stack Hub. It is not fit for production workloads and has some subtle differences vs the real Azure Stack Hub integrate appliance, however for most test scenarios it will suffice.
