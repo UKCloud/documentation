@@ -91,8 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-use-networkpolicy-objects-to-connect-services-between-projects">How to use NetworkPolicy objects to connect services between projects</h1>
 
+<h4 id="ukcloud-limited-ukc-and-virtual-infrastructure-group-limited-vig-together-the-companies--in-compulsory-liquidation">UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation</h4>
+<p>On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.</p>
+<p>Further information regarding the Liquidations can be found here: <a href="https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties">https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties</a></p>
+<p>Contact details:<br>
+For any general queries relating to the Liquidations please email <a href="mailto:ukcloud@uk.ey.com">ukcloud@uk.ey.com</a><br>
+For customer related queries please email <a href="mailto:ukcloudcustomers@uk.ey.com">ukcloudcustomers@uk.ey.com</a><br>
+For supplier related queries please email <a href="mailto:ukcloudsuppliers@uk.ey.com">ukcloudsuppliers@uk.ey.com</a></p>
+<h1 id="how-to-use-networkpolicy-objects-to-connect-services-between-projects">How to use NetworkPolicy objects to connect services between projects</h1>
 <h2 id="overview">Overview</h2>
 <p>In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster.</p>
 <p>By default, we create a NetworkPolicy object, named <code>allow-from-same-and-privileged-namespaces</code>, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.</p>

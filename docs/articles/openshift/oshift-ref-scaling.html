@@ -91,8 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="considerations-when-scaling-an-openshift-cluster">Considerations when scaling an OpenShift cluster</h1>
 
+<h4 id="ukcloud-limited-ukc-and-virtual-infrastructure-group-limited-vig-together-the-companies--in-compulsory-liquidation">UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation</h4>
+<p>On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.</p>
+<p>Further information regarding the Liquidations can be found here: <a href="https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties">https://www.gov.uk/government/news/virtual-infrastructure-group-limited-and-ukcloud-limited-information-for-creditors-and-interested-parties</a></p>
+<p>Contact details:<br>
+For any general queries relating to the Liquidations please email <a href="mailto:ukcloud@uk.ey.com">ukcloud@uk.ey.com</a><br>
+For customer related queries please email <a href="mailto:ukcloudcustomers@uk.ey.com">ukcloudcustomers@uk.ey.com</a><br>
+For supplier related queries please email <a href="mailto:ukcloudsuppliers@uk.ey.com">ukcloudsuppliers@uk.ey.com</a></p>
+<h1 id="considerations-when-scaling-an-openshift-cluster">Considerations when scaling an OpenShift cluster</h1>
 <h3 id="infrastructure-applications">Infrastructure applications</h3>
 <p>With your UKCloud for Red Hat OpenShift cluster we deploy a number of infrastructure applications by default. These are quality of service features that are intended to help you with administration, management and application development within your cluster. Examples include the EFK stack, Hawkular Metrics, the integrated registry, the service catalog and, with v3.11 deployments onwards, Prometheus and Grafana.</p>
 <p>These applications run their components on the infrastructure nodes (these are the nodes with the naming convention worker-infra). Your cluster comes out of the box with three of these nodes and each has 16GB of memory and two vCPUs. This provides an adequate amount of resource and good level of resiliency for the infrastructure components to support a production deployment. If you're looking to scale out the cluster to a larger size and start running more intensive applications or builds, these nodes may not be enough. For example, the more applications and nodes you have in your environment, the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This will result in significantly higher resource usage. In the same vein, the more pods and nodes that are running in your environment, the more stats Hawkular Metrics will be gathering and storing in the Cassandra database.</p>
