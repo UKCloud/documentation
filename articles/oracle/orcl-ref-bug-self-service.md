@@ -2,9 +2,9 @@
 title: Oracle cloud self-service functionality
 description: Contains information about changes to the self-service functionality for UKCloud for Oracle Software
 services: oracle
-author: Sue Highmoor
-reviewer: bchallis
-lastreviewed: 16/11/2021
+author: shighmoor
+reviewer: awebb
+lastreviewed: 01/11/2022
 toc_rootlink: UKCloud for Oracle Software
 toc_sub1: Reference
 toc_sub2:

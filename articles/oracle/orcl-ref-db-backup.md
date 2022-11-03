@@ -3,8 +3,8 @@ title: Best practice guidelines for Oracle Database backup
 description: Defines guidelines to set up and manage Oracle Database backups on the UKCloud platform
 services: oracle
 author: fbordacchini
-reviewer: bchallis
-lastreviewed: 16/11/2021
+reviewer: awebb
+lastreviewed: 01/11/2022
 toc_rootlink: UKCloud for Oracle Software
 toc_sub1: Reference
 toc_sub2:
