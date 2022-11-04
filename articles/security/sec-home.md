@@ -153,33 +153,6 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 
 <!-- end Find More -->
 
-<!-- begin Videos -->
-
-<div class="row">
-  <div class="col-md-12">
-    <h2><img src="images/home-ukc-logo.png">See it in action</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/_j2O5omYG6Y" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=_j2O5omYG6Y">Security Operations Service - UKCloud & e2e-assure</a></p>
-  </div>
-  <div class="col-md-4">
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/2ugrh8F9uVU" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=2ugrh8F9uVU">How to use the Zerto Virtual Manager to perform DR testing on UKCloud</a></p>
-  </div>
-</div>
-
-<!-- end Videos -->
-
 <!-- begin How to Buy -->
 
 <div class="row">

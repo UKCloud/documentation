@@ -42,16 +42,11 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 <!-- begin Introduction -->
 
 <div class="row">
-  <div class="col-md-8"> 
+  <div class="col-md-12"> 
     <!-- brief introduction -->
     <p>As a developer-focused Platform-as-a-Service (PaaS) offering, UKCloud for Red Hat OpenShift helps to increase the agility and efficiency of your software development lifecycle &ndash; giving you the tools you need to adopt DevOps best practice. By divorcing development and application delivery from infrastructure, you can start to move your IT teams up the technology stack and start to focus on longer-term business value and strategic projects.</p>
     <!-- link to propositions -->
     <p>Combining our <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a> with Red Hat's award-winning open source container platform, you can efficiently progress your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>modernisation</strong></a> journey from <a href="https://ukcloud.com/solutions/software-to-service/"><strong>software to services</strong></a>, through to delivering <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative digital services</strong></a> and cloud-native applications.
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/qM02_BacmoY" style="position:absolute;top:0;left:0;width:100%;height:100%;"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
   </div>
 </div>
 
@@ -179,33 +174,6 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 </div>
 
 <!-- end Find More -->
-
-<!-- begin Videos -->
-
-<div class="row">
-  <div class="col-md-12">
-    <h2><img src="images/home-ukc-logo.png">See it in action</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/v4JlSxroZGs" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=v4JlSxroZGs">Evolution of digital workloads</a></p>
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/BZIINbOBGBk" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=BZIINbOBGBk">What are containers?</a></p>
-  </div>
-  <div class="col-md-4">
-  </div>
-</div>
-
-<!-- end Videos -->
 
 <!-- begin How to Buy -->
 

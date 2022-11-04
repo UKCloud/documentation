@@ -196,10 +196,6 @@ For more information about UKCloud for Microsoft Azure, see:
 
 - [*Configure the Azure Stack Hub user's PowerShell environment*](azs-how-configure-powershell-users.md)
 
-## Related videos
-
-- [*UKCloud Azure Stack Hub portal overview video*](azs-vid-overview.md)
-
 ## Related repositories
 
 - [UKCloud Azure Stack Hub Repository](https://github.com/UKCloud/AzureStack)

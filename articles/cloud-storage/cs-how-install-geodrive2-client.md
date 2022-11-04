@@ -146,10 +146,6 @@ This guide has shown you how to install and configure GeoDrive for use with Clou
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
-## Related videos
-
-- [*Dell EMC GeoDrive overview video*](cs-vid-geodrive2-client-overview.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

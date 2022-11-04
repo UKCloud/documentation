@@ -239,12 +239,6 @@ Answer the questions in the survey and when you're done, click **Save**.
 
 - For information about what else you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
 
-## Related videos
-
-- [*Creating support tickets in My Calls*](ptl-vid-mycalls.md)
-
-- [*UKCloud Portal overview video*](ptl-vid-portal.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

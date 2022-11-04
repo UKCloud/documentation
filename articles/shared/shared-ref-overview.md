@@ -56,8 +56,6 @@ UKCloud provides various shared services, including update servers, licensing se
 
 - [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md)
 
-  - [Video](shared-vid-licensing-kms.md)
-
 ### Network Time Protocol servers
 
 - [*Network Time Server access*](shared-ref-network-time-server.md)

@@ -42,17 +42,12 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 <!-- begin Introduction -->
 
 <div class="row">
-  <div class="col-md-8"> 
+  <div class="col-md-12"> 
     <!-- brief introduction -->
     <p>Our team of multi-cloud experts is at hand to help you with a clear path to the cloud – no matter where you are on that journey.</p>
     <!-- link to propositions -->
     <p>UKCloud provides expert, agnostic, multi-cloud advisory through a structured, modular approach. Each stage is supported by a defined, outcome-focused workflow that delivers tailored, high-value output enabling organisations to adopt the cloud with confidence.</p>
     <p>Data sits at the heart of a sustainable <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> journey. Work with our team to build a comprehensive data strategy, unlocking data-driven insights and delivering better, more cost-effective solutions to UK citizens utilising our <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/Ay2VO5KfNeQ" style="position:absolute;top:0;left:0;width:100%;height:100%;"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
   </div>
 </div>
 
@@ -162,29 +157,6 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 </div>
 
 <!-- end List of Services -->
-
-<!-- begin Videos -->
-
-<div class="row">
-  <div class="col-md-12">
-    <h2><img src="images/home-ukc-logo.png">See it in action</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/-YwfAwBIEl4" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=-YwfAwBIEl4">Using Professional Services to Fill the Skills Gap</a></p>
-  </div>
-  <div class="col-md-4">
-  </div>
-  <div class="col-md-4">
-  </div>
-</div>
-
-<!-- end Videos -->
 
 <!-- begin How to Buy -->
 

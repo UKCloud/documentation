@@ -86,10 +86,6 @@ For more information about UKCloud for Oracle Software, see:
 
 - [*UKCloud for Oracle Software FAQs*](orcl-faq.md)
 
-## Related videos
-
-- [*Oracle Enterprise Manager Cloud Control console overview video*](orcl-vid-overview.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

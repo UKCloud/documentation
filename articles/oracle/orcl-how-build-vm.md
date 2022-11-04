@@ -199,10 +199,6 @@ On the *Requests* page, you can view and edit all requests.
 
 For a general overview of UKCloud for Oracle Software, see the [*Getting Started Guide for UKCloud for Oracle Software*](orcl-gs.md).
 
-## Related videos
-
-- [*Oracle Enterprise Manager Cloud Control console overview video*](orcl-vid-overview.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

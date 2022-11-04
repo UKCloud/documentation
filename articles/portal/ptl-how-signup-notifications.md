@@ -53,10 +53,6 @@ To keep up to date with everything that's happening on the UKCloud platform, inc
 > [!NOTE]
 > This may not happen immediately as the update will need to sync with Active Directory. If you experience any issues with receiving emails from the Portal, raise a ticket with UKCloud Support.
 
-## Related videos
-
-- [*UKCloud Portal overview video*](ptl-vid-portal.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

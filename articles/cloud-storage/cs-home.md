@@ -41,16 +41,11 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 <!-- begin Introduction -->
 
 <div class="row">
-  <div class="col-md-8"> 
+  <div class="col-md-12"> 
     <!-- brief introduction -->
     <p>Our state-of-the-art unstructured storage solution offers an unmatched combination of storage efficiency and data access. UKCloud provides enhanced data durability, with built-in protection from disk and node failures.</p>
     <!-- link to propositions -->
     <p>As the public's perception of data privacy continues to heighten, public sector organisations can no longer delay their <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital transformation</strong></a> journeys. Sensitive patient records, tax information and mission-critical data are at stake and our <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a> can help keep it safe in our military-grade data centres.</p>
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/oGKYSba4dzs" style="position:absolute;top:0;left:0;width:100%;height:100%;"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
   </div>
 </div>
 
@@ -128,29 +123,6 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 </div>
 
 <!-- end Find More -->
-
-<!-- begin Videos -->
-
-<div class="row">
-  <div class="col-md-12">
-    <h2><img src="images/home-ukc-logo.png">See it in action</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/vAZ29Sygw8s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=vAZ29Sygw8s">GeoDrive Client overview</a></p>
-  </div>
-  <div class="col-md-4">
-  </div>
-  <div class="col-md-4">
-  </div>
-</div>
-
-<!-- end Videos -->
 
 <!-- begin How to Buy -->
 

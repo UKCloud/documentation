@@ -86,10 +86,6 @@ This article is intended for anyone who wants to update a Knowledge Centre artic
 
 If you want to suggest significant changes to the Knowledge Centre, or have a suggestion for a new article, [raise an issue](https://github.com/UKCloud/documentation/issues) within GitHub or contact <products@ukcloud.com> to share your ideas.
 
-## Related videos
-
-- [*Editing Knowledge Centre articles video*](other-vid-kc-contribution.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
