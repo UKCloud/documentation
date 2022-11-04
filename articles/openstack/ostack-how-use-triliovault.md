@@ -811,10 +811,6 @@ To delete a snapshot, follow these steps.
 
 For full documentation regarding using the Workload Manager API/CLI, see the TrilioVault [Workload Manager API/CLI Documentation](http://triliodoc.com/openstack/3.0/documentation/sphinx-doc/build/html/apicli.html).
 
-## Related videos
-
-- [*OpenStack self-service backup and restoration with TrilioVault*](ostack-vid-trilio.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.

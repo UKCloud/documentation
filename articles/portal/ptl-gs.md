@@ -236,12 +236,6 @@ In this Getting Started Guide, you've learned the basics about the Portal and th
 
 - [*Cloud Storage*](../cloud-storage/cs-gs.md)
 
-## Related videos
-
-- [*UKCloud Portal overview video*](ptl-vid-portal.md)
-
-- [*Creating support tickets in My Calls*](ptl-vid-mycalls.md)
-
 ## Glossary
 
 This section provides a glossary of terms specific to the UKCloud Portal.

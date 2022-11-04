@@ -303,10 +303,6 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*How to use the Azure Stack Hub API*](azs-how-use-api.md)
 
-## Related videos
-
-- [*Microsoft Azure Stack Hub Portal overview video*](azs-vid-overview.md)
-
 ## Related repositories
 
 - [*UKCloud Azure Stack Hub Repository*](https://github.com/UKCloud/AzureStack)

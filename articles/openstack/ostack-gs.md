@@ -568,10 +568,6 @@ You can find additional information in the following places:
 
 - **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <https://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
 
-## Related videos
-
-- [*OpenStack Horizon dashboard overview video*](ostack-vid-overview.md)
-
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for OpenStack.

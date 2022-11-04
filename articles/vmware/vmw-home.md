@@ -41,16 +41,11 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 <!-- begin Introduction -->
 
 <div class="row">
-  <div class="col-md-8"> 
+  <div class="col-md-12"> 
     <!-- brief introduction -->
     <p>The first step in data centre modernisation is rehosting your traditional applications. By removing the burden of having to maintain your own data centre, you and your team can start to focus on more strategic projects. And for applications where VMware is a critical component, UKCloud offers a secure, government-grade platform for you to transition to the cloud.</p>
     <!-- link to propositions -->
     <p>With UKCloud for VMware you can take the first steps on your <a href="https://ukcloud.com/solutions/data-centre-modernisation/"><strong>data centre modernisation</strong></a> and <a href="https://ukcloud.com/solutions/digital-workplace/"><strong>digital transformation</strong></a> journeys. With the right digital foundations, you can harness the latest <a href="https://ukcloud.com/solutions/public-sector-innovation/"><strong>innovative technologies</strong></a> to deliver improved outcomes with the added benefit and assurance of it running on a <a href="https://ukcloud.com/solutions/secure-cloud/"><strong>secure</strong></a> and <a href="https://ukcloud.com/solutions/sovereign-cloud/"><strong>sovereign cloud</strong></a>.</p>
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/gtFmm6t4-fE" style="position:absolute;top:0;left:0;width:100%;height:100%;"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
   </div>
 </div>
 
@@ -231,37 +226,6 @@ For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 </div>
 
 <!-- end Find More -->
-
-<!-- begin Videos -->
-
-<div class="row">
-  <div class="col-md-12">
-    <h2><img src="images/home-ukc-logo.png">See it in action</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/0rnDPQsF8Ts" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=0rnDPQsF8Ts">Creating a virtual data centre</a></p>
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/uLocAqDFBbw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>  
-    <p><a href="https://www.youtube.com/watch?v=uLocAqDFBbw">VMware Distributed Firewall</a></p>
-  </div>
-  <div class="col-md-4">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://www.youtube.com/embed/Zdct0gy20-g" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/watch?v=Zdct0gy20-g">Benefits of VMware L2 VPN</a></p>
-  </div>
-</div>
-
-<!-- end Videos -->
 
 <!-- begin How to Buy -->
 

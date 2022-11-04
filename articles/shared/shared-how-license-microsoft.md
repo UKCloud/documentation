@@ -58,7 +58,7 @@ The standard licensing approach is for us to provide Microsoft Windows Server li
 > [!IMPORTANT]
 > You cannot bring your own Microsoft Windows Server licences for use on the UKCloud platform within the multi-tenant (public cloud) environments.
 
-For your Microsoft Windows Server‑based VMs in our multi-tenant environments, to use a UKCloud-purchased licence you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalog. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). See the [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md) article or [*Licensing Windows VMs using the UKCloud Key Management Server video*](shared-vid-licensing-kms.md) for information about how to do this.
+For your Microsoft Windows Server‑based VMs in our multi-tenant environments, to use a UKCloud-purchased licence you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalog. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). See [*How to license Windows VMs using the UKCloud Key Management Server*](shared-how-setup-kms.md) for information about how to do this.
 
 The Microsoft Windows Server licence is invoiced each month, in addition to the cost of the VM, based on the VM's usage.
 

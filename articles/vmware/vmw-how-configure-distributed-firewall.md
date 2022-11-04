@@ -201,10 +201,6 @@ Security groups enable you to categorise based on the access level required. If 
 
     ![Security group](images/vmw-vcd91-security-group.png)
 
-## Related videos
-
-- [*VMware Distributed Firewall video*](vmw-vid-dfw.md)
-
 ## Feedback
 
 If you find a problem with this article, click **Improve this Doc** to make the change yourself or raise an [issue](https://github.com/UKCloud/documentation/issues) in GitHub. If you have an idea for how we could improve any of our services, send an email to <feedback@ukcloud.com>.
