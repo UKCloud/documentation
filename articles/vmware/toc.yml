@@ -196,11 +196,3 @@
       href: vmw-ref-pricing.md
     - name: Service Scope
       href: vmw-sco.md
-- name: Videos
-  items:
-  - name: Benefits of VMware L2 VPN
-    href: vmw-vid-l2-vpn.md
-  - name: Create a VDC in the Portal
-    href: vmw-vid-build-vdc-portal.md
-  - name: VMware Distributed Firewall
-    href: vmw-vid-dfw.md

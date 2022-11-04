@@ -122,10 +122,6 @@
       href: azs-ref-pricing.md
     - name: Service Scope
       href: azs-sco.md
-  - name: Videos
-    items:
-    - name: UKCloud Azure Stack Hub portal overview
-      href: azs-vid-overview.md
 - name: Operators
   items:
   - name: How To

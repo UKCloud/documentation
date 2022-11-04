@@ -52,9 +52,3 @@
     href: ptl-ref-raise-escalate-service-request.md
   - name: UKCloud Portal security settings
     href: ptl-ref-security-settings.md
-- name: Videos
-  items:
-  - name: Creating support tickets
-    href: ptl-vid-mycalls.md
-  - name: UKCloud Portal
-    href: ptl-vid-portal.md

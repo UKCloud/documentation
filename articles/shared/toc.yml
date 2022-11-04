@@ -28,7 +28,3 @@
     href: shared-ref-network-time-server.md
   - name: Red Hat Update Infrastructure Overview (RHUI 3)
     href: shared-ref-rhui-3.md
-- name: Videos
-  items:
-  - name: Licensing Windows VMs using the KMS
-    href: shared-vid-licensing-kms.md
