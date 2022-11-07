@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/Add a Managed Disk to a VM/azs-how-add-managed-disks-
 toc_mdlink: azs-how-add-managed-disks-portal.md
 ---
 
-#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+<br>**UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation**
 
 On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
 
