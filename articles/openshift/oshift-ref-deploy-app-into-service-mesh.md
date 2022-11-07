@@ -16,7 +16,7 @@ toc_fullpath: Reference/v4/oshift-ref-deploy-app-into-service-mesh.md
 toc_mdlink: oshift-ref-deploy-app-into-service-mesh.md
 ---
 
-#### UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation
+<br>**UKCloud Limited (“UKC”) and Virtual Infrastructure Group Limited (“VIG”) (together “the Companies”) – in Compulsory Liquidation**
 
 On 25 October 2022, the Companies were placed into Liquidation with the Official Receiver appointed as Liquidator and J Robinson and A M Hudson simultaneously appointed as Special Managers to manage the liquidation process on behalf of the Official Receiver.
 
