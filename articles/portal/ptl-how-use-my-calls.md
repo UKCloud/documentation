@@ -1,5 +1,5 @@
 ---
-title: How to use My Calls to raise and monitor support tickets
+title: How to raise and monitor support tickets in My Calls
 description: Provides an overview of the functionality provided by My Calls
 services: portal
 author: shighmoor
@@ -11,7 +11,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use My Calls to raise and monitor support tickets
+toc_title: Raise and monitor support tickets
 toc_fullpath: How To/ptl-how-use-my-calls.md
 toc_mdlink: ptl-how-use-my-calls.md
 ---
@@ -27,7 +27,7 @@ For any general queries relating to the Liquidations please email <ukcloud@uk.ey
 For customer related queries please email <ukcloudcustomers@uk.ey.com><br>
 For supplier related queries please email <ukcloudsuppliers@uk.ey.com>
 
-# How to use My Calls to raise and monitor support tickets
+# How to raise and monitor support tickets in My Calls
 
 ## Overview
 
