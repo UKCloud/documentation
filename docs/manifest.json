@@ -12819,17 +12819,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/cloud_registration.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/cloud_registration.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/copy.png",
       "output": {
         "resource": {
@@ -13032,17 +13021,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/home-ukc-logo.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/kms_client_info.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/kms_client_info.png"
         }
       },
       "is_incremental": false,
@@ -13417,17 +13395,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ukc-services-g13.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/update_node.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/update_node.png"
         }
       },
       "is_incremental": false,
@@ -17295,23 +17262,12 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/windows_activation.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/windows_activation.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "WDVbnpw7ommn+Yf9vp9I3+NyYDV/hmQG+HxNoUK2VP4="
+          "hash": "HLo0T8ZMMTtkUjnU1yf11mrXQHVAA3RyzlnoXEuj/S8="
         }
       },
       "is_incremental": false,
@@ -18207,35 +18163,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-vcloud-connector.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-vcloud-connector.html",
-          "hash": "xj7z8kzpFvOqdKfZDxk/E8yXMZrhOgS37mZ2xPzvB9M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-virtual-hardware-v13.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-virtual-hardware-v13.html",
-          "hash": "A6Flm8MrL9Q6pnxtvHnzIVaOvPdVMdINHQI+QtDSJEI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-virtual-hardware-v14.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-virtual-hardware-v14.html",
-          "hash": "9gEN286hF8ntkpFF3cNQ0ToblljQi0dSBRlZYdEOtsE="
+          "hash": "kdfTDCvMsE2WamiZqCEj8TRq8FmUAV1NiJcytJ9mxG4="
         }
       },
       "is_incremental": false,
@@ -18296,18 +18228,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vrops-trouble.html",
           "hash": "P0l9S35kLzZValXVbFUebWj5ap8jP1l6f2tAiTvK2og="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-windows-server-activation.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-windows-server-activation.html",
-          "hash": "1ElcLrH4O0QgtOnJdYbuZfMDohCU/NKhPnmvnKLJZE8="
         }
       },
       "is_incremental": false,
@@ -18446,7 +18366,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 412,
+          "total_file_count": 409,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

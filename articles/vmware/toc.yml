@@ -128,8 +128,6 @@
   items:
   - name: Advanced management options
     href: vmw-ref-advanced-mgmt.md
-  - name: Availability of Virtual Hardware version 13
-    href: vmw-ref-virtual-hardware-v13.md
   - name: Availability of Virtual Hardware version 14
     href: vmw-ref-virtual-hardware-v14.md
   - name: Changes in VMware Cloud Director 10.1
@@ -174,10 +172,6 @@
     href: vmw-ref-vmdk-limits.md
   - name: VMware Tools installation
     href: vmw-ref-vmware-tools-installation.md
-  - name: VMware vCloud Connector
-    href: vmw-ref-vcloud-connector.md
-  - name: Windows Server activation
-    href: vmw-ref-windows-server-activation.md
 - name: Service Information
   items:
   - name: Bring Your Own Firewall Service Scope
