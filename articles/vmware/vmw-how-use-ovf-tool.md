@@ -3,8 +3,8 @@ title: How to use the VMware OVF Tool
 description: Describes how to use the VMware OVF Tool to assist in the distribution of virtual machines and vApps
 services: vmware
 author: shall
-reviewer: swthomas
-lastreviewed: 11/11/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
