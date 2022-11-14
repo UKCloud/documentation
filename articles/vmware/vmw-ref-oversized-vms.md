@@ -3,8 +3,8 @@ title: Oversized VMs on UKCloud for VMware
 description: Advisory statement on UKCloud's position on VMs that exceed the maximum configuration
 services: vmware
 author: shighmoor
-reviewer: swthomas
-lastreviewed: 12/11/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
