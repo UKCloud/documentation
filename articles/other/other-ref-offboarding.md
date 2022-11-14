@@ -3,8 +3,8 @@ title: Terminating your UKCloud services
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
 author: shighmoor
-reviewer: shighmoor
-lastreviewed: 22/04/2022
+reviewer: geverett
+lastreviewed: 14/11/2022
 
 toc_rootlink: Reference
 toc_sub1:
