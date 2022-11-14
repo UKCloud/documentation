@@ -3,8 +3,8 @@ title: Known Issues in VMware Cloud Director
 description: Provides details of known issues in VMware Cloud Director and how to resolve them
 services: vmware
 author: dbroderick
-reviewer: 
-lastreviewed: 11/06/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
