@@ -3,8 +3,8 @@ title: How to retrieve utilisation metrics for your virtual machines
 description: This guide shows how you can use the Cloud Director API to retrieve current and historic utilisation metrics for a virtual machine
 services: vmware
 author: shall
-reviewer: swthomas
-lastreviewed: 12/11/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
