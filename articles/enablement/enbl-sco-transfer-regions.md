@@ -3,8 +3,8 @@ title: Data Transfer - Region to Region Service Scope
 description: Outlines how to move VMware workloads between regions on the UKCloud platform
 services: enablement
 author: shall
-reviewer: 
-lastreviewed: 03/03/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: Service Information
 toc_sub1: 
 toc_sub2:
