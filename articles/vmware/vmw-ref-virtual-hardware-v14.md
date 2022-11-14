@@ -3,8 +3,8 @@ title: Availability of Virtual Hardware version 14
 description: UKCloud has upgraded UKCloud for VMware to expose Virtual Hardware version 14
 services: vmware
 author: shighmoor
-reviewer: swthomas
-lastreviewed: 26/10/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -35,18 +35,6 @@ In comparison to Virtual Hardware v13, Virtual Hardware v14 enables UKCloud to s
 You can find a list of supported guest OSs via the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php?deviceCategory=software) (set **Product Release Version** to **ESXi 6.7 U3**).
 
 ## When do these changes take effect?
-
-Currently, UKCloud has enabled these upgrades across the following regions (with the remainder to follow):
-
-- Region 1,2,7,8  
-
-- Zone 2e (Region 14)
-
-- Zone 2d (Region 13)
-
-- Zone 1 (Region 6)
-
-Contact your Service Delivery Manager for more information.
 
 Any new virtual machines (VMs) will, by default, be created with the updated virtual hardware version. Any existing VMs and templates will continue to use their currently configured virtual hardware version until such time as you select to change this. Any clones/copies of VMs or templates will retain the same virtual hardware version as the source image.
 
