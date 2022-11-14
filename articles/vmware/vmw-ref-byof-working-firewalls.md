@@ -3,8 +3,8 @@ title: Bring Your Own Firewall - Known working and non-working firewalls
 description: This guide provides information about firewall technology that is known to work or not work on the UKCloud platform.
 services: vmware
 author: shighmoor
-reviewer: thallsmith
-lastreviewed: 19/08/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
