@@ -3,8 +3,8 @@ title: VMware vCloud Connector
 description: Covers the use of VMware vCloud Connector with the UKCloud platform
 services: vmware
 author: shighmoor
-reviewer: swthomas
-lastreviewed: 15/11/2021
+reviewer: geverett
+lastreviewed: 14/11/2022
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
